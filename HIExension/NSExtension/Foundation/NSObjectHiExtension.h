@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (HiRuntime)
 
-+ (void)hi_class_getInstanceMethod:(SEL)originalSelector newSelector:(SEL)newSelector;
++ (void)hi_exchange_classMethod:(SEL)sel1 newSelector:(SEL)sel2;
++ (void)hi_exchange_instanceMethod:(SEL)sel1 newSelector:(SEL)sel2;
 
 /// 强制转换, 如果不是同类型 retern nil.
 + (instancetype)hi_convert:(id)object;

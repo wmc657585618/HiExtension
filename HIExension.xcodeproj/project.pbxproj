@@ -30,6 +30,7 @@
 		1CBA5C8B26899D83007DBFE0 /* HiCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA5C7526899D83007DBFE0 /* HiCorners.m */; };
 		1CBA5C8C26899D83007DBFE0 /* HiPaddingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA5C7726899D83007DBFE0 /* HiPaddingLabel.m */; };
 		1CBA5C8D26899D83007DBFE0 /* NSObjectHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA5C7C26899D83007DBFE0 /* NSObjectHiExtension.m */; };
+		1CBA5C902689E12F007DBFE0 /* HiCornerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA5C8F2689E12F007DBFE0 /* HiCornerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,8 @@
 		1CBA5C7A26899D83007DBFE0 /* UIKitHiExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKitHiExtension.h; sourceTree = "<group>"; };
 		1CBA5C7C26899D83007DBFE0 /* NSObjectHiExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectHiExtension.m; sourceTree = "<group>"; };
 		1CBA5C7D26899D83007DBFE0 /* NSObjectHiExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectHiExtension.h; sourceTree = "<group>"; };
+		1CBA5C8E2689E12F007DBFE0 /* HiCornerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiCornerView.h; sourceTree = "<group>"; };
+		1CBA5C8F2689E12F007DBFE0 /* HiCornerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiCornerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				1CBA5C3526899D6A007DBFE0 /* SceneDelegate.m */,
 				1CBA5C3726899D6A007DBFE0 /* ViewController.h */,
 				1CBA5C3826899D6A007DBFE0 /* ViewController.m */,
+				1CBA5C8E2689E12F007DBFE0 /* HiCornerView.h */,
+				1CBA5C8F2689E12F007DBFE0 /* HiCornerView.m */,
 				1CBA5C3A26899D6A007DBFE0 /* Main.storyboard */,
 				1CBA5C3D26899D6A007DBFE0 /* Assets.xcassets */,
 				1CBA5C3F26899D6A007DBFE0 /* LaunchScreen.storyboard */,
@@ -366,6 +371,7 @@
 				1CBA5C8A26899D83007DBFE0 /* UIViewHiConstraint.m in Sources */,
 				1CBA5C3926899D6A007DBFE0 /* ViewController.m in Sources */,
 				1CBA5C8026899D83007DBFE0 /* UITableViewHiExtension.m in Sources */,
+				1CBA5C902689E12F007DBFE0 /* HiCornerView.m in Sources */,
 				1CBA5C8B26899D83007DBFE0 /* HiCorners.m in Sources */,
 				1CBA5C8426899D83007DBFE0 /* HiFrameHander.m in Sources */,
 				1CBA5C8C26899D83007DBFE0 /* HiPaddingLabel.m in Sources */,

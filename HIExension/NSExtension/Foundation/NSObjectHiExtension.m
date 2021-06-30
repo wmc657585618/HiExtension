@@ -17,12 +17,21 @@
 
 @implementation NSObject (HiRuntime)
 
-+ (void)hi_class_getInstanceMethod:(SEL)originalSelector newSelector:(SEL)newSelector {
-    Method originalMethod = class_getInstanceMethod(self, originalSelector);
-    Method altMetthod = class_getInstanceMethod(self, newSelector);
++ (void)hi_exchange_classMethod:(SEL)sel1 newSelector:(SEL)sel2 {
+    Method m1 = class_getClassMethod(self, sel1);
+    Method m2 = class_getClassMethod(self, sel2);
     
-    if (originalMethod && altMetthod) {
-        method_exchangeImplementations(originalMethod, altMetthod);
+    if (m1 && m2) {
+        method_exchangeImplementations(m1, m2);
+    }
+}
+
++ (void)hi_exchange_instanceMethod:(SEL)sel1 newSelector:(SEL)sel2 {
+    Method m1 = class_getInstanceMethod(self, sel1);
+    Method m2 = class_getInstanceMethod(self, sel2);
+    
+    if (m1 && m2) {
+        method_exchangeImplementations(m1, m2);
     }
 }
 

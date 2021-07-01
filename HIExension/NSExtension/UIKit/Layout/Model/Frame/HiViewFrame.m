@@ -36,8 +36,6 @@
     return self;
 }
 
-
-
 - (void)updateFrame{
     if ([HiOptions availableViewOptions:self.options]) {
         self.view.frame = [HiFrameHander frameForBuilder:self withOptions:self.options];
@@ -92,7 +90,7 @@
 }
 
 - (HiFrameLayoutModel *)centerX {
-    if (!_centerY) {
+    if (!_centerX) {
         _centerX = [self modelForAttribute:NSLayoutAttributeCenterX];
     }
     return _centerX;

@@ -428,19 +428,19 @@
 
 - (float)hi_floatForKey:(NSString *)defaultName {
     id objc = [NSObject hi_dictionary:self valueKey:defaultName];
-    if ([objc respondsToSelector:@selector(integerValue)]) return [objc integerValue];
+    if ([objc respondsToSelector:@selector(floatValue)]) return [objc floatValue];
     return 0;
 }
 
 - (double)hi_doubleForKey:(NSString *)defaultName {
     id objc = [NSObject hi_dictionary:self valueKey:defaultName];
-    if ([objc respondsToSelector:@selector(integerValue)]) return [objc integerValue];
+    if ([objc respondsToSelector:@selector(doubleValue)]) return [objc doubleValue];
     return 0;
 }
 
 - (BOOL)hi_boolForKey:(NSString *)defaultName {
     id objc = [NSObject hi_dictionary:self valueKey:defaultName];
-    if ([objc respondsToSelector:@selector(integerValue)]) return [objc integerValue];
+    if ([objc respondsToSelector:@selector(boolValue)]) return [objc boolValue];
     return 0;
 }
 
@@ -484,19 +484,19 @@
 
 - (float)hi_floatAtIndex:(NSUInteger)index {
     id objc = [NSObject hi_array:self objectAtIndex:index];
-    if ([objc respondsToSelector:@selector(integerValue)]) return [objc integerValue];
+    if ([objc respondsToSelector:@selector(floatValue)]) return [objc floatValue];
     return 0;
 }
 
 - (double)hi_doubleAtIndex:(NSUInteger)index {
     id objc = [NSObject hi_array:self objectAtIndex:index];
-    if ([objc respondsToSelector:@selector(integerValue)]) return [objc integerValue];
+    if ([objc respondsToSelector:@selector(doubleValue)]) return [objc doubleValue];
     return 0;
 }
 
 - (BOOL)hi_boolAtIndex:(NSUInteger)index  {
     id objc = [NSObject hi_array:self objectAtIndex:index];
-    if ([objc respondsToSelector:@selector(integerValue)]) return [objc integerValue];
+    if ([objc respondsToSelector:@selector(boolValue)]) return [objc boolValue];
     return 0;
 }
 

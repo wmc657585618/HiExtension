@@ -45,17 +45,31 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
-}
-
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
     
-    [self.tableView hi_frame_make:^(id<HiViewFrameBuilder>  _Nonnull builder) {
+    [self.tableView hi_constraints_make:^(id<HiViewConstraintBuilder>  _Nonnull builder) {
         builder.left.value(0);
         builder.top.value(100);
         builder.right.value(0);
         builder.bottom.value(-20);
     }];
+    
+    [self.tableView hi_constraints_make:^(id<HiViewConstraintBuilder>  _Nonnull builder) {
+        builder.left.value(0);
+        builder.top.value(100);
+        builder.right.value(0);
+        builder.bottom.value(-20);
+    }];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+//
+//    [self.tableView hi_frame_make:^(id<HiViewFrameBuilder>  _Nonnull builder) {
+//        builder.left.value(0);
+//        builder.top.value(100);
+//        builder.right.value(0);
+//        builder.bottom.value(-20);
+//    }];
 
 }
 

@@ -32,6 +32,7 @@
     NSAssert(self.superview, @"Super view is nil");
 
     if (block) {
+        NSAssert(self.hi_builder.avaliable, @"you have made contraints. please remove all constraints");
         self.translatesAutoresizingMaskIntoConstraints = false;
         block(self.hi_builder);
         [self.hi_builder updateFrame];

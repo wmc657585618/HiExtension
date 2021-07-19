@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HiViewConstraint : NSObject<HiViewConstraintBuilder>
 
+@property (nonatomic, assign, readonly) BOOL avaliable;
+
 - (instancetype)initWithView:(UIView *)view;
 - (void)updateFrame;
 - (void)removeAllConstraints;

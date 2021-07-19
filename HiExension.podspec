@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "HiExension"
-    s.version      = "1.0.1"
+    s.version      = "1.0.2"
     s.summary      = "HiExension is written for developer."
     s.description  = "HiExension is written for developer, use easy"
     s.homepage     = "hhttps://github.com/wmc657585618/HiExtension"

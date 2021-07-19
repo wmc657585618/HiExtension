@@ -241,4 +241,9 @@
             return [_height getConstraint];
     }
 }
+
+- (BOOL)avaliable {
+    return HiViewOptionsNone == self.options;
+}
+
 @end

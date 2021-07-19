@@ -52,13 +52,6 @@
         builder.right.value(0);
         builder.bottom.value(-20);
     }];
-    
-    [self.tableView hi_constraints_make:^(id<HiViewConstraintBuilder>  _Nonnull builder) {
-        builder.left.value(0);
-        builder.top.value(100);
-        builder.right.value(0);
-        builder.bottom.value(-20);
-    }];
 }
 
 - (void)viewDidLayoutSubviews {

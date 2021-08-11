@@ -1,0 +1,16 @@
+PODS:
+  - HiExension (1.0.2)
+
+DEPENDENCIES:
+  - HiExension (from `./`)
+
+EXTERNAL SOURCES:
+  HiExension:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  HiExension: f9c1b861701e06f20855ae6c5c46b76146136010
+
+PODFILE CHECKSUM: 4af98001af15d2f0cbf215ca9aa528e88f933b02
+
+COCOAPODS: 1.10.1

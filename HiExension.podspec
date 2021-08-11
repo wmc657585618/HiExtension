@@ -8,5 +8,5 @@ Pod::Spec.new do |s|
     s.license      = "MIT"
     s.platform     = :ios, "7.0"
     s.source       = { :git => "https://github.com/wmc657585618/HiExtension.git", :tag => "#{s.version}" }
-    s.source_files  = "HIExension/NSExtension/**/*.{h,m}"
+    s.source_files  = "NSExtension/**/*.{h,m}"
 end

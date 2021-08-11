@@ -1,0 +1,781 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02C9BD80F282FF1C2F3A1B196D845BC0 /* HiUIHander.h in Headers */ = {isa = PBXBuildFile; fileRef = 520754AE878D0F20FEF2B791E9FE7E50 /* HiUIHander.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		075603AEE0B18763DA0D61A821940F34 /* HiViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EA50BA942999D99E873FFB93198D9E /* HiViewConstraint.m */; };
+		07BD3E98A17FAE7D2D0AC480122460BA /* UICollectionVIewHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 740D6CFFCE2488B4CC1F3841588ACA99 /* UICollectionVIewHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0B82865C0A637611EBC12D2A91691263 /* HiViewFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A963C0D576C7D07E46E60756F4C23896 /* HiViewFrame.m */; };
+		1B0F6B32E9E1688644E0D8915B08B0D7 /* NSObjectHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 93155962F94A83712DCFDBB9E483D319 /* NSObjectHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1F6954D3043D289493910F41748EDC61 /* HiPaddingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A3CDED6E547500A215FB68700957696A /* HiPaddingLabel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		20BC98B337E1EE8CC1D681A34F677F73 /* Pods-HIExension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E6577DEC2D3EB86C52F00E221B632E /* Pods-HIExension-dummy.m */; };
+		2D85988DDDEABDC5623F95148BCD4299 /* HiConstraintModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F172C65524C530932567A13EE031780E /* HiConstraintModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3956633D7385DFC73B7287D22E77D26A /* HiFrameHander.h in Headers */ = {isa = PBXBuildFile; fileRef = D543A13B8185DCEFA453101762CAD7F7 /* HiFrameHander.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3C1374544645FB3AB1A6F23DF42200E5 /* HiFramDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 86457C1F4FF0E2C49FBE2A4D1BFBB6D8 /* HiFramDefine.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3D89261880CDD0D0F2F59C1451E3DE80 /* HiExension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE05CD18D67F084C77AB074B5DD467E /* HiExension-dummy.m */; };
+		4203C48190018239C433C06BC4BC3F44 /* NSObjectHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0DE66A92BC4810B2401F3859F2EC18 /* NSObjectHiExtension.m */; };
+		4F7DFA215251DA39C1E4DABCADE29BBB /* HiFrameLayoutModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C6DC29BB08A63B5F4CFA366317A991 /* HiFrameLayoutModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		53541C59008B359B10340221936CD79B /* UITableViewHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A8ACC8B0D73A9CA7C2E1ADA956536D36 /* UITableViewHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		55B6444393CFD2AF3C7556841477E770 /* HiFrameLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 571703E9D36448CF0D1C6E07A5552AEC /* HiFrameLayoutModel.m */; };
+		5684C7C205D6170B6B3FD1FACC9B1BBC /* HiPaddingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C4E2F2209990A4CEBB3171C23E7B7F /* HiPaddingLabel.m */; };
+		5F756386C5A1F82CE8EA8C06C682D011 /* HiOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D183D113B0EA327E130F7D26219139 /* HiOptions.m */; };
+		61ADBF3232971A590C48C61FF630A1A6 /* HiViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 805A0AB68CF18241E8EA3BBF0F659B4F /* HiViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		62BB2899D2FE74A5464FC6A8163856CC /* UIKitHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 712DA218C00B596720136A3E1A79E62F /* UIKitHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		64BEE9FF0639BB45B3AFC228E6C61C10 /* UIControlHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3123FFE52216081AEE220DAF8637DB35 /* UIControlHiExtension.m */; };
+		69A72EC4A26DCC155A1ECB972DF9B5DD /* HiFrameProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A1F7066286A029C81EBBDF8DFE10ADB /* HiFrameProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7F9A966CA47235856B5279BBC848EF7B /* HiViewFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 0955494C83374FCE6346C4BC470E9A22 /* HiViewFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8257D7F479E223F64BCAC84D6ACBB7F6 /* UICollectionVIewHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC64747276A3847D08777FCEB9860CC /* UICollectionVIewHiExtension.m */; };
+		8323335207D1AAAAAA4050EA8FF7D2F1 /* UIViewHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EA6894516F4E9AB960DD8580F600F /* UIViewHiExtension.m */; };
+		849F9508B25F322A15351511A80456D1 /* HiNSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FB1AF46A9FEFED70339F03FF5DE7774 /* HiNSExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9962325F5AE988C7807E05BE4C82650F /* HiOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = CD69D0AF01D540E09E864F209BC2CE50 /* HiOptions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AAD7FFDD8C32588238E5334FAECC8E7B /* HiCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8492BAC136FB88FDBE3F5663E25D21 /* HiCorners.m */; };
+		AB6E45DED60595B30B0A251C3170260D /* UIButtonHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CC7E45C750CF439E334E481F4E8713 /* UIButtonHiExtension.m */; };
+		ABF0ACAA21238863B66F51CFFA51DA12 /* UIViewHiConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6DFB7F653406F312D33A38B664EE30 /* UIViewHiConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B3EE032EA856C5C48474A6B0708AEC41 /* UIControlHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E190D076CA7E25A065C15B3BCBEEB52 /* UIControlHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C16EA0A7AFA23C358FF3B07DB6DCA076 /* HIContraintMake.h in Headers */ = {isa = PBXBuildFile; fileRef = D34074BF1A9E3D1C1704A7CF15B54990 /* HIContraintMake.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C3EB213292946EB48E3A2AE123E0DBFB /* HiUIHander.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003513C6A421BFAEAD4126F2137D83A /* HiUIHander.m */; };
+		C8495F32E7F18636AB7EED151C6CC64D /* HiCorners.h in Headers */ = {isa = PBXBuildFile; fileRef = A75BEC693F8C834985E3101AB212B965 /* HiCorners.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C88B1C0327AE0528727DC2C04DA7DD16 /* HiConstraintModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B41B3320E5DF89746B4D198E62576610 /* HiConstraintModel.m */; };
+		D6EC4AE03C024958D4A136062506AD02 /* UIViewHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = CD36C9913739D446B2515397CD2A8AC4 /* UIViewHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D727DC5FC591166125A6740A218265CE /* UIButtonHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A0B69FB982161DF1DDBE4F36B38F3E0C /* UIButtonHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DD03918AEAC3492A23BB99734F0B2402 /* UIViewHiConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B1C676749C438EA13E1D3C2FE66071 /* UIViewHiConstraint.m */; };
+		E6D40039656DDC1F163F6BF3CB76E6AD /* UITableViewHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 033AA1DE3322487EA2108CE4A5C37BB4 /* UITableViewHiExtension.m */; };
+		F20AA79FF39293A60DB19AC0A1D85FFD /* HIContraintMake.m in Sources */ = {isa = PBXBuildFile; fileRef = D20E52295CF23334BC8B4FD4DC6A93DC /* HIContraintMake.m */; };
+		F53C91E48F196C5582185CF935EE8DE7 /* HiFrameHander.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E57B34E6B7741352996ADFC26CC28BA /* HiFrameHander.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A145F3F233B1E842D3D8E01EF6B754C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46A87A73C8DCB406B149EBFDB982D08F;
+			remoteInfo = HiExension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		033AA1DE3322487EA2108CE4A5C37BB4 /* UITableViewHiExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UITableViewHiExtension.m; sourceTree = "<group>"; };
+		0955494C83374FCE6346C4BC470E9A22 /* HiViewFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiViewFrame.h; sourceTree = "<group>"; };
+		0E57B34E6B7741352996ADFC26CC28BA /* HiFrameHander.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiFrameHander.m; sourceTree = "<group>"; };
+		1205EBA02D71B28A22C1C02CA4F73588 /* Pods-HIExension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HIExension.release.xcconfig"; sourceTree = "<group>"; };
+		1C9925755F2B2522B93ED0F7878AB1AE /* Pods-HIExension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HIExension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2003513C6A421BFAEAD4126F2137D83A /* HiUIHander.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiUIHander.m; sourceTree = "<group>"; };
+		2D0DE66A92BC4810B2401F3859F2EC18 /* NSObjectHiExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NSObjectHiExtension.m; sourceTree = "<group>"; };
+		3123FFE52216081AEE220DAF8637DB35 /* UIControlHiExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIControlHiExtension.m; sourceTree = "<group>"; };
+		404A8623A7AF7EB82E529A5373B92B23 /* Pods-HIExension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HIExension-acknowledgements.plist"; sourceTree = "<group>"; };
+		48BAC7BC303E966AAAB8ACF881F8826F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		520754AE878D0F20FEF2B791E9FE7E50 /* HiUIHander.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiUIHander.h; sourceTree = "<group>"; };
+		571703E9D36448CF0D1C6E07A5552AEC /* HiFrameLayoutModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiFrameLayoutModel.m; sourceTree = "<group>"; };
+		5A1F7066286A029C81EBBDF8DFE10ADB /* HiFrameProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiFrameProtocol.h; sourceTree = "<group>"; };
+		5B1EA6894516F4E9AB960DD8580F600F /* UIViewHiExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIViewHiExtension.m; sourceTree = "<group>"; };
+		5FB1AF46A9FEFED70339F03FF5DE7774 /* HiNSExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HiNSExtension.h; path = NSExtension/HiNSExtension.h; sourceTree = "<group>"; };
+		60D183D113B0EA327E130F7D26219139 /* HiOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiOptions.m; sourceTree = "<group>"; };
+		6E86455FC2ED7742B471A780CD5D78BA /* Pods-HIExension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HIExension.debug.xcconfig"; sourceTree = "<group>"; };
+		712DA218C00B596720136A3E1A79E62F /* UIKitHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIKitHiExtension.h; sourceTree = "<group>"; };
+		73F0561037DF95CC5576806DAF108CE3 /* HiExension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HiExension-prefix.pch"; sourceTree = "<group>"; };
+		740D6CFFCE2488B4CC1F3841588ACA99 /* UICollectionVIewHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UICollectionVIewHiExtension.h; sourceTree = "<group>"; };
+		75C4E2F2209990A4CEBB3171C23E7B7F /* HiPaddingLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiPaddingLabel.m; sourceTree = "<group>"; };
+		805A0AB68CF18241E8EA3BBF0F659B4F /* HiViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiViewConstraint.h; sourceTree = "<group>"; };
+		81B1C676749C438EA13E1D3C2FE66071 /* UIViewHiConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIViewHiConstraint.m; sourceTree = "<group>"; };
+		81CC7E45C750CF439E334E481F4E8713 /* UIButtonHiExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIButtonHiExtension.m; sourceTree = "<group>"; };
+		86457C1F4FF0E2C49FBE2A4D1BFBB6D8 /* HiFramDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiFramDefine.h; sourceTree = "<group>"; };
+		8D8492BAC136FB88FDBE3F5663E25D21 /* HiCorners.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiCorners.m; sourceTree = "<group>"; };
+		93155962F94A83712DCFDBB9E483D319 /* NSObjectHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NSObjectHiExtension.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E190D076CA7E25A065C15B3BCBEEB52 /* UIControlHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIControlHiExtension.h; sourceTree = "<group>"; };
+		A0B69FB982161DF1DDBE4F36B38F3E0C /* UIButtonHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIButtonHiExtension.h; sourceTree = "<group>"; };
+		A3CDED6E547500A215FB68700957696A /* HiPaddingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiPaddingLabel.h; sourceTree = "<group>"; };
+		A6C6DC29BB08A63B5F4CFA366317A991 /* HiFrameLayoutModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiFrameLayoutModel.h; sourceTree = "<group>"; };
+		A75BEC693F8C834985E3101AB212B965 /* HiCorners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiCorners.h; sourceTree = "<group>"; };
+		A8ACC8B0D73A9CA7C2E1ADA956536D36 /* UITableViewHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UITableViewHiExtension.h; sourceTree = "<group>"; };
+		A963C0D576C7D07E46E60756F4C23896 /* HiViewFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiViewFrame.m; sourceTree = "<group>"; };
+		B3E6577DEC2D3EB86C52F00E221B632E /* Pods-HIExension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HIExension-dummy.m"; sourceTree = "<group>"; };
+		B41B3320E5DF89746B4D198E62576610 /* HiConstraintModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiConstraintModel.m; sourceTree = "<group>"; };
+		BC6DFB7F653406F312D33A38B664EE30 /* UIViewHiConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIViewHiConstraint.h; sourceTree = "<group>"; };
+		C6EA50BA942999D99E873FFB93198D9E /* HiViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiViewConstraint.m; sourceTree = "<group>"; };
+		C85BF5FD772E8D70A1E5AD1DB3DE9A09 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CD36C9913739D446B2515397CD2A8AC4 /* UIViewHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIViewHiExtension.h; sourceTree = "<group>"; };
+		CD3D40131D55D7EAD4833C94429884CD /* HiExension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HiExension.debug.xcconfig; sourceTree = "<group>"; };
+		CD69D0AF01D540E09E864F209BC2CE50 /* HiOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiOptions.h; sourceTree = "<group>"; };
+		D20E52295CF23334BC8B4FD4DC6A93DC /* HIContraintMake.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HIContraintMake.m; sourceTree = "<group>"; };
+		D34074BF1A9E3D1C1704A7CF15B54990 /* HIContraintMake.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HIContraintMake.h; sourceTree = "<group>"; };
+		D543A13B8185DCEFA453101762CAD7F7 /* HiFrameHander.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiFrameHander.h; sourceTree = "<group>"; };
+		DBDB5CA2FC6850783DC3C9F7E101AEB1 /* HiExension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HiExension.release.xcconfig; sourceTree = "<group>"; };
+		DEC64747276A3847D08777FCEB9860CC /* UICollectionVIewHiExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UICollectionVIewHiExtension.m; sourceTree = "<group>"; };
+		EB879155E1A0D4B960DBF8DF1BC308F3 /* libHiExension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHiExension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE05CD18D67F084C77AB074B5DD467E /* HiExension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HiExension-dummy.m"; sourceTree = "<group>"; };
+		F172C65524C530932567A13EE031780E /* HiConstraintModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiConstraintModel.h; sourceTree = "<group>"; };
+		F24ECA559EE7E7E869E3F4A15752FE3E /* HiExension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HiExension.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FDA06B9FABFA6EFC8B25FED4AC5BEE5E /* libPods-HIExension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HIExension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FE4C79D53E0215AEC0CC24CE1B022D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B910D1DB39BD566443F8E46EE8D32AB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		067BBCAAC7324A9E199E4265C2531308 /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				9E190D076CA7E25A065C15B3BCBEEB52 /* UIControlHiExtension.h */,
+				3123FFE52216081AEE220DAF8637DB35 /* UIControlHiExtension.m */,
+			);
+			path = UIControl;
+			sourceTree = "<group>";
+		};
+		0686FA1EFBE7C23B642ABC846DB085B0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDE05CD18D67F084C77AB074B5DD467E /* HiExension-dummy.m */,
+				73F0561037DF95CC5576806DAF108CE3 /* HiExension-prefix.pch */,
+				CD3D40131D55D7EAD4833C94429884CD /* HiExension.debug.xcconfig */,
+				DBDB5CA2FC6850783DC3C9F7E101AEB1 /* HiExension.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Pods/Target Support Files/HiExension";
+			sourceTree = "<group>";
+		};
+		06B08CB91816A8C432E24E17345E90B1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BC6DFB7F653406F312D33A38B664EE30 /* UIViewHiConstraint.h */,
+				81B1C676749C438EA13E1D3C2FE66071 /* UIViewHiConstraint.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1259AE6A4C0BB278F07F3C34C9EFCC92 /* Pods-HIExension */ = {
+			isa = PBXGroup;
+			children = (
+				1C9925755F2B2522B93ED0F7878AB1AE /* Pods-HIExension-acknowledgements.markdown */,
+				404A8623A7AF7EB82E529A5373B92B23 /* Pods-HIExension-acknowledgements.plist */,
+				B3E6577DEC2D3EB86C52F00E221B632E /* Pods-HIExension-dummy.m */,
+				6E86455FC2ED7742B471A780CD5D78BA /* Pods-HIExension.debug.xcconfig */,
+				1205EBA02D71B28A22C1C02CA4F73588 /* Pods-HIExension.release.xcconfig */,
+			);
+			name = "Pods-HIExension";
+			path = "Target Support Files/Pods-HIExension";
+			sourceTree = "<group>";
+		};
+		14061D7BF9ED3E3CE289095DDC8E89D1 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				A0B69FB982161DF1DDBE4F36B38F3E0C /* UIButtonHiExtension.h */,
+				81CC7E45C750CF439E334E481F4E8713 /* UIButtonHiExtension.m */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		1E260E4BDB40A78270042C45E685A147 /* HiExension */ = {
+			isa = PBXGroup;
+			children = (
+				5FB1AF46A9FEFED70339F03FF5DE7774 /* HiNSExtension.h */,
+				E7FBF24EAD9D2EB37E305484FE6CBA58 /* Foundation */,
+				231BDAF1039B4C5AF5B879B647A21C22 /* Pod */,
+				0686FA1EFBE7C23B642ABC846DB085B0 /* Support Files */,
+				BA6DC658B28B1FB5A20A62501B608914 /* UIKit */,
+			);
+			name = HiExension;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		231BDAF1039B4C5AF5B879B647A21C22 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F24ECA559EE7E7E869E3F4A15752FE3E /* HiExension.podspec */,
+				C85BF5FD772E8D70A1E5AD1DB3DE9A09 /* LICENSE */,
+				48BAC7BC303E966AAAB8ACF881F8826F /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		36C1C0DD49B529A62C10D71225C153AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FAEE8250E12B64B684040C81D2468E9 /* Frame */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F77075F1A9485A4404F7C763D2DF4DF /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E260E4BDB40A78270042C45E685A147 /* HiExension */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5FDE58B4B805390FBE6A048C1F7D4B68 /* UICollectionVIew */ = {
+			isa = PBXGroup;
+			children = (
+				740D6CFFCE2488B4CC1F3841588ACA99 /* UICollectionVIewHiExtension.h */,
+				DEC64747276A3847D08777FCEB9860CC /* UICollectionVIewHiExtension.m */,
+			);
+			path = UICollectionVIew;
+			sourceTree = "<group>";
+		};
+		69E2C8A6A90D83FCB0E8DA8AEEBCD63F /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				A8ACC8B0D73A9CA7C2E1ADA956536D36 /* UITableViewHiExtension.h */,
+				033AA1DE3322487EA2108CE4A5C37BB4 /* UITableViewHiExtension.m */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		789AD55DDD02D6E6E45B71273DDC6BA9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				14061D7BF9ED3E3CE289095DDC8E89D1 /* Button */,
+				5FDE58B4B805390FBE6A048C1F7D4B68 /* UICollectionVIew */,
+				067BBCAAC7324A9E199E4265C2531308 /* UIControl */,
+				69E2C8A6A90D83FCB0E8DA8AEEBCD63F /* UITableView */,
+				B87E4CE90679C0A49E709E148F9386B9 /* UIView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7A23637AD0EF7018A04407BA2E9E33FB /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				06B08CB91816A8C432E24E17345E90B1 /* Main */,
+				36C1C0DD49B529A62C10D71225C153AB /* Model */,
+				E0EC80B1CCCD090B818FEEE740F0DF3E /* Other */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		81ABBCEBD6D418A6479DCC6EF65F5948 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1259AE6A4C0BB278F07F3C34C9EFCC92 /* Pods-HIExension */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9C548C77880421F2F0167D122396329A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				712DA218C00B596720136A3E1A79E62F /* UIKitHiExtension.h */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9FAEE8250E12B64B684040C81D2468E9 /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				F172C65524C530932567A13EE031780E /* HiConstraintModel.h */,
+				B41B3320E5DF89746B4D198E62576610 /* HiConstraintModel.m */,
+				86457C1F4FF0E2C49FBE2A4D1BFBB6D8 /* HiFramDefine.h */,
+				A6C6DC29BB08A63B5F4CFA366317A991 /* HiFrameLayoutModel.h */,
+				571703E9D36448CF0D1C6E07A5552AEC /* HiFrameLayoutModel.m */,
+				805A0AB68CF18241E8EA3BBF0F659B4F /* HiViewConstraint.h */,
+				C6EA50BA942999D99E873FFB93198D9E /* HiViewConstraint.m */,
+				0955494C83374FCE6346C4BC470E9A22 /* HiViewFrame.h */,
+				A963C0D576C7D07E46E60756F4C23896 /* HiViewFrame.m */,
+			);
+			path = Frame;
+			sourceTree = "<group>";
+		};
+		B87E4CE90679C0A49E709E148F9386B9 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				CD36C9913739D446B2515397CD2A8AC4 /* UIViewHiExtension.h */,
+				5B1EA6894516F4E9AB960DD8580F600F /* UIViewHiExtension.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		BA6DC658B28B1FB5A20A62501B608914 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				7A23637AD0EF7018A04407BA2E9E33FB /* Layout */,
+				9C548C77880421F2F0167D122396329A /* Main */,
+				789AD55DDD02D6E6E45B71273DDC6BA9 /* UI */,
+				C0BCBDB5BD0D63235764BF654219F358 /* View */,
+			);
+			name = UIKit;
+			path = NSExtension/UIKit;
+			sourceTree = "<group>";
+		};
+		C0BCBDB5BD0D63235764BF654219F358 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A75BEC693F8C834985E3101AB212B965 /* HiCorners.h */,
+				8D8492BAC136FB88FDBE3F5663E25D21 /* HiCorners.m */,
+				A3CDED6E547500A215FB68700957696A /* HiPaddingLabel.h */,
+				75C4E2F2209990A4CEBB3171C23E7B7F /* HiPaddingLabel.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				3F77075F1A9485A4404F7C763D2DF4DF /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				E214AEE96824E9F7A94B88851BD1F329 /* Products */,
+				81ABBCEBD6D418A6479DCC6EF65F5948 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0EC80B1CCCD090B818FEEE740F0DF3E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D34074BF1A9E3D1C1704A7CF15B54990 /* HIContraintMake.h */,
+				D20E52295CF23334BC8B4FD4DC6A93DC /* HIContraintMake.m */,
+				D543A13B8185DCEFA453101762CAD7F7 /* HiFrameHander.h */,
+				0E57B34E6B7741352996ADFC26CC28BA /* HiFrameHander.m */,
+				5A1F7066286A029C81EBBDF8DFE10ADB /* HiFrameProtocol.h */,
+				CD69D0AF01D540E09E864F209BC2CE50 /* HiOptions.h */,
+				60D183D113B0EA327E130F7D26219139 /* HiOptions.m */,
+				520754AE878D0F20FEF2B791E9FE7E50 /* HiUIHander.h */,
+				2003513C6A421BFAEAD4126F2137D83A /* HiUIHander.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E214AEE96824E9F7A94B88851BD1F329 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB879155E1A0D4B960DBF8DF1BC308F3 /* libHiExension.a */,
+				FDA06B9FABFA6EFC8B25FED4AC5BEE5E /* libPods-HIExension.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7FBF24EAD9D2EB37E305484FE6CBA58 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				93155962F94A83712DCFDBB9E483D319 /* NSObjectHiExtension.h */,
+				2D0DE66A92BC4810B2401F3859F2EC18 /* NSObjectHiExtension.m */,
+			);
+			name = Foundation;
+			path = NSExtension/Foundation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8F6A995C9E74713F3BA7FB033209738B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D85988DDDEABDC5623F95148BCD4299 /* HiConstraintModel.h in Headers */,
+				C16EA0A7AFA23C358FF3B07DB6DCA076 /* HIContraintMake.h in Headers */,
+				C8495F32E7F18636AB7EED151C6CC64D /* HiCorners.h in Headers */,
+				3C1374544645FB3AB1A6F23DF42200E5 /* HiFramDefine.h in Headers */,
+				3956633D7385DFC73B7287D22E77D26A /* HiFrameHander.h in Headers */,
+				4F7DFA215251DA39C1E4DABCADE29BBB /* HiFrameLayoutModel.h in Headers */,
+				69A72EC4A26DCC155A1ECB972DF9B5DD /* HiFrameProtocol.h in Headers */,
+				849F9508B25F322A15351511A80456D1 /* HiNSExtension.h in Headers */,
+				9962325F5AE988C7807E05BE4C82650F /* HiOptions.h in Headers */,
+				1F6954D3043D289493910F41748EDC61 /* HiPaddingLabel.h in Headers */,
+				02C9BD80F282FF1C2F3A1B196D845BC0 /* HiUIHander.h in Headers */,
+				61ADBF3232971A590C48C61FF630A1A6 /* HiViewConstraint.h in Headers */,
+				7F9A966CA47235856B5279BBC848EF7B /* HiViewFrame.h in Headers */,
+				1B0F6B32E9E1688644E0D8915B08B0D7 /* NSObjectHiExtension.h in Headers */,
+				D727DC5FC591166125A6740A218265CE /* UIButtonHiExtension.h in Headers */,
+				07BD3E98A17FAE7D2D0AC480122460BA /* UICollectionVIewHiExtension.h in Headers */,
+				B3EE032EA856C5C48474A6B0708AEC41 /* UIControlHiExtension.h in Headers */,
+				62BB2899D2FE74A5464FC6A8163856CC /* UIKitHiExtension.h in Headers */,
+				53541C59008B359B10340221936CD79B /* UITableViewHiExtension.h in Headers */,
+				ABF0ACAA21238863B66F51CFFA51DA12 /* UIViewHiConstraint.h in Headers */,
+				D6EC4AE03C024958D4A136062506AD02 /* UIViewHiExtension.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5C4B7FF26B2D142C69E534F50CB45C6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		46A87A73C8DCB406B149EBFDB982D08F /* HiExension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE72FA67B2024933CEAE0FBFECA91FE /* Build configuration list for PBXNativeTarget "HiExension" */;
+			buildPhases = (
+				8F6A995C9E74713F3BA7FB033209738B /* Headers */,
+				9E92261712421183DE208CAD795E0821 /* Sources */,
+				B910D1DB39BD566443F8E46EE8D32AB4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HiExension;
+			productName = HiExension;
+			productReference = EB879155E1A0D4B960DBF8DF1BC308F3 /* libHiExension.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F389725DC3F52DAFE81E91BE45FAA74F /* Pods-HIExension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98DBBB3B8FCD3FF2339147B41CD87130 /* Build configuration list for PBXNativeTarget "Pods-HIExension" */;
+			buildPhases = (
+				C5C4B7FF26B2D142C69E534F50CB45C6 /* Headers */,
+				8A7EABBAFCF65B0BC3CC5DD353BAE6B6 /* Sources */,
+				8FE4C79D53E0215AEC0CC24CE1B022D8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				718D688030C957F76F20126FCE0748E0 /* PBXTargetDependency */,
+			);
+			name = "Pods-HIExension";
+			productName = "Pods-HIExension";
+			productReference = FDA06B9FABFA6EFC8B25FED4AC5BEE5E /* libPods-HIExension.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1250;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = E214AEE96824E9F7A94B88851BD1F329 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46A87A73C8DCB406B149EBFDB982D08F /* HiExension */,
+				F389725DC3F52DAFE81E91BE45FAA74F /* Pods-HIExension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A7EABBAFCF65B0BC3CC5DD353BAE6B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20BC98B337E1EE8CC1D681A34F677F73 /* Pods-HIExension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E92261712421183DE208CAD795E0821 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C88B1C0327AE0528727DC2C04DA7DD16 /* HiConstraintModel.m in Sources */,
+				F20AA79FF39293A60DB19AC0A1D85FFD /* HIContraintMake.m in Sources */,
+				AAD7FFDD8C32588238E5334FAECC8E7B /* HiCorners.m in Sources */,
+				3D89261880CDD0D0F2F59C1451E3DE80 /* HiExension-dummy.m in Sources */,
+				F53C91E48F196C5582185CF935EE8DE7 /* HiFrameHander.m in Sources */,
+				55B6444393CFD2AF3C7556841477E770 /* HiFrameLayoutModel.m in Sources */,
+				5F756386C5A1F82CE8EA8C06C682D011 /* HiOptions.m in Sources */,
+				5684C7C205D6170B6B3FD1FACC9B1BBC /* HiPaddingLabel.m in Sources */,
+				C3EB213292946EB48E3A2AE123E0DBFB /* HiUIHander.m in Sources */,
+				075603AEE0B18763DA0D61A821940F34 /* HiViewConstraint.m in Sources */,
+				0B82865C0A637611EBC12D2A91691263 /* HiViewFrame.m in Sources */,
+				4203C48190018239C433C06BC4BC3F44 /* NSObjectHiExtension.m in Sources */,
+				AB6E45DED60595B30B0A251C3170260D /* UIButtonHiExtension.m in Sources */,
+				8257D7F479E223F64BCAC84D6ACBB7F6 /* UICollectionVIewHiExtension.m in Sources */,
+				64BEE9FF0639BB45B3AFC228E6C61C10 /* UIControlHiExtension.m in Sources */,
+				E6D40039656DDC1F163F6BF3CB76E6AD /* UITableViewHiExtension.m in Sources */,
+				DD03918AEAC3492A23BB99734F0B2402 /* UIViewHiConstraint.m in Sources */,
+				8323335207D1AAAAAA4050EA8FF7D2F1 /* UIViewHiExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		718D688030C957F76F20126FCE0748E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HiExension;
+			target = 46A87A73C8DCB406B149EBFDB982D08F /* HiExension */;
+			targetProxy = A145F3F233B1E842D3D8E01EF6B754C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2ECB1AA39D30D6E6F976DA0961A0F975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1205EBA02D71B28A22C1C02CA4F73588 /* Pods-HIExension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		653F096A2BAE304FB1D9FC7870A921EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD3D40131D55D7EAD4833C94429884CD /* HiExension.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/HiExension/HiExension-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = HiExension;
+				PRODUCT_NAME = HiExension;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6C83A4E35F1B9B5D59FD81D3532A092C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBDB5CA2FC6850783DC3C9F7E101AEB1 /* HiExension.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/HiExension/HiExension-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = HiExension;
+				PRODUCT_NAME = HiExension;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B530BD9939B0AF48FBE05291ACE44B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E86455FC2ED7742B471A780CD5D78BA /* Pods-HIExension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C352469741B3A74ED19BE4F809ED9D7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F26A457E3AE997331A7B7AA0E1DF884C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C352469741B3A74ED19BE4F809ED9D7A /* Debug */,
+				F26A457E3AE997331A7B7AA0E1DF884C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98DBBB3B8FCD3FF2339147B41CD87130 /* Build configuration list for PBXNativeTarget "Pods-HIExension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B530BD9939B0AF48FBE05291ACE44B6 /* Debug */,
+				2ECB1AA39D30D6E6F976DA0961A0F975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE72FA67B2024933CEAE0FBFECA91FE /* Build configuration list for PBXNativeTarget "HiExension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653F096A2BAE304FB1D9FC7870A921EB /* Debug */,
+				6C83A4E35F1B9B5D59FD81D3532A092C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

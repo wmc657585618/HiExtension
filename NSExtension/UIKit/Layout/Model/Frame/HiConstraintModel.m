@@ -147,12 +147,12 @@
     };
 }
 
-- (__kindof HiConstraintModel * _Nonnull (^)(CGFloat))lessValue {
+- (__kindof HiConstraintModel * _Nonnull (^)(CGFloat))max {
     self.relate = NSLayoutRelationLessThanOrEqual;
     return [self value];
 }
 
-- (__kindof HiConstraintModel * _Nonnull (^)(CGFloat))greaterValue {
+- (__kindof HiConstraintModel * _Nonnull (^)(CGFloat))min {
     self.relate = NSLayoutRelationGreaterThanOrEqual;
     return [self value];
 }

@@ -19,8 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,readonly) HiFloatBlock(HiConstraintModel, multiplier);
 
 @property (nonatomic,readonly) HiFloatBlock(__kindof HiConstraintModel, value);
-@property (nonatomic, readonly, copy) HiFloatBlock(__kindof HiConstraintModel, lessValue);
-@property (nonatomic, readonly, copy) HiFloatBlock(__kindof HiConstraintModel, greaterValue);
+@property (nonatomic, readonly, copy) HiFloatBlock(__kindof HiConstraintModel, max);
+@property (nonatomic, readonly, copy) HiFloatBlock(__kindof HiConstraintModel, min);
 @property (nonatomic, copy) void(^autoValue)(void);
 
 - (void)remove;

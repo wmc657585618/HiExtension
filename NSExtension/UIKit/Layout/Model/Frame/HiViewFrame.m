@@ -6,7 +6,7 @@
 //
 
 #import "HiViewFrame.h"
-#import "HiFrameHander.h"
+#import "HiOptions.h"
 #import "HiFrameLayoutModel.h"
 
 @interface HiViewFrame ()

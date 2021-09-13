@@ -38,71 +38,58 @@
     return self;
 }
 
+- (NSLayoutConstraint *)constraintView:(UIView *)view2 attri:(NSLayoutAttribute)attri {
+    NSLayoutConstraint *layout = [NSLayoutConstraint constraintWithItem:self.view1 attribute:self.attribute1 relatedBy:self.relate toItem:view2 attribute:attri multiplier:self.mult constant:self.constraint];
+    [self.constraintView addConstraint:layout];
+    
+    return layout;
+}
 #pragma mark *********** layout ***********
 - (NSLayoutConstraint *)layout {
     
     // 防止重复创建
     if (self.layoutConstraint) return self.layoutConstraint;
     
-    NSLayoutConstraint *layout = nil;
     if ([self.view1 isEqual:self.view2] && self.attribute1 == self.attribute2) {
 #ifdef DEBUG
         @throw [NSException exceptionWithName:@"HiConstraint" reason:@"不能依赖自身相同属性" userInfo:nil];
 #endif
-        return layout;
+        return nil;
     }
     
     
-    // 不依赖 其它 view
+    UIView *view2 = nil;
+    NSLayoutAttribute attri = NSLayoutAttributeNotAnAttribute;
+    
     if (!self.view2) {
-        
-        if (self.attribute1 == NSLayoutAttributeWidth || self.attribute1 == NSLayoutAttributeHeight) {
+        // 自身约束
+        if (self.attribute1 == NSLayoutAttributeWidth ||
+            self.attribute1 == NSLayoutAttributeHeight) {
             
-            layout = [NSLayoutConstraint constraintWithItem:self.view1 attribute:self.attribute1 relatedBy:self.relate toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:self.mult constant:self.constraint];
+            self.constraintView = self.view1;
             
         } else {
-            
-            layout = [NSLayoutConstraint constraintWithItem:self.view1 attribute:self.attribute1 relatedBy:self.relate toItem:self.view1.superview attribute:self.attribute1 multiplier:self.mult constant:self.constraint];
+            // top bottom left right ...
+            // 相对 super, 约束 加在 super 上
+            view2 = self.view1.superview;
+            attri = self.attribute1;
+            self.constraintView = self.view1.superview;
         }
         
+    } else {
         
-        [self.view1.superview addConstraint:layout];
-        self.constraintView = self.view1.superview;
-        self.layoutConstraint = layout;
-        return layout;
+        // 依赖相同属性
+        // 没有设置 attribute2
+        if (NSLayoutAttributeNotAnAttribute == self.attribute2) self.attribute2 = self.attribute1;
+        
+        view2 = self.view2;
+        attri = self.attribute2;
+        
+        self.constraintView = [self.view1 superViewWithView:self.view2];
     }
     
-    // 依赖相同属性
-    // 没有设置 attribute2
-    if (NSLayoutAttributeNotAnAttribute == self.attribute2) self.attribute2 = self.attribute1;
-    
-    layout = [NSLayoutConstraint constraintWithItem:self.view1 attribute:self.attribute1 relatedBy:self.relate toItem:self.view2 attribute:self.attribute2 multiplier:self.mult constant:self.constraint];
-    self.layoutConstraint = layout;
-    
-    // 位置关系
-    // view2 在 view1 中
-    // view1 在 view2 中
-    // view1 和 view2 在不同的 view 中
-    // 相同坐标系
-    UIView *superview = self.view2;
-    NSMutableArray *superviews = [NSMutableArray array];
-    // view2 在 view1 中
-    while (superview) {
-        [superviews addObject:superview];
-        if ([superview isEqual:self.view1]) break;
-        superview = superview.superview;
-    }
-    
-    // view1 在 view2 中 或者是 view2 的superview 中
-    superview = self.view1;
-    while (superview) {
-        if ([superview isEqual:self.view2] || [superviews containsObject:superview]) break;
-        superview = superview.superview;
-    }
-
-    [superview addConstraint:layout];
-    self.constraintView = superview;
-    return layout;
+    self.layoutConstraint = [self constraintView:view2 attri:attri];
+    return self.layoutConstraint;
 }
 
 - (void)remove {

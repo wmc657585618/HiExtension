@@ -59,17 +59,26 @@ CGFloat hi_attribute_frame(CGRect frame, NSLayoutAttribute attribute) {
 
 - (UIView *)superViewWithView:(UIView *)view {
     
-    if (!view) return nil;
-    
-    NSArray *arr1 = [self superViews];
-    NSArray *arr2 = [view superViews];
-    NSSet *set = [NSSet setWithArray:arr2];
-    for (NSUInteger i = 0; i < arr1.count; ++i) {
-        UIView *targetView = arr1[i];
-        if ([set containsObject:targetView]) return targetView;
+    // 位置关系
+    UIView *superview = self.superview;
+    NSMutableArray *superviews = [NSMutableArray array];
+    // view2 在 view1 中
+    while (superview) {
+        [superviews addObject:superview];
+        if ([superview isEqual:view]) break;
+        superview = superview.superview;
     }
     
-    return nil;
+    if (!superview) {
+        // view1 在 view2 中 或者是 view2 的superview 中
+        superview = view;
+        while (superview) {
+            if ([superview isEqual:self] || [superviews containsObject:superview]) break;
+            superview = superview.superview;
+        }
+    }
+    
+    return superview;
 }
 
 - (CGRect)convertToView:(UIView *)view {

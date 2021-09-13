@@ -53,11 +53,11 @@
 //        builder.bottom.value(-20);
 //    }];
     
-    [self.tableView hi_frame_make:^(id<HiViewFrameBuilder> builder) {
+    [self.tableView hi_constraints_make:^(id<HiViewConstraintBuilder> builder) {
         builder.left.value(0);
         builder.top.value(100);
         builder.right.value(0);
-        builder.height.equal(self.tableView).width.multiplier(0.5).value(0);
+        builder.height.max(100.0);
     }];
 }
 

@@ -6,7 +6,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HiFramDefine.h"
 #import "HiFrameLayoutProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN

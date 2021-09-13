@@ -15,12 +15,13 @@
 @property (nonatomic, assign) NSLayoutAttribute attribute1;
 @property (nonatomic, weak) UIView *view2;
 @property (nonatomic, assign) NSLayoutAttribute attribute2;
-@property (nonatomic, assign) CGFloat constraint;
-@property (nonatomic, assign) CGFloat mult;
+@property (nonatomic, assign) CGFloat v; // value
+@property (nonatomic, assign) CGFloat m; // multiplier
 
 @property (nonatomic, weak) HiViewFrame *builder;
-@property (nonatomic, assign) BOOL layout; // 是否已经计算过. 依赖自身可能已经计算过
-@property (nonatomic, assign) CGFloat result; // 储存计算结果
+@property (nonatomic, assign, getter=isCover) BOOL cover; // 直接设置值
+
+@property (nonatomic, strong) NSNumber *result;// 储存计算结果
 
 @end
 
@@ -30,10 +31,11 @@
 {
     self = [super init];
     if (self) {
-        self.mult = 1.0;
+        self.m = 1.0;
         self.view1 = view;
         self.attribute1 = attribute;
         self.builder = builder;
+        self.cover = true;
     }
     return self;
 }
@@ -80,10 +82,11 @@
 
 - (HiFrameLayoutModel *)relate {
     self.view2 = self.view1;
+    self.cover = false;
     return self;
 }
 
-- (HiFrameLayoutModel * _Nonnull (^)(UIView * _Nonnull))equal {
+- (id<HiFrameLayoutRelate> (^)(UIView *))equal {
     __weak typeof(self) weak = self;
     return ^(UIView *view) {
         __strong typeof(weak) strong = weak;
@@ -92,53 +95,73 @@
     };
 }
 
-- (HiFrameLayoutModel * _Nonnull (^)(CGFloat))multiplier {
+- (id<HiFrameLayoutValue> (^)(CGFloat))multiplier {
     __weak typeof(self) weak = self;
     return ^(CGFloat value) {
         __strong typeof(weak) strong = weak;
-        strong.mult = value;
+        strong.m = value;
         return strong;
     };
 }
 
-- (HiFrameLayoutModel * _Nonnull (^)(CGFloat))value {
+- (void (^)(CGFloat))value {
     __weak typeof(self) weak = self;
     return ^(CGFloat value) {
         __strong typeof(weak) strong = weak;
-        strong.constraint = value;
-        return strong;
+        strong.v = value;
+        // 能算出先算出来
+        strong.result = [self workout];
     };
 }
 
-- (CGFloat)valueWithAttribute:(NSLayoutAttribute)attribute {
+- (NSNumber *)workout {
+    // 设置自身属性
+    if (!self.view2) {
+        if ([self isSizeAttribute:self.attribute1]) return @(self.v);
+        
+        // 相对 super view.
+        CGFloat v = [self.view1.superview boundsForAtrribute:self.attribute1];
+        return @(self.v + v);
+    }
+    
+    if (![self.view1 isEqual:self.view2]) {
+        return @([self otherView]);
+    }
+    
+    // 依赖 view1 自身属性
+    return nil;
+}
+
+- (CGFloat)modelWithAttribute:(NSLayoutAttribute)attribute {
+
     switch (attribute) {
         case NSLayoutAttributeLeft:
-            return self.builder.left.frame;
+            return self.builder.leftValue;
             
         case NSLayoutAttributeRight:
-            return self.builder.right.frame;
+            return self.builder.rightValue;
 
         case NSLayoutAttributeTop:
-            return self.builder.top.frame;
+            return self.builder.topValue;
 
         case NSLayoutAttributeBottom:
-            return self.builder.bottom.frame;
+            return self.builder.bottomValue;
 
         case NSLayoutAttributeWidth:
-            return self.builder.width.frame;
+            return self.builder.widthValue;
 
         case NSLayoutAttributeHeight:
-            return self.builder.height.frame;
+            return self.builder.heightValue;
 
         case NSLayoutAttributeCenterX:
-            return self.builder.centerX.frame;
+            return self.builder.centerXValue;
 
         case NSLayoutAttributeCenterY:
-            return self.builder.centerY.frame;
+            return self.builder.centerYValue;
 
         default:
             return 0;
-    }
+    }    
 }
 
 - (BOOL)isSizeAttribute:(NSLayoutAttribute)attribute {
@@ -154,33 +177,23 @@
     // 相同坐标系
     if ([self.view1.superview isEqual:self.view2.superview]) {
         CGFloat v = [self.view2 frameForAtrribute:attribute2];
-        return v * self.mult + self.constraint;
+        return v * self.m + self.v;
     }
     
     // view1 是 view2 的子视图
     if ([self.view1.superview isEqual:self.view2]) {
         CGFloat v = [self.view2 boundsForAtrribute:attribute2];
-        return v * self.mult + self.constraint;
+        return v * self.m + self.v;
     }
     
     CGRect frame = [self.view2 convertToView:self.view1.superview];
     CGFloat v = hi_attribute_frame(frame, attribute2);
-    return v * self.mult + self.constraint;
+    return v * self.m + self.v;
 }
 
-// 计算结果
-- (CGFloat)layoutResult {
+- (CGFloat)frame {
+    if (self.result) return self.result.floatValue;
     
-    // 设置自身属性
-    if (!self.view2) {
-        if ([self isSizeAttribute:self.attribute1]) return self.constraint;
-        // 相对 super view.
-        CGFloat v = [self.view1.superview boundsForAtrribute:self.attribute1];
-        return self.constraint + v;
-    }
-    
-    // 依赖自身属性
-    if ([self.view1 isEqual:self.view2]) {
 #ifdef DEBUG
         if (self.attribute2 == self.attribute1) {
             @throw [NSException exceptionWithName:@"HiConstraint" reason:@"不能依赖自身相同属性" userInfo:nil];
@@ -190,21 +203,8 @@
             @throw [NSException exceptionWithName:@"HiConstraint" reason:@"必须添加自身属性" userInfo:nil];
         }
 #endif
-        
-        CGFloat v = [self valueWithAttribute:self.attribute2];
-        return v * self.mult + self.constraint;
-    }
     
-    return [self otherView];
-}
-
-- (CGFloat)frame {
-    if (!self.layout) {
-        self.layout = true;
-        self.result = [self layoutResult];
-    }
-    
-    return self.result;
+    return [self modelWithAttribute:self.attribute2] * self.m + self.v;
 }
 
 @end

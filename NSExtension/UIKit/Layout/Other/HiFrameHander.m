@@ -69,145 +69,145 @@
 
 //  x-y-r-b : 15
 + (CGRect)frame15WithBuilder:(HiViewFrame *)builder {
-    CGFloat x = builder.left.frame;
-    CGFloat y = builder.top.frame;
-    CGFloat w = builder.right.frame - x;
-    CGFloat h = builder.bottom.frame - y;
+    CGFloat x = builder.leftValue;
+    CGFloat y = builder.topValue;
+    CGFloat w = builder.rightValue - x;
+    CGFloat h = builder.bottomValue - y;
     return CGRectMake(x, y, w, h);
 }
 
 // x-y-b-w : 29
 + (CGRect)frame29WithBuilder:(HiViewFrame *)builder {
-    CGFloat x = builder.left.frame;
-    CGFloat y = builder.top.frame;
-    CGFloat w = builder.width.frame;
-    CGFloat h = builder.bottom.frame - y;
+    CGFloat x = builder.leftValue;
+    CGFloat y = builder.topValue;
+    CGFloat w = builder.widthValue;
+    CGFloat h = builder.bottomValue - y;
     return CGRectMake(x, y, w, h);
 }
 
 // r-y-b-w : 30
 + (CGRect)frame30WithBuilder:(HiViewFrame *)builder {
-    CGFloat w = builder.width.frame;
-    CGFloat x = builder.right.frame - w;
-    CGFloat y = builder.top.frame;
-    CGFloat h = builder.bottom.frame - y;
+    CGFloat w = builder.widthValue;
+    CGFloat x = builder.rightValue - w;
+    CGFloat y = builder.topValue;
+    CGFloat h = builder.bottomValue - y;
     return CGRectMake(x, y, w, h);
 }
 
 //  x-r-y-h : 39
 + (CGRect)frame39WithBuilder:(HiViewFrame *)builder {
-    CGFloat x = builder.left.frame;
-    CGFloat y = builder.top.frame;
-    CGFloat w = builder.right.frame - x;
-    CGFloat h = builder.height.frame;
+    CGFloat x = builder.leftValue;
+    CGFloat y = builder.topValue;
+    CGFloat w = builder.rightValue - x;
+    CGFloat h = builder.heightValue;
     return CGRectMake(x, y, w, h);
 }
 
 // x-r-b-h : 43
 + (CGRect)frame43WithBuilder:(HiViewFrame *)builder {
-    CGFloat x = builder.left.frame;
-    CGFloat h = builder.height.frame;
-    CGFloat y = builder.bottom.frame - h;
-    CGFloat w = builder.right.frame - x;
+    CGFloat x = builder.leftValue;
+    CGFloat h = builder.heightValue;
+    CGFloat y = builder.bottomValue - h;
+    CGFloat w = builder.rightValue - x;
     return CGRectMake(x, y, w, h);
 }
 
 // x-y-w-h : 53
 + (CGRect)frame53WithBuilder:(HiViewFrame *)builder {
-    CGFloat x = builder.left.frame;
-    CGFloat y = builder.top.frame;
-    CGFloat w = builder.width.frame;
-    CGFloat h = builder.height.frame;
+    CGFloat x = builder.leftValue;
+    CGFloat y = builder.topValue;
+    CGFloat w = builder.widthValue;
+    CGFloat h = builder.heightValue;
     return CGRectMake(x, y, w, h);
 }
 
 // r-y-w-h : 54
 + (CGRect)frame54WithBuilder:(HiViewFrame *)builder {
-    CGFloat w = builder.width.frame;
-    CGFloat y = builder.top.frame;
-    CGFloat x = builder.right.frame - w;
-    CGFloat h = builder.height.frame;
+    CGFloat w = builder.widthValue;
+    CGFloat y = builder.topValue;
+    CGFloat x = builder.rightValue - w;
+    CGFloat h = builder.heightValue;
     return CGRectMake(x, y, w, h);
 }
 
 // x-b-w-h : 57
 + (CGRect)frame57WithBuilder:(HiViewFrame *)builder {
-    CGFloat x = builder.left.frame;
-    CGFloat h = builder.height.frame;
-    CGFloat y = builder.bottom.frame - h;
-    CGFloat w = builder.width.frame;
+    CGFloat x = builder.leftValue;
+    CGFloat h = builder.heightValue;
+    CGFloat y = builder.bottomValue - h;
+    CGFloat w = builder.widthValue;
     return CGRectMake(x, y, w, h);
 }
 
 // r-b-w-h : 58
 + (CGRect)frame58WithBuilder:(HiViewFrame *)builder {
-    CGFloat w = builder.width.frame;
-    CGFloat h = builder.height.frame;
-    CGFloat x = builder.right.frame - w;
-    CGFloat y = builder.bottom.frame - h;
+    CGFloat w = builder.widthValue;
+    CGFloat h = builder.heightValue;
+    CGFloat x = builder.rightValue - w;
+    CGFloat y = builder.bottomValue - h;
     return CGRectMake(x, y, w, h);
 }
 
 // cx-y-b-w : 92
 + (CGRect)frame92WithBuilder:(HiViewFrame *)builder {
-    CGFloat y = builder.top.frame;
-    CGFloat w = builder.width.frame;
-    CGFloat x = builder.centerX.frame - w * 0.5;
-    CGFloat h = builder.bottom.frame - y;
+    CGFloat y = builder.topValue;
+    CGFloat w = builder.widthValue;
+    CGFloat x = builder.centerXValue - w * 0.5;
+    CGFloat h = builder.bottomValue - y;
     return CGRectMake(x, y, w, h);
 }
 
 // cx-y-w-h : 116
 + (CGRect)frame116WithBuilder:(HiViewFrame *)builder {
-    CGFloat y = builder.top.frame;
-    CGFloat w = builder.width.frame;
-    CGFloat x = builder.centerX.frame - w * 0.5;
-    CGFloat h = builder.height.frame;
+    CGFloat y = builder.topValue;
+    CGFloat w = builder.widthValue;
+    CGFloat x = builder.centerXValue - w * 0.5;
+    CGFloat h = builder.heightValue;
     return CGRectMake(x, y, w, h);
 }
 
 // cx-b-w-h : 120
 + (CGRect)frame120WithBuilder:(HiViewFrame *)builder {
-    CGFloat h = builder.height.frame;
-    CGFloat y = builder.bottom.frame - h;
-    CGFloat w = builder.width.frame;
-    CGFloat x = builder.centerX.frame - w * 0.5;
+    CGFloat h = builder.heightValue;
+    CGFloat y = builder.bottomValue - h;
+    CGFloat w = builder.widthValue;
+    CGFloat x = builder.centerXValue - w * 0.5;
     return CGRectMake(x, y, w, h);
 }
 
 // x-r-cy-h : 163
 + (CGRect)frame163WithBuilder:(HiViewFrame *)builder {
-    CGFloat x = builder.left.frame;
-    CGFloat h = builder.height.frame;
-    CGFloat y = builder.centerY.frame - h * 0.5;
-    CGFloat w = builder.right.frame - x;
+    CGFloat x = builder.leftValue;
+    CGFloat h = builder.heightValue;
+    CGFloat y = builder.centerYValue - h * 0.5;
+    CGFloat w = builder.rightValue - x;
     return CGRectMake(x, y, w, h);
 }
 
 // x-cy-w-h : 177
 + (CGRect)frame177WithBuilder:(HiViewFrame *)builder {
-    CGFloat x = builder.left.frame;
-    CGFloat h = builder.height.frame;
-    CGFloat y = builder.centerY.frame - h * 0.5;
-    CGFloat w = builder.width.frame;
+    CGFloat x = builder.leftValue;
+    CGFloat h = builder.heightValue;
+    CGFloat y = builder.centerYValue - h * 0.5;
+    CGFloat w = builder.widthValue;
     return CGRectMake(x, y, w, h);
 }
 
 // r-cy-w-h : 178
 + (CGRect)frame178WithBuilder:(HiViewFrame *)builder {
-    CGFloat w = builder.width.frame;
-    CGFloat x = builder.right.frame - w;
-    CGFloat h = builder.height.frame;
-    CGFloat y = builder.centerY.frame - h * 0.5;
+    CGFloat w = builder.widthValue;
+    CGFloat x = builder.rightValue - w;
+    CGFloat h = builder.heightValue;
+    CGFloat y = builder.centerYValue - h * 0.5;
     return CGRectMake(x, y, w, h);
 }
 
 // cx-cy-w-h : 240
 + (CGRect)frame240WithBuilder:(HiViewFrame *)builder {
-    CGFloat w = builder.width.frame;
-    CGFloat h = builder.height.frame;
-    CGFloat x = builder.centerX.frame - w * 0.5;
-    CGFloat y = builder.centerY.frame - h * 0.5;
+    CGFloat w = builder.widthValue;
+    CGFloat h = builder.heightValue;
+    CGFloat x = builder.centerXValue - w * 0.5;
+    CGFloat y = builder.centerYValue - h * 0.5;
     return CGRectMake(x, y, w, h);
 }
 

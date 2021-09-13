@@ -9,16 +9,18 @@
 #import "HiFrameLayoutModel.h"
 #import "HiConstraintModel.h"
 
+#import "HiFrameLayoutProtocol.h"
+
 @protocol HiViewFrameBuilder <NSObject>
 
-@property (nonatomic,readonly) HiFrameLayoutModel *left;                         //左侧
-@property (nonatomic,readonly) HiFrameLayoutModel *right;                        //右侧
-@property (nonatomic,readonly) HiFrameLayoutModel *top;                          //上方
-@property (nonatomic,readonly) HiFrameLayoutModel *bottom;                       //下方
-@property (nonatomic,readonly) HiFrameLayoutModel *width;                        //宽度
-@property (nonatomic,readonly) HiFrameLayoutModel *height;                       //高度
-@property (nonatomic,readonly) HiFrameLayoutModel *centerX;                      //X轴中心
-@property (nonatomic,readonly) HiFrameLayoutModel *centerY;                      //Y轴中心
+@property (nonatomic,readonly) id<HiFrameLayoutModel> left;                         //左侧
+@property (nonatomic,readonly) id<HiFrameLayoutModel> right;                        //右侧
+@property (nonatomic,readonly) id<HiFrameLayoutModel> top;                          //上方
+@property (nonatomic,readonly) id<HiFrameLayoutModel> bottom;                       //下方
+@property (nonatomic,readonly) id<HiFrameLayoutModel> width;                        //宽度
+@property (nonatomic,readonly) id<HiFrameLayoutModel> height;                       //高度
+@property (nonatomic,readonly) id<HiFrameLayoutModel> centerX;                      //X轴中心
+@property (nonatomic,readonly) id<HiFrameLayoutModel> centerY;                      //Y轴中心
 
 @end
 

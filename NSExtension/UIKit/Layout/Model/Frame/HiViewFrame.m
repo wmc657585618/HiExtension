@@ -38,7 +38,7 @@
 
 - (void)updateFrame{
     if ([HiOptions availableViewOptions:self.options]) {
-        self.view.frame = [HiFrameHander frameForBuilder:self withOptions:self.options];
+        self.view.frame = CGRectMake(self.leftValue, self.topValue, self.widthValue, self.heightValue);
     }
 }
 
@@ -101,6 +101,73 @@
         _centerY = [self modelForAttribute:NSLayoutAttributeCenterY];
     }
     return _centerY;
+}
+
+
+- (CGFloat)leftValue {
+    if (_left) return self.left.frame;
+    if (_right && _width) return _right.frame + _width.frame;
+    if (_width && _centerX) return _centerX.frame - _width.frame * 0.5;
+    
+    return 0;
+}
+
+- (CGFloat)rightValue {
+    if (_right) return _right.frame;
+    if (_centerX && _width) return _centerX.frame + _width.frame * 0.5;
+    if (_left && _width) return _left.frame + _width.frame;
+    
+    return 0;
+
+}
+
+- (CGFloat)topValue {
+    if (_top) return _top.frame;
+    if (_bottom && _height) return _bottom.frame - _height.frame;
+    if (_centerY && _height) return _centerY.frame - _height.frame * 0.5;
+    
+    return 0;
+
+}
+
+- (CGFloat)bottomValue {
+    if (_bottom) return _bottom.frame;
+    if (_height && _top) return _top.frame + _height.frame;
+    if (_height && _centerY) return _centerY.frame + _height.frame * 0.5;
+    
+    return 0;
+
+}
+
+- (CGFloat)centerXValue {
+    if (_centerX) return _centerX.frame;
+    if (_left && _width) return _left.frame + _width.frame * 0.5;
+    if (_right && _width ) return _right.frame - _width.frame * 0.5;
+    
+    return 0;
+}
+
+- (CGFloat)centerYValue {
+    if (_centerY) return _centerY.frame;
+    if (_top && _height) return _top.frame + _height.frame * 0.5;
+    if (_bottom && _height) return _bottom.frame - _height.frame * 0.5;
+    
+    return 0;
+
+}
+
+- (CGFloat)widthValue {
+    if (_width) return _width.frame;
+    if (_left && _right) return _left.frame + _right.frame;
+    
+    return 0;
+}
+
+- (CGFloat)heightValue  {
+    if (_height) return _height.frame;
+    if (_bottom && _top) return _bottom.frame - _top.frame;
+    
+    return 0;
 }
 
 @end

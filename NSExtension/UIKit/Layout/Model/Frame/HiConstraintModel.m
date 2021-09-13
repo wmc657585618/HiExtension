@@ -11,7 +11,7 @@
 
 @interface HiConstraintModel ()
 
-@property (nonatomic, weak) UIView *constraintView;
+@property (nonatomic, weak) UIView *constraintView; // 添加约束的 view
 @property (nonatomic, weak) NSLayoutConstraint *layoutConstraint;
 
 @property (nonatomic, weak) UIView *view1;
@@ -19,8 +19,8 @@
 @property (nonatomic, assign) NSLayoutRelation relate;
 @property (nonatomic, weak) UIView *view2;
 @property (nonatomic, assign) NSLayoutAttribute attribute2;
-@property (nonatomic, assign) CGFloat constraint;
 @property (nonatomic, assign) CGFloat mult;
+@property (nonatomic, assign) CGFloat constraint;
 
 @end
 
@@ -38,6 +38,82 @@
     return self;
 }
 
+#pragma mark *********** layout ***********
+- (NSLayoutConstraint *)layout {
+    
+    // 防止重复创建
+    if (self.layoutConstraint) return self.layoutConstraint;
+    
+    NSLayoutConstraint *layout = nil;
+    if ([self.view1 isEqual:self.view2] && self.attribute1 == self.attribute2) {
+#ifdef DEBUG
+        @throw [NSException exceptionWithName:@"HiConstraint" reason:@"不能依赖自身相同属性" userInfo:nil];
+#endif
+        return layout;
+    }
+    
+    
+    // 不依赖 其它 view
+    if (!self.view2) {
+        
+        if (self.attribute1 == NSLayoutAttributeWidth || self.attribute1 == NSLayoutAttributeHeight) {
+            
+            layout = [NSLayoutConstraint constraintWithItem:self.view1 attribute:self.attribute1 relatedBy:self.relate toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:self.mult constant:self.constraint];
+            
+        } else {
+            
+            layout = [NSLayoutConstraint constraintWithItem:self.view1 attribute:self.attribute1 relatedBy:self.relate toItem:self.view1.superview attribute:self.attribute1 multiplier:self.mult constant:self.constraint];
+        }
+        
+        
+        [self.view1.superview addConstraint:layout];
+        self.constraintView = self.view1.superview;
+        self.layoutConstraint = layout;
+        return layout;
+    }
+    
+    // 依赖相同属性
+    // 没有设置 attribute2
+    if (NSLayoutAttributeNotAnAttribute == self.attribute2) self.attribute2 = self.attribute1;
+    
+    layout = [NSLayoutConstraint constraintWithItem:self.view1 attribute:self.attribute1 relatedBy:self.relate toItem:self.view2 attribute:self.attribute2 multiplier:self.mult constant:self.constraint];
+    self.layoutConstraint = layout;
+    
+    // 位置关系
+    // view2 在 view1 中
+    // view1 在 view2 中
+    // view1 和 view2 在不同的 view 中
+    // 相同坐标系
+    UIView *superview = self.view2;
+    NSMutableArray *superviews = [NSMutableArray array];
+    // view2 在 view1 中
+    while (superview) {
+        [superviews addObject:superview];
+        if ([superview isEqual:self.view1]) break;
+        superview = superview.superview;
+    }
+    
+    // view1 在 view2 中 或者是 view2 的superview 中
+    superview = self.view1;
+    while (superview) {
+        if ([superview isEqual:self.view2] || [superviews containsObject:superview]) break;
+        superview = superview.superview;
+    }
+
+    [superview addConstraint:layout];
+    self.constraintView = superview;
+    return layout;
+}
+
+- (void)remove {
+    [self.constraintView removeConstraint:self.layoutConstraint];
+}
+
+- (NSLayoutConstraint *)getConstraint {
+    return self.layoutConstraint;
+}
+
+#pragma mark *********** protocol ***********
 - (HiConstraintModel *)left {
     self.attribute2 = NSLayoutAttributeLeft;
     return self;
@@ -78,91 +154,54 @@
     return self;
 }
 
-- (NSLayoutConstraint *)layout {
-    
-    NSLayoutConstraint *layout = nil;
-    
-    if ([self.view1 isEqual:self.view2] && self.attribute1 == self.attribute2) {
-#ifdef DEBUG
-        @throw [NSException exceptionWithName:@"HiConstraint" reason:@"不能依赖自身相同属性" userInfo:nil];
-#endif
-        return layout;
-    }
-    
-    // 大小
-    if (self.attribute1 == NSLayoutAttributeWidth || self.attribute1 == NSLayoutAttributeHeight) {
-        layout = [NSLayoutConstraint constraintWithItem:self.view1 attribute:self.attribute1 relatedBy:self.relate toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:self.constraint];
-        [self.view1 addConstraint:layout];
-        self.constraintView = self.view1;
-        self.layoutConstraint = layout;
-        return layout;
-    }
-    
-    // 自己
-    if (!self.view2) {
-        layout = [NSLayoutConstraint constraintWithItem:self.view1 attribute:self.attribute1 relatedBy:self.relate toItem:self.view1.superview attribute:self.attribute1 multiplier:self.mult constant:self.constraint];
-        
-        [self.view1.superview addConstraint:layout];
-        self.constraintView = self.view1.superview;
-        self.layoutConstraint = layout;
-        return layout;
-    }
-    
-    if (NSLayoutAttributeNotAnAttribute == self.attribute2) self.attribute2 = self.attribute1;
-    layout = [NSLayoutConstraint constraintWithItem:self.view1 attribute:self.attribute1 relatedBy:self.relate toItem:self.view2 attribute:self.attribute2 multiplier:self.mult constant:self.constraint];
-    self.layoutConstraint = layout;
-    
-    // 相同坐标系
-    if ([self.view1.superview isEqual:self.view2.superview]) {
-        [self.view1.superview addConstraint:layout];
-        return layout;
-    }
-
-    // 包含
-    if ([self.view1.superview isEqual:self.view2]) {
-        [self.view2 addConstraint:layout];
-        self.constraintView = self.view2;
-        return layout;
-    }
-    
-    if ([self.view2.superview isEqual:self.view1]) {
-        [self.view1 addConstraint:layout];
-        self.constraintView = self.view1;
-        return layout;
-    }
-    
-    UIView *superview = [self.view1 superViewWithView:self.view2];
-    [superview addConstraint:layout];
-    self.constraintView = superview;
-    return layout;
-}
-
-/// MARK:- subclass
-- (HiConstraintModel *(^)(CGFloat))multiplier {
+#pragma mark *********** relate ***********
+- (HiConstraintModel * _Nonnull (^)(UIView * _Nonnull))equal {
     __weak typeof(self) weak = self;
-    return ^(CGFloat value) {
+    return ^(UIView * view2) {
         __strong typeof(weak) strong = weak;
-        strong.mult = value;
+        strong.view2 = view2;
+        strong.relate = NSLayoutRelationEqual;
         return strong;
     };
 }
 
-- (__kindof HiConstraintModel * _Nonnull (^)(CGFloat))max {
-    self.relate = NSLayoutRelationLessThanOrEqual;
-    return [self value];
-}
-
-- (__kindof HiConstraintModel * _Nonnull (^)(CGFloat))min {
-    self.relate = NSLayoutRelationGreaterThanOrEqual;
-    return [self value];
-}
-
-- (__kindof HiConstraintModel *(^)(CGFloat))value {
+- (HiConstraintModel * _Nonnull (^)(UIView * _Nonnull))less {
+    
     __weak typeof(self) weak = self;
-    return ^(CGFloat value) {
+    return ^(UIView * view2) {
         __strong typeof(weak) strong = weak;
-        strong.constraint = value;
+        strong.view2 = view2;
+        strong.relate = NSLayoutRelationLessThanOrEqual;
         return strong;
+    };
+}
+
+- (HiConstraintModel * _Nonnull (^)(UIView * _Nonnull))greater {
+    
+    __weak typeof(self) weak = self;
+    return ^(UIView * view2) {
+        __strong typeof(weak) strong = weak;
+        strong.view2 = view2;
+        strong.relate = NSLayoutRelationGreaterThanOrEqual;
+        return strong;
+    };
+}
+
+- (void (^)(CGFloat))min {
+    __weak typeof(self) weak = self;
+    return ^(CGFloat v) {
+        __strong typeof(weak) strong = weak;
+        strong.constraint = v;
+        strong.relate = NSLayoutRelationGreaterThanOrEqual;
+    };
+}
+
+- (void (^)(CGFloat))max {
+    __weak typeof(self) weak = self;
+    return ^(CGFloat v) {
+        __strong typeof(weak) strong = weak;
+        strong.constraint = v;
+        strong.relate = NSLayoutRelationLessThanOrEqual;
     };
 }
 
@@ -175,99 +214,24 @@
     };
 }
 
-- (__kindof HiConstraintModel *(^)(UIView *))less {
+#pragma mark *********** multiplier ***********
+
+- (id<HiConstraint> (^)(CGFloat))multiplier {
     __weak typeof(self) weak = self;
-    return ^(UIView *view) {
+    return ^(CGFloat v) {
         __strong typeof(weak) strong = weak;
-        strong.view2 = view;
-        strong.relate = NSLayoutRelationLessThanOrEqual;
+        strong.mult = v;
         return strong;
     };
 }
 
-- (__kindof HiConstraintModel *(^)(UIView *))greater {
+- (void (^)(CGFloat))value {
     __weak typeof(self) weak = self;
-    return ^(UIView *view) {
+    return ^(CGFloat v) {
         __strong typeof(weak) strong = weak;
-        strong.view2 = view;
-        strong.relate = NSLayoutRelationGreaterThanOrEqual;
-        return strong;
+        strong.constraint = v;
     };
 }
 
-- (__kindof HiConstraintModel *(^)(UIView *))equal {
-    __weak typeof(self) weak = self;
-    return ^(UIView *view) {
-        __strong typeof(weak) strong = weak;
-        strong.view2 = view;
-        strong.relate = NSLayoutRelationEqual;
-        return strong;
-    };
-}
-
-- (void)remove {
-    [self.constraintView removeConstraint:self.layoutConstraint];
-}
-
-- (NSLayoutConstraint *)getConstraint {
-    return self.layoutConstraint;
-}
-
 @end
 
-@implementation HiConstraintHorizontal0Model
-@end
-
-@implementation HiConstraintHorizontal1Model
-
-- (HiConstraintHorizontal0Model * _Nonnull (^)(UIView * _Nonnull))less{
-    return [super less];
-}
-
-- (HiConstraintHorizontal0Model * _Nonnull(^)(UIView * _Nonnull))greater {
-    return [super greater];
-}
-
-- (HiConstraintHorizontal0Model * _Nonnull(^)(UIView * _Nonnull))equal {
-    return [super equal];
-}
-
-@end
-
-@implementation HiConstraintVertical0Model
-@end
-
-@implementation HiConstraintVertical1Model
-
-- (HiConstraintVertical0Model * _Nonnull (^)(UIView * _Nonnull))less{
-    return [super less];
-}
-
-- (HiConstraintVertical0Model * _Nonnull(^)(UIView * _Nonnull))greater {
-    return [super greater];
-}
-
-- (HiConstraintVertical0Model * _Nonnull(^)(UIView * _Nonnull))equal {
-    return [super equal];
-}
-
-@end
-
-@implementation HiConstraintSize0Model
-@end
-
-@implementation HiConstraintSize1Model
-
-- (HiConstraintSize0Model * _Nonnull (^)(UIView * _Nonnull))less{
-    return [super less];
-}
-
-- (HiConstraintSize0Model * _Nonnull(^)(UIView * _Nonnull))greater {
-    return [super greater];
-}
-
-- (HiConstraintSize0Model * _Nonnull(^)(UIView * _Nonnull))equal {
-    return [super equal];
-}
-
-@end

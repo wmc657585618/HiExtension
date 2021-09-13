@@ -10,8 +10,6 @@
 #import "HiConstraintModel.h"
 #import "HiFrameProtocol.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface UIView (HiViewLayout)
 
 - (void)hi_constraints_make:(void(^)(id<HiViewConstraintBuilder> builder))block;
@@ -27,5 +25,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)hi_verticallCompressionPriority:(UILayoutPriority)priority;
 
 @end
-
-NS_ASSUME_NONNULL_END

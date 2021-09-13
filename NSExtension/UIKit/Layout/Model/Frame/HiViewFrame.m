@@ -7,6 +7,7 @@
 
 #import "HiViewFrame.h"
 #import "HiFrameHander.h"
+#import "HiFrameLayoutModel.h"
 
 @interface HiViewFrame ()
 @property (nonatomic,assign) HiViewOptions options;

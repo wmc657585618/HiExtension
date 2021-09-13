@@ -7,21 +7,22 @@
 
 #import "HiViewConstraint.h"
 #import "HiOptions.h"
+#import "HiConstraintModel.h"
 
 @interface HiViewConstraint ()
 @property (nonatomic, weak) UIView *view;
 @property (nonatomic,assign) HiViewOptions options;
 
-@property (nonatomic,readwrite) HiConstraintHorizontal1Model *left;
-@property (nonatomic,readwrite) HiConstraintHorizontal1Model *right;
-@property (nonatomic,readwrite) HiConstraintHorizontal1Model *centerX;
+@property (nonatomic,readwrite) HiConstraintModel *left;
+@property (nonatomic,readwrite) HiConstraintModel *right;
+@property (nonatomic,readwrite) HiConstraintModel *centerX;
 
-@property (nonatomic,readwrite) HiConstraintVertical1Model *top;
-@property (nonatomic,readwrite) HiConstraintVertical1Model *bottom;
-@property (nonatomic,readwrite) HiConstraintVertical1Model *centerY;
+@property (nonatomic,readwrite) HiConstraintModel *top;
+@property (nonatomic,readwrite) HiConstraintModel *bottom;
+@property (nonatomic,readwrite) HiConstraintModel *centerY;
 
-@property (nonatomic,readwrite) HiConstraintSize1Model *width;
-@property (nonatomic,readwrite) HiConstraintSize1Model *height;
+@property (nonatomic,readwrite) HiConstraintModel *width;
+@property (nonatomic,readwrite) HiConstraintModel *height;
 
 @end
 
@@ -39,73 +40,59 @@
 
 - (__kindof HiConstraintModel *)modelForAttribute:(NSLayoutAttribute)attribute {
     self.options = [HiOptions viewOptions:self.options forAttribute:attribute];
-    switch (attribute) {
-        case NSLayoutAttributeLeft:
-        case NSLayoutAttributeRight:
-        case NSLayoutAttributeCenterX:
-            return [[HiConstraintHorizontal1Model alloc] initWithView:self.view attribute:attribute];
-        
-        case NSLayoutAttributeTop:
-        case NSLayoutAttributeBottom:
-        case NSLayoutAttributeCenterY:
-            return [[HiConstraintVertical1Model alloc] initWithView:self.view attribute:attribute];
-       
-        default:
-            return [[HiConstraintSize1Model alloc] initWithView:self.view attribute:attribute];
-
-    }
+    return [[HiConstraintModel alloc] initWithView:self.view attribute:attribute];
 }
 
-- (HiConstraintHorizontal1Model *)left {
+- (HiConstraintModel *)left {
     if (!_left) {
         _left = [self modelForAttribute:NSLayoutAttributeLeft];
     }
     return _left;
 }
 
-- (HiConstraintHorizontal1Model *)right {
+- (HiConstraintModel *)right {
     if (!_right) {
         _right = [self modelForAttribute:NSLayoutAttributeRight];
     }
     return _right;
 }
 
-- (HiConstraintVertical1Model *)top {
+- (HiConstraintModel *)top {
     if (!_top) {
         _top = [self modelForAttribute:NSLayoutAttributeTop];
     }
     return _top;
 }
 
-- (HiConstraintVertical1Model *)bottom {
+- (HiConstraintModel *)bottom {
     if (!_bottom) {
         _bottom = [self modelForAttribute:NSLayoutAttributeBottom];
     }
     return _bottom;
 }
 
-- (HiConstraintSize1Model *)width {
+- (HiConstraintModel *)width {
     if (!_width) {
         _width = [self modelForAttribute:NSLayoutAttributeWidth];
     }
     return _width;
 }
 
-- (HiConstraintSize1Model *)height {
+- (HiConstraintModel *)height {
     if (!_height) {
         _height = [self modelForAttribute:NSLayoutAttributeHeight];
     }
     return _height;
 }
 
-- (HiConstraintHorizontal1Model *)centerX {
+- (HiConstraintModel *)centerX {
     if (!_centerX) {
         _centerX = [self modelForAttribute:NSLayoutAttributeCenterX];
     }
     return _centerX;
 }
 
-- (HiConstraintVertical1Model *)centerY {
+- (HiConstraintModel *)centerY {
     if (!_centerY) {
         _centerY = [self modelForAttribute:NSLayoutAttributeCenterY];
     }

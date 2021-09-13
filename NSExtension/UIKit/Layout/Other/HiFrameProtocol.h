@@ -5,11 +5,8 @@
 //  Created by four on 2021/6/25.
 //
 
-#import <Foundation/Foundation.h>
-#import "HiFrameLayoutModel.h"
-#import "HiConstraintModel.h"
-
 #import "HiFrameLayoutProtocol.h"
+#import "HiConstraintLayoutProtocol.h"
 
 @protocol HiViewFrameBuilder <NSObject>
 
@@ -26,13 +23,13 @@
 
 @protocol HiViewConstraintBuilder <NSObject>
 
-@property (nonatomic,readonly) HiConstraintHorizontal1Model *left;
-@property (nonatomic,readonly) HiConstraintHorizontal1Model *right;
-@property (nonatomic,readonly) HiConstraintVertical1Model *top;
-@property (nonatomic,readonly) HiConstraintVertical1Model *bottom;
-@property (nonatomic,readonly) HiConstraintSize1Model *width;
-@property (nonatomic,readonly) HiConstraintSize1Model *height;
-@property (nonatomic,readonly) HiConstraintHorizontal1Model *centerX;
-@property (nonatomic,readonly) HiConstraintVertical1Model *centerY;
+@property (nonatomic,readonly) id<HiConstraintHorizontal0> left;
+@property (nonatomic,readonly) id<HiConstraintHorizontal0> right;
+@property (nonatomic,readonly) id<HiConstraintVertical0> top;
+@property (nonatomic,readonly) id<HiConstraintVertical0> bottom;
+@property (nonatomic,readonly) id<HiConstraintSize0> width;
+@property (nonatomic,readonly) id<HiConstraintSize0> height;
+@property (nonatomic,readonly) id<HiConstraintHorizontal0> centerX;
+@property (nonatomic,readonly) id<HiConstraintVertical0> centerY;
 
 @end

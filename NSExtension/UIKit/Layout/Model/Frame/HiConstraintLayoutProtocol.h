@@ -15,7 +15,7 @@
 @end
 
 
-@protocol HiConstraintMultiplier <NSObject>
+@protocol HiConstraintMultiplier <HiConstraint>
 
 @property (nonatomic, readonly) id<HiConstraint> (^multiplier)(CGFloat);
 
@@ -39,9 +39,9 @@
 
 @protocol HiConstraintVertical0 <HiConstraint, HiConstraintLimit>
 
-@property (nonatomic, readonly) id<HiConstraintVertical1>(^less)(id); // <=
-@property (nonatomic, readonly) id<HiConstraintVertical1>(^equal)(id); // ==
-@property (nonatomic, readonly) id<HiConstraintVertical1>(^greater)(id); // >==
+@property (nonatomic, readonly) id<HiConstraintVertical1>(^less)(UIView *); // <=
+@property (nonatomic, readonly) id<HiConstraintVertical1>(^equal)(UIView *); // ==
+@property (nonatomic, readonly) id<HiConstraintVertical1>(^greater)(UIView *); // >==
 
 @end
 
@@ -55,10 +55,13 @@
 
 @protocol HiConstraintSize0 <HiConstraint, HiConstraintLimit>
 
-@property (nonatomic, readonly) id<HiConstraintSize1>(^less)(id); // <=
-@property (nonatomic, readonly) id<HiConstraintSize1>(^equal)(id); // ==
-@property (nonatomic, readonly) id<HiConstraintSize1>(^greater)(id); // >==
+@property (nonatomic, readonly) id<HiConstraintSize1>(^less)(UIView *); // <=
+@property (nonatomic, readonly) id<HiConstraintSize1>(^equal)(UIView *); // ==
+@property (nonatomic, readonly) id<HiConstraintSize1>(^greater)(UIView *); // >==
 
+/**
+ 如果是 UILabel 的 height 要设置 preferredMaxLayoutWidth
+ */
 @property (nonatomic, readonly) void(^autoValue)(void);
 
 @end
@@ -74,9 +77,9 @@
 
 @protocol HiConstraintHorizontal0 <HiConstraint, HiConstraintLimit>
 
-@property (nonatomic, readonly) id<HiConstraintHorizontal1>(^less)(id); // <=
-@property (nonatomic, readonly) id<HiConstraintHorizontal1>(^equal)(id); // ==
-@property (nonatomic, readonly) id<HiConstraintHorizontal1>(^greater)(id); // >==
+@property (nonatomic, readonly) id<HiConstraintHorizontal1>(^less)(UIView *); // <=
+@property (nonatomic, readonly) id<HiConstraintHorizontal1>(^equal)(UIView *); // ==
+@property (nonatomic, readonly) id<HiConstraintHorizontal1>(^greater)(UIView *); // >==
 
 @end
 

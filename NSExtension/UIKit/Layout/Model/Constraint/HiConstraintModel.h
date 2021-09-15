@@ -5,12 +5,12 @@
 //  Created by four on 2021/2/19.
 //
 
-#import <UIKit/UIKit.h>
+#import "HiLayoutModel.h"
 #import "HiConstraintLayoutProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HiConstraintModel : NSObject<HiConstraintHorizontal0, HiConstraintHorizontal1, HiConstraintSize0, HiConstraintSize1, HiConstraintVertical0, HiConstraintVertical1, HiConstraintMultiplier>
+@interface HiConstraintModel : HiLayoutModel<HiConstraintHorizontal0, HiConstraintHorizontal1, HiConstraintSize0, HiConstraintSize1, HiConstraintVertical0, HiConstraintVertical1, HiConstraintMultiplier>
 
 - (instancetype)initWithView:(UIView *)view attribute:(NSLayoutAttribute)attribute;
 

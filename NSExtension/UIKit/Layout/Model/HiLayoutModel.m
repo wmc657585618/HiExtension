@@ -9,6 +9,20 @@
 
 @implementation HiLayoutModel
 
+#pragma mark *********** instance ***********
+- (instancetype)initWithView:(UIView *)view attribute:(NSLayoutAttribute)attribute
+{
+    self = [super init];
+    if (self) {
+        self.mult = 1.0;
+        self.view1 = view;
+        self.attribute1 = attribute;
+    }
+    return self;
+}
+
+#pragma mark *********** property ***********
+
 - (instancetype)left {
     self.attribute2 = NSLayoutAttributeLeft;
     return self;
@@ -74,7 +88,6 @@
         __strong typeof(weak) strong = weak;
         strong.view2 = view;
         strong.relate = NSLayoutRelationEqual;
-
         return strong;
     };
 }

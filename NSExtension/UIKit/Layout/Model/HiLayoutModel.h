@@ -9,7 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HiLayoutModel : UIView
+@interface HiLayoutModel : NSObject
+
+- (instancetype)initWithView:(UIView *)view attribute:(NSLayoutAttribute)attribute;
 
 @property (nonatomic, weak) UIView *view1;
 @property (nonatomic, assign) NSLayoutAttribute attribute1;

@@ -16,19 +16,7 @@
 
 @end
 
-
 @implementation HiConstraintModel
-
-- (instancetype)initWithView:(UIView *)view attribute:(NSLayoutAttribute)attribute
-{
-    self = [super init];
-    if (self) {
-        self.mult = 1.0;
-        self.view1 = view;
-        self.attribute1 = attribute;
-    }
-    return self;
-}
 
 - (NSLayoutConstraint *)constraintView:(UIView *)view2 attri:(NSLayoutAttribute)attri {
     NSLayoutConstraint *layout = [NSLayoutConstraint constraintWithItem:self.view1 attribute:self.attribute1 relatedBy:self.relate toItem:view2 attribute:attri multiplier:self.mult constant:self.constraint];
@@ -105,15 +93,6 @@
 }
 
 #pragma mark *********** relate ***********
-- (HiConstraintModel * _Nonnull (^)(UIView * _Nonnull))equal {
-    __weak typeof(self) weak = self;
-    return ^(UIView * view2) {
-        __strong typeof(weak) strong = weak;
-        strong.view2 = view2;
-        return strong;
-    };
-}
-
 - (HiConstraintModel * _Nonnull (^)(UIView * _Nonnull))less {
     
     __weak typeof(self) weak = self;

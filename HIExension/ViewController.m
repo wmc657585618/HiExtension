@@ -58,12 +58,12 @@
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.label];
 
-    [self.tableView hi_constraints_make:^(id<HiViewConstraintBuilder> builder) {
-        builder.left.value(0.0);
-        builder.top.value(100.0);
-        builder.right.value(0.0);
-        builder.height.equal(self.tableView).width.multiplier(0.5).value(0);
-    }];
+//    [self.tableView hi_constraints_make:^(id<HiViewConstraintBuilder> builder) {
+//        builder.left.value(0.0);
+//        builder.top.value(100.0);
+//        builder.right.value(0.0);
+//        builder.height.equal(self.tableView).width.multiplier(0.5).value(0);
+//    }];
     
     [self.label hi_constraints_make:^(id<HiViewConstraintBuilder> builder) {
         builder.left.value(0);
@@ -76,12 +76,12 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
 
-//    [self.tableView hi_frame_make:^(id<HiViewFrameBuilder>  _Nonnull builder) {
-//        builder.left.value(0);
-//        builder.top.value(100);
-//        builder.right.value(0);
-//        builder.height.equal(self.tableView).width.multiplier(0.5).value(0);
-//    }];
+    [self.tableView hi_frame_make:^(id<HiViewFrameBuilder>  _Nonnull builder) {
+        builder.left.value(0);
+        builder.top.value(100);
+        builder.right.value(0);
+        builder.height.equal(self.tableView).width.multiplier(0.5).value(0);
+    }];
 
 }
 

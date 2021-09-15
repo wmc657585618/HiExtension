@@ -20,11 +20,8 @@
 
 - (instancetype)initWithView:(UIView *)view attribute:(NSLayoutAttribute)attribute builder:(HiViewFrame *)builder
 {
-    self = [super init];
+    self = [super initWithView:view attribute:attribute];
     if (self) {
-        self.mult = 1.0;
-        self.view1 = view;
-        self.attribute1 = attribute;
         self.builder = builder;
     }
     return self;

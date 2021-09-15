@@ -92,6 +92,10 @@
     return self.layoutConstraint;
 }
 
+- (void)animate {
+    [self.constraintView layoutIfNeeded];
+}
+
 #pragma mark *********** relate ***********
 - (HiConstraintModel * _Nonnull (^)(UIView * _Nonnull))less {
     

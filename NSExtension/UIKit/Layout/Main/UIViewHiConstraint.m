@@ -65,6 +65,46 @@
     return [self.hi_builder constraint:attribute];
 }
 
+#pragma mark *********** animations ***********
+
+- (void)hi_animateWithDuration:(NSTimeInterval)duration animations:(void (^)(void))animations {
+    
+    if (animations) {
+        animations();
+        [UIView animateWithDuration:duration animations:^{
+            [self.hi_builder animateLayout];
+        }];
+    }
+}
+
+- (void)hi_animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^ __nullable)(BOOL finished))completion  {
+    
+    if (animations) {
+        animations();
+        [UIView animateWithDuration:duration delay:delay options:options animations:^{
+            [self.hi_builder animateLayout];
+        } completion:completion];
+    }
+}
+
+- (void)hi_animateWithDuration:(NSTimeInterval)duration animations:(void (^)(void))animations completion:(void (^ __nullable)(BOOL finished))completion {
+    if (animations) {
+        animations();
+        [UIView animateWithDuration:duration animations:^{
+            [self.hi_builder animateLayout];
+        } completion:completion];
+    }
+}
+
+- (void)hi_animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay usingSpringWithDamping:(CGFloat)dampingRatio initialSpringVelocity:(CGFloat)velocity options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^ __nullable)(BOOL finished))completion {
+    if (animations) {
+        animations();
+        [UIView animateWithDuration:duration delay:delay usingSpringWithDamping:dampingRatio initialSpringVelocity:velocity options:options animations:^{
+            [self.hi_builder animateLayout];
+        } completion:completion];
+    }
+}
+
 - (void)hi_horizotalHuggingPriority:(UILayoutPriority)priority {
     [self setContentHuggingPriority:priority forAxis:UILayoutConstraintAxisHorizontal];
 }

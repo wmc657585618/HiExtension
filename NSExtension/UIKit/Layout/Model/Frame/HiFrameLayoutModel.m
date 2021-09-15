@@ -55,7 +55,7 @@
     return nil;
 }
 
-- (CGFloat)modelWithAttribute:(NSLayoutAttribute)attribute {
+- (CGFloat)resultWithAttribute:(NSLayoutAttribute)attribute {
 
     switch (attribute) {
         case NSLayoutAttributeLeft:
@@ -127,7 +127,7 @@
         }
 #endif
     
-    return [self modelWithAttribute:self.attribute2] * self.mult + self.constraint;
+    return [self resultWithAttribute:self.attribute2] * self.mult + self.constraint;
 }
 
 @end

@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeAllConstraints;
 - (void)removeConstraint:(NSLayoutAttribute)attribute;
 - (NSLayoutConstraint *)constraint:(NSLayoutAttribute)attribute;
+- (void)animateLayout;
 
 @end
 

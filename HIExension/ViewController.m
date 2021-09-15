@@ -85,6 +85,17 @@
 
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    
+    [self.label hi_animateWithDuration:10 animations:^{
+    
+        NSLayoutConstraint *left = [self.label hi_constraint:NSLayoutAttributeTop];
+        left.constant = 200.0;
+        
+    } completion:nil];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 10;
 }

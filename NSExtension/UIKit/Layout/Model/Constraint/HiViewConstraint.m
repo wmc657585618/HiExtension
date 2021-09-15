@@ -233,4 +233,15 @@
     return HiViewOptionsNone == self.options;
 }
 
+- (void)animateLayout {
+    [_left animate];
+    [_right animate];
+    [_top animate];
+    [_bottom animate];
+    [_centerX animate];
+    [_centerY animate];
+    [_width animate];
+    [_height animate];
+}
+
 @end

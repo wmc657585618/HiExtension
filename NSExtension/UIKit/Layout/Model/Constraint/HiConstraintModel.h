@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,readonly) NSLayoutConstraint *layout;
 
+// 动画
+- (void)animate;
+
 - (void)remove;
 - (NSLayoutConstraint *)getConstraint;
 

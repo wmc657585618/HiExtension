@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 如果之前有 才重置
 - (void)resetAttribute:(NSLayoutAttribute)attribute constraint:(void(^)(id))constraint;
 
+@property (nonatomic, readonly) NSArray<NSLayoutConstraint *> *allConstraints;
+
 @end
 
 NS_ASSUME_NONNULL_END

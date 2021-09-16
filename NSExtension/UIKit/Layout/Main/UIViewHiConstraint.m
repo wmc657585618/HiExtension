@@ -28,6 +28,21 @@
     return _builer;
 }
 
+- (NSArray<NSLayoutConstraint *> *)hi_constraints_instance:(void (^)(id<HiViewConstraintBuilder> _Nullable))block {
+    NSAssert(self.superview, @"Super view is nil");
+
+    if (block) {
+        NSAssert(self.hi_builder.avaliable, @"you have made contraints. please remove all constraints");
+        self.translatesAutoresizingMaskIntoConstraints = false;
+        HiViewConstraint *_builer = [[HiViewConstraint alloc] initWithView:self];
+
+        block(_builer);
+        [_builer updateFrame];
+        return _builer.allConstraints;
+    }
+    
+    return nil;
+}
 - (void)hi_constraints_make:(void(^)(id<HiViewConstraintBuilder> builder))block {
     NSAssert(self.superview, @"Super view is nil");
 
@@ -37,7 +52,6 @@
         block(self.hi_builder);
         [self.hi_builder updateFrame];
     }
-    block = nil;
 }
 
 - (void)hi_frame_make:(void(^)(id<HiViewFrameBuilder> builder))block {
@@ -47,10 +61,7 @@
         HiViewFrame *builder = [[HiViewFrame alloc] initWithView:self];
         block(builder);
         [builder updateFrame];
-        builder = nil;
-    }
-    
-    block = nil;
+    }    
 }
 
 - (void)hi_removeConstraint:(NSLayoutAttribute)attribute {
@@ -162,6 +173,10 @@
 
 - (void)hi_verticallCompressionPriority:(UILayoutPriority)priority {
     [self setContentCompressionResistancePriority:priority forAxis:UILayoutConstraintAxisVertical];
+}
+
+- (NSArray<NSLayoutConstraint *> *)hi_allConstraints {
+    return self.hi_builder.allConstraints;
 }
 
 @end

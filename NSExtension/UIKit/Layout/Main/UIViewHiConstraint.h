@@ -12,6 +12,9 @@
 
 @interface UIView (HiViewLayout)
 
+/// 只能创建 constraints, 不能有后续操作
+- (NSArray<NSLayoutConstraint *> *_Nullable)hi_constraints_instance:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block;
+
 - (void)hi_constraints_make:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block;
 - (void)hi_frame_make:(void(^_Nullable)(id<HiViewFrameBuilder> _Nullable builder))block;
 
@@ -55,9 +58,12 @@
 
 - (void)hi_resetHeight:(void(^_Nullable)(id<HiConstraintSize0> _Nullable constraint))constraint;
 
+
 - (void)hi_horizotalHuggingPriority:(UILayoutPriority)priority;
 - (void)hi_verticallHuggingPriority:(UILayoutPriority)priority;
 - (void)hi_horizotalCompressionPriority:(UILayoutPriority)priority;
 - (void)hi_verticallCompressionPriority:(UILayoutPriority)priority;
+
+@property (nonatomic, readonly) NSArray<NSLayoutConstraint *> * _Nonnull hi_allConstraints;
 
 @end

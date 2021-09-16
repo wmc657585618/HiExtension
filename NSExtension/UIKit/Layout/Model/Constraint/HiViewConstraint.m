@@ -262,4 +262,18 @@
         [model layout];
     }
 }
+
+- (NSArray<NSLayoutConstraint *> *)allConstraints {
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:4];
+    if([_left getConstraint]) [array addObject:[_left getConstraint]];
+    if([_right getConstraint]) [array addObject:[_right getConstraint]];
+    if([_top getConstraint]) [array addObject:[_top getConstraint]];
+    if([_bottom getConstraint]) [array addObject:[_bottom getConstraint]];
+    if([_width getConstraint]) [array addObject:[_width getConstraint]];
+    if([_height getConstraint]) [array addObject:[_height getConstraint]];
+    if([_centerX getConstraint]) [array addObject:[_centerX getConstraint]];
+    if([_centerY getConstraint]) [array addObject:[_centerY getConstraint]];
+    
+    return array;
+}
 @end

@@ -58,12 +58,12 @@
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.label];
 
-//    [self.tableView hi_constraints_make:^(id<HiViewConstraintBuilder> builder) {
-//        builder.left.value(0.0);
-//        builder.top.value(100.0);
-//        builder.right.value(0.0);
-//        builder.height.equal(self.tableView).width.multiplier(0.5).value(0);
-//    }];
+    [self.tableView hi_constraints_make:^(id<HiViewConstraintBuilder> builder) {
+        builder.left.value(0.0);
+        builder.top.value(100.0);
+        builder.right.value(0.0);
+        builder.height.equal(self.tableView).width.multiplier(0.5).value(0);
+    }];
     
     [self.label hi_constraints_make:^(id<HiViewConstraintBuilder> builder) {
         builder.left.value(0);
@@ -76,22 +76,25 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
 
-    [self.tableView hi_frame_make:^(id<HiViewFrameBuilder>  _Nonnull builder) {
-        builder.left.value(0);
-        builder.top.value(100);
-        builder.right.value(0);
-        builder.height.equal(self.tableView).width.multiplier(0.5).value(0);
-    }];
+//    [self.tableView hi_frame_make:^(id<HiViewFrameBuilder>  _Nonnull builder) {
+//        builder.left.value(0);
+//        builder.top.value(100);
+//        builder.right.value(0);
+//        builder.height.equal(self.tableView).width.multiplier(0.5).value(0);
+//    }];
+    
 
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
     
-    [self update];
+    [self animations];
 }
 #pragma mark *********** update ***********
 - (void)update {
+    
+//    [self.navigationController pushViewController:[[ViewController alloc] init] animated:true];
 //    [self.label hi_updateAttribute:NSLayoutAttributeTop constraint:200];
     
     [self.label hi_resetTop:^(id<HiConstraintVertical0>  _Nullable constraint) {
@@ -103,9 +106,9 @@
 - (void)animations {
     [self.label hi_animateWithDuration:10 animations:^{
     
-        NSLayoutConstraint *left = [self.label hi_constraint:NSLayoutAttributeTop];
-        left.constant = 200.0;
-        
+//        NSLayoutConstraint *left = [self.label hi_constraint:NSLayoutAttributeTop];
+//        left.constant = 200.0;
+        [self.label hi_updateAttribute:NSLayoutAttributeTop constraint:200.0];
     } completion:nil];
 }
 
@@ -115,6 +118,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [TableViewCell hi_tableView:tableView dequeueCellForIndexPath:indexPath];
+}
+
+- (void)dealloc {
+    NSLog(@"dealloc");
 }
 
 @end

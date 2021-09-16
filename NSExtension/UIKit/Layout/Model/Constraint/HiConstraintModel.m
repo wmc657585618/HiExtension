@@ -86,6 +86,11 @@
 
 - (void)remove {
     [self.constraintView removeConstraint:self.layoutConstraint];
+    self.layoutConstraint = nil;
+    self.constraintView = nil;
+    self.view2 = nil;
+    self.attribute2 = NSLayoutAttributeNotAnAttribute;
+    self.relate = NSLayoutRelationEqual;
 }
 
 - (NSLayoutConstraint *)getConstraint {

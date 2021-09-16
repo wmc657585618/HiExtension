@@ -88,6 +88,19 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
     
+    [self update];
+}
+#pragma mark *********** update ***********
+- (void)update {
+//    [self.label hi_updateAttribute:NSLayoutAttributeTop constraint:200];
+    
+    [self.label hi_resetTop:^(id<HiConstraintVertical0>  _Nullable constraint) {
+        constraint.equal(self.view).value(100.0);
+    }];
+}
+
+#pragma mark *********** animate ***********
+- (void)animations {
     [self.label hi_animateWithDuration:10 animations:^{
     
         NSLayoutConstraint *left = [self.label hi_constraint:NSLayoutAttributeTop];

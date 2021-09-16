@@ -21,6 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSLayoutConstraint *)constraint:(NSLayoutAttribute)attribute;
 - (void)animateLayout;
 
+/// 更新 constraint
+- (void)updateAttribute:(NSLayoutAttribute)attribute constraint:(CGFloat)constraint;
+
+/// 如果之前有 才重置
+- (void)resetAttribute:(NSLayoutAttribute)attribute constraint:(void(^)(id))constraint;
+
 @end
 
 NS_ASSUME_NONNULL_END

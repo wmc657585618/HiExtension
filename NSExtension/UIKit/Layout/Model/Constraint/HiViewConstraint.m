@@ -202,30 +202,34 @@
 }
 
 - (NSLayoutConstraint *)constraint:(NSLayoutAttribute)attribute {
+    return [[self modelWithAttribute:attribute] getConstraint];
+}
+
+- (HiConstraintModel *)modelWithAttribute:(NSLayoutAttribute)attribute {
     switch (attribute) {
         case NSLayoutAttributeLeft:
-            return [_left getConstraint];
+            return _left;
 
         case NSLayoutAttributeRight:
-            return [_right getConstraint];
+            return _right;
 
         case NSLayoutAttributeCenterX:
-            return [_centerX getConstraint];
+            return _centerX;
         
         case NSLayoutAttributeTop:
-            return [_top getConstraint];
+            return _top;
 
         case NSLayoutAttributeBottom:
-            return [_bottom getConstraint];
+            return _bottom;
 
         case NSLayoutAttributeCenterY:
-            return [_centerY getConstraint];
+            return _centerY;
             
         case NSLayoutAttributeWidth:
-            return [_width getConstraint];
+            return _width;
 
         default:
-            return [_height getConstraint];
+            return _height;
     }
 }
 
@@ -244,4 +248,18 @@
     [_height animate];
 }
 
+- (void)updateAttribute:(NSLayoutAttribute)attribute constraint:(CGFloat)constraint {
+    NSLayoutConstraint *c = [self constraint:attribute];
+    c.constant = constraint;
+}
+
+- (void)resetAttribute:(NSLayoutAttribute)attribute constraint:(void(^)(id))constraint {
+
+    HiConstraintModel *model = [self modelWithAttribute:attribute];
+    if (model && constraint) {
+        constraint(model);
+        [model remove];
+        [model layout];
+    }
+}
 @end

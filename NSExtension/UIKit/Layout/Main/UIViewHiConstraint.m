@@ -105,6 +105,49 @@
     }
 }
 
+#pragma mark *********** update ***********
+- (void)hi_updateAttribute:(NSLayoutAttribute)attribute constraint:(CGFloat)constraint {
+    [self.hi_builder updateAttribute:attribute constraint:constraint];
+}
+
+- (void)hi_resetAttribute:(NSLayoutAttribute)attribute constraint:(void(^)(id))constraint {
+    [self.hi_builder resetAttribute:attribute constraint:constraint];
+}
+
+- (void)hi_resetTop:(void(^_Nullable)(id<HiConstraintVertical0> _Nullable constraint))constraint {
+    [self hi_resetAttribute:NSLayoutAttributeTop constraint:constraint];
+}
+
+- (void)hi_resetBottom:(void(^_Nullable)(id<HiConstraintVertical0> _Nullable constraint))constraint {
+    [self hi_resetAttribute:NSLayoutAttributeBottom constraint:constraint];
+}
+
+- (void)hi_resetLeft:(void(^_Nullable)(id<HiConstraintHorizontal0> _Nullable constraint))constraint {
+    [self hi_resetAttribute:NSLayoutAttributeLeft constraint:constraint];
+}
+
+- (void)hi_resetRight:(void(^_Nullable)(id<HiConstraintHorizontal0> _Nullable constraint))constraint {
+    [self hi_resetAttribute:NSLayoutAttributeRight constraint:constraint];
+}
+
+- (void)hi_resetCenterX:(void(^_Nullable)(id<HiConstraintHorizontal0> _Nullable constraint))constraint {
+    [self hi_resetAttribute:NSLayoutAttributeCenterX constraint:constraint];
+}
+
+- (void)hi_resetCenterY:(void(^_Nullable)(id<HiConstraintVertical0> _Nullable constraint))constraint {
+    [self hi_resetAttribute:NSLayoutAttributeCenterY constraint:constraint];
+}
+
+- (void)hi_resetWidth:(void(^_Nullable)(id<HiConstraintSize0> _Nullable constraint))constraint {
+    [self hi_resetAttribute:NSLayoutAttributeWidth constraint:constraint];
+
+}
+
+- (void)hi_resetHeight:(void(^_Nullable)(id<HiConstraintSize0> _Nullable constraint))constraint {
+    [self hi_resetAttribute:NSLayoutAttributeHeight constraint:constraint];
+}
+
+
 - (void)hi_horizotalHuggingPriority:(UILayoutPriority)priority {
     [self setContentHuggingPriority:priority forAxis:UILayoutConstraintAxisHorizontal];
 }

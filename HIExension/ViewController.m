@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "HiNSExtension.h"
+#import "UIViewHiConstraintSizeClass.h"
 
 @interface TableViewCell : UITableViewCell
 
@@ -24,7 +25,7 @@
 }
 @end
 
-@interface ViewController ()<UITableViewDataSource>
+@interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UILabel *label;
@@ -39,6 +40,7 @@
         
         [TableViewCell hi_tableViewRegister:_tableView];
         _tableView.dataSource = self;
+        _tableView.delegate = self;
     }
     return _tableView;
 }
@@ -54,7 +56,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = UIColor.whiteColor;
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.label];
 
@@ -71,6 +73,20 @@
         builder.height.autoValue();
         builder.right.value(0);
     }];
+    
+//    [self.label hi_constraints_cr_make:^(id<HiViewConstraintBuilder>  _Nullable builder) {
+//        builder.left.value(0);
+//        builder.top.equal(self.tableView).bottom.value(10.0);
+//        builder.height.autoValue();
+//        builder.right.value(0);
+//    }];
+    
+//    [self.label hi_constraints_cc_make:^(id<HiViewConstraintBuilder>  _Nullable builder) {
+//        builder.left.value(0);
+//        builder.top.value(10.0);
+//        builder.height.autoValue();
+//        builder.right.value(0);
+//    }];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -83,6 +99,7 @@
 //        builder.height.equal(self.tableView).width.multiplier(0.5).value(0);
 //    }];
     
+    [self.label hi_activateConstraints:self.label.hi_sizeClass];
 
 }
 
@@ -118,6 +135,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [TableViewCell hi_tableView:tableView dequeueCellForIndexPath:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.navigationController pushViewController:[[ViewController alloc] init] animated:true];
 }
 
 - (void)dealloc {

@@ -90,19 +90,3 @@
 - (void)hi_verticallCompressionPriority:(UILayoutPriority)priority;
 
 @end
-
-typedef enum : NSUInteger {
-    HiSizeClass_rr,
-    HiSizeClass_rc,
-    HiSizeClass_ra,
-    HiSizeClass_cr,
-    HiSizeClass_cc,
-    HiSizeClass_ca,
-    HiSizeClass_ar,
-    HiSizeClass_ac,
-    HiSizeClass_aa,
-} HiSizeClass;
-
-@interface UIView (HiSizeClass)
-
-@end

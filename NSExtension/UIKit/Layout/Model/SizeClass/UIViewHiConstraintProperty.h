@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HiViewConstraint.h"
+#import "UIViewHiEnum.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong,readonly) HiViewConstraint *hi_builder_ar;
 @property (nonatomic, strong,readonly) HiViewConstraint *hi_builder_ac;
 @property (nonatomic, strong,readonly) HiViewConstraint *hi_builder_aa;
+
+- (HiViewConstraint *)hi_getBuilderWithSizeClass:(HiSizeClass)sizeClass;
 
 @end
 

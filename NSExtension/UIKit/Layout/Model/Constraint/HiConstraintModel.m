@@ -12,7 +12,7 @@
 @interface HiConstraintModel ()
 
 @property (nonatomic, weak) UIView *constraintView; // 添加约束的 view
-@property (nonatomic, weak) NSLayoutConstraint *layoutConstraint;
+@property (nonatomic, strong) NSLayoutConstraint *layoutConstraint;
 
 @end
 

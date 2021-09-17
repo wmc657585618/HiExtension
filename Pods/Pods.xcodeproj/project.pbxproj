@@ -7,53 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01F9EDE98215691F2443F894D39E744B /* UIButtonHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CC7E45C750CF439E334E481F4E8713 /* UIButtonHiExtension.m */; };
-		0317C58AD562543FD743440865EE9A4C /* UIControlHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3123FFE52216081AEE220DAF8637DB35 /* UIControlHiExtension.m */; };
-		0F7D79A163DD8034F5A85358FC393E5D /* HiLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63185582FEAE565E42A9EA38964F593B /* HiLayoutModel.m */; };
-		1C344D8EB3C444BBBA2BF45F850E39BB /* UICollectionVIewHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC64747276A3847D08777FCEB9860CC /* UICollectionVIewHiExtension.m */; };
-		1C5233F70B361E9CBD1420B40A436F0E /* HiViewFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C7973A1AF8F89A398ABB7EFE12F7C2 /* HiViewFrame.m */; };
-		1D5866932EC282C9E4BC7CB51F07F517 /* HIContraintMake.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CC5B95ABF4A24C3AFB705C70268864A /* HIContraintMake.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		09866A1A772A6BB8B57982314FEFC5E5 /* HiLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 32718B1B01CDC12426D2F5C1E77E62C7 /* HiLayoutModel.m */; };
+		18C199682A5E926101C3F3A1400F1A9E /* HiFrameLayoutModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2164DE32225E1ABC1C04C2B404DA4C /* HiFrameLayoutModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1FDC018E9B5D71DB4359D400AA531450 /* HiUIHander.h in Headers */ = {isa = PBXBuildFile; fileRef = A8D6193D438138FD8E492B84422E1905 /* HiUIHander.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		20BC98B337E1EE8CC1D681A34F677F73 /* Pods-HIExension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E6577DEC2D3EB86C52F00E221B632E /* Pods-HIExension-dummy.m */; };
-		237C209FD17AB5B4EB6AA7EC204A0B5F /* UIViewHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EA6894516F4E9AB960DD8580F600F /* UIViewHiExtension.m */; };
-		299A06306F51D03DCF0B1C28D2A573A2 /* HiLayoutModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A38CF6ADA6E2AC5F3A383EDE752EBACF /* HiLayoutModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2E8F969990D68E3199F85140EBAB6A79 /* HiUIHander.m in Sources */ = {isa = PBXBuildFile; fileRef = 089B690DD55003E998D96D04CF52FBEC /* HiUIHander.m */; };
-		3474A353F2B7C6CBCAE620617B9490F5 /* HIContraintMake.m in Sources */ = {isa = PBXBuildFile; fileRef = BA20EEE32BDBB7A8B73E34FCD789A963 /* HIContraintMake.m */; };
-		3A2408C137731EE2C660E16604E122B5 /* HiConstraintModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5254E447460BA7BCD28976A78F25C352 /* HiConstraintModel.m */; };
-		3B75493EB3626B33B788CCB484EDE48C /* HiViewFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 74EDB089933169F24C7FC398158B158F /* HiViewFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5C0A535CDE11F0514084D0DF7E7B9365 /* UICollectionVIewHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 740D6CFFCE2488B4CC1F3841588ACA99 /* UICollectionVIewHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5EB76473D851F461E7DB980394DB3262 /* NSObjectHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0DE66A92BC4810B2401F3859F2EC18 /* NSObjectHiExtension.m */; };
-		62AAF853BF73E415F498F65483618AE9 /* UITableViewHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 033AA1DE3322487EA2108CE4A5C37BB4 /* UITableViewHiExtension.m */; };
-		6541210E90D3D64AE0595730A7FDE27B /* HiViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B1A2C197FE05D8FDC1AC75BACA475E23 /* HiViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6ADF85F491155BCCEEB8D4484D60D6BD /* UIViewHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = CD36C9913739D446B2515397CD2A8AC4 /* UIViewHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6F89AA1C6D683E4855055547656635C5 /* HiConstraintLayoutProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FF66BF3A38C94A23FA219F0DADC33BC /* HiConstraintLayoutProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7236D21F18F05FD254D5AD74406AEEBC /* UITableViewHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A8ACC8B0D73A9CA7C2E1ADA956536D36 /* UITableViewHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		76CA67897DACD55B8FA52549A4B84DA8 /* UIButtonHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A0B69FB982161DF1DDBE4F36B38F3E0C /* UIButtonHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		78BAD57CAA5E1C449AA45E4181B7FEDC /* HiViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 463748D959BC3AAC5F0F85D716176197 /* HiViewConstraint.m */; };
-		80E73BCE970A10B28B057826A401FC70 /* HiNSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FB1AF46A9FEFED70339F03FF5DE7774 /* HiNSExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		839BDB2796D13E9251AA67D7956CE380 /* HiCorners.h in Headers */ = {isa = PBXBuildFile; fileRef = A75BEC693F8C834985E3101AB212B965 /* HiCorners.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9BD07DBA35B76EF18F73FA0FD931AE79 /* HiOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 650EF17F55F19579C3F4A899CE828E2C /* HiOptions.m */; };
-		A29C80CB8E129A72F5A8A23CAA05CA81 /* HiFrameProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = E8579F10599CFA7338165493C6DF1FE1 /* HiFrameProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A5BCAE0C99923A5D94F30BAE0D0285A5 /* HiExension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE05CD18D67F084C77AB074B5DD467E /* HiExension-dummy.m */; };
-		A6F993428451A3B8E1DDF8E0B5335062 /* HiFrameLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8339DABF53387437E9712BB060C94D /* HiFrameLayoutModel.m */; };
-		A89AB4CF356584DCD84E8D29E112F8B5 /* UIViewHiConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3E5392962E071BCBBE6F96C0E57898 /* UIViewHiConstraint.m */; };
-		A91CE510F5BB78B3F4416CDDFCDE697E /* HiFrameLayoutModel.h in Headers */ = {isa = PBXBuildFile; fileRef = C7F4979BF3AB95107233480E2963C156 /* HiFrameLayoutModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AD39EB12CCE053DB0D76B9062817DC66 /* UIKitHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 712DA218C00B596720136A3E1A79E62F /* UIKitHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C2BC59B5DCF6E44238D7751A5CE6BB9E /* HiFrameLayoutProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = ACD0632DDBABB7A4123286953DDB8690 /* HiFrameLayoutProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D6F3CB4C4EE07B4C3A1096AB16238E70 /* HiUIHander.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA4610D80EAD761FB200B47F608FBFD /* HiUIHander.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D8B70EC7B3277BF6A2E632B4C96EFE9C /* UIViewHiConstraintProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 2572B881452FEE6FE640DDCA61A24213 /* UIViewHiConstraintProperty.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DCFA2D1053037DE6B6D1D75513EB30E8 /* UIControlHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E190D076CA7E25A065C15B3BCBEEB52 /* UIControlHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DE79D1C4FA70130E7F2D692190ED934B /* HiConstraintModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B26F116C2EE5EEE0C9D3488B17B76CB8 /* HiConstraintModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DEB74448D3BA74792E604A762549652E /* HiPaddingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C4E2F2209990A4CEBB3171C23E7B7F /* HiPaddingLabel.m */; };
-		E737F0B5EB177DACB8802001A536E67D /* UIViewHiConstraintProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FE86001836A11406A45BA2F632E3B5 /* UIViewHiConstraintProperty.m */; };
-		EB01EB8C623F1427F55AA3B2BE7DD492 /* NSObjectHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 93155962F94A83712DCFDBB9E483D319 /* NSObjectHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F0CFA42FA5D6E7987E7B23B34C9851C2 /* UIViewHiConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = E70A86896A667352DCAC78A80715B887 /* UIViewHiConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F13897A677B77ECD2CD2104AF87813FD /* HiCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8492BAC136FB88FDBE3F5663E25D21 /* HiCorners.m */; };
-		F28C0473AFD5A60C83FFA91E9B4DFF18 /* HiOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B40EAABD22E3A25355BC1687993B3AF /* HiOptions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F2DC226EA37F16A8279F73E89FCEC8DB /* HiPaddingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A3CDED6E547500A215FB68700957696A /* HiPaddingLabel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		26996316D4D03A00BD6C3E87DC250E57 /* UIViewHiConstraintProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = B1C5C0FB2B9D9F696FE6E6DF24AFA7C4 /* UIViewHiConstraintProperty.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		272D73A7919AD83D4E6893464B873746 /* HiViewFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 083F40B95D9E24D413C2EC275C554BDB /* HiViewFrame.m */; };
+		27D054BA20EDF17DA5B122498993B785 /* UIControlHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E190D076CA7E25A065C15B3BCBEEB52 /* UIControlHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2BF4E11255C85E049AFAE21C297A96BB /* UIViewHiConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = F4696E82C86568E4F2B5743D4D9BF19B /* UIViewHiConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2EAB5EB0240205465F1AFE90BD2738D9 /* UIViewHiConstraintSizeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D382BF4AA1167B780C2E002A341BF /* UIViewHiConstraintSizeClass.m */; };
+		310F8CF49E75D7FAD36B6B6FC48DBC54 /* HiLayoutModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5627F35B66DF041E4F4D70BB5CF54D26 /* HiLayoutModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		31357A5367D2B33D5E1603F66792AB1E /* UIViewHiConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 880AD5D5B7C74F16DDB44A359BE33908 /* UIViewHiConstraint.m */; };
+		330F74CF57E11D4312E6A4E307482C68 /* HiViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A109B7703C48678047F53BDA0DA4CD3 /* HiViewConstraint.m */; };
+		347AF0BC68651235078CDAD9B553BCA1 /* UITableViewHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 033AA1DE3322487EA2108CE4A5C37BB4 /* UITableViewHiExtension.m */; };
+		39011FB47E3D956C60560B0DEEE4650F /* UIButtonHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A0B69FB982161DF1DDBE4F36B38F3E0C /* UIButtonHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3C6A370EDFB758552E3440F9CEC433E8 /* HiOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = A2F55E0BAB733BC8BFBC64254D8CB05B /* HiOptions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		43E6EB3C307FFD0A260DA9542EA1FAE5 /* UIViewHiConstraintProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B290035677B477619A4140A3841EF0 /* UIViewHiConstraintProperty.m */; };
+		5800B42F0781B61DA90136A9FA4E068B /* UICollectionVIewHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 740D6CFFCE2488B4CC1F3841588ACA99 /* UICollectionVIewHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		59F17B14611A238E0647786C611E73F7 /* UITableViewHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A8ACC8B0D73A9CA7C2E1ADA956536D36 /* UITableViewHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5B1395D5AE395A17A8C646D994E4A54B /* HiOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEC82BA5C36BB1DE9CC37465A83F284 /* HiOptions.m */; };
+		5F70893D3734C59ACCEBCF671B626A26 /* HiPaddingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C4E2F2209990A4CEBB3171C23E7B7F /* HiPaddingLabel.m */; };
+		660672FC9EA1F7667162532076A6B7BC /* HIContraintMake.m in Sources */ = {isa = PBXBuildFile; fileRef = E96F7B7E56D0C8C2BB416DBF76A3D8EB /* HIContraintMake.m */; };
+		696447ECED8D8A2E0849FC817EF51811 /* UIViewHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = CD36C9913739D446B2515397CD2A8AC4 /* UIViewHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		715633B3AFDFCC0E2362C2CF4777135B /* HiNSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FB1AF46A9FEFED70339F03FF5DE7774 /* HiNSExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		77E52DFCA2CB2CD2C9FA02114939653F /* HiFrameProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FB09B12032CA95D30D17847614F47021 /* HiFrameProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		837AC6B45B63FF2DC51E4EE83984209E /* UIViewHiEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = B685FC4BF9BD6028FE92535919A7E542 /* UIViewHiEnum.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		924053B72C722A24EA6880709C79315B /* UIButtonHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CC7E45C750CF439E334E481F4E8713 /* UIButtonHiExtension.m */; };
+		94F7119014CF8C26695EB5AB2BD3AC6B /* UIViewHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1EA6894516F4E9AB960DD8580F600F /* UIViewHiExtension.m */; };
+		95EA97A9E2D279274461082C8C90E575 /* NSObjectHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 93155962F94A83712DCFDBB9E483D319 /* NSObjectHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		97E891FABFE0C096F3BF621FC268062F /* HiCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8492BAC136FB88FDBE3F5663E25D21 /* HiCorners.m */; };
+		9E1D80A4E5C32C38BA5B8171AF61AF08 /* UICollectionVIewHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC64747276A3847D08777FCEB9860CC /* UICollectionVIewHiExtension.m */; };
+		9F2EDFABEF34D734A89772C1C4ADEAFD /* HiViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E322D75C9F42B574E2016D133E41501 /* HiViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A21C116BD805E9A5C7091E8AEDFBF36B /* HiViewFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B9BBDED75262C4506532FBABD22C6F9 /* HiViewFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A23782E5C39E08A4AA721DB617AB8E61 /* UIKitHiExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 712DA218C00B596720136A3E1A79E62F /* UIKitHiExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AED5D863BF9DC35D7F81FB1DDD7D7FDA /* HiConstraintModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A9E8C055679A2C4A24D2CC6F9C1B24 /* HiConstraintModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B4B4DCC0EE1676C613493AA757F9F8CE /* HiConstraintModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFF026D6BEC548E864DD212FCFEFFD7 /* HiConstraintModel.m */; };
+		B7F8CF14DC4E661482B9B23E6320AA7B /* HiCorners.h in Headers */ = {isa = PBXBuildFile; fileRef = A75BEC693F8C834985E3101AB212B965 /* HiCorners.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C530CD7099154D045E629727EC4125AE /* HiFrameLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D926097058E6EA3DCD1E446BEE4E5DB /* HiFrameLayoutModel.m */; };
+		CBECDC0C61EBEA04AA1872A7EB3EEA7A /* NSObjectHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0DE66A92BC4810B2401F3859F2EC18 /* NSObjectHiExtension.m */; };
+		CC6CA09BDE929EA473BD186D9DF3183E /* UIViewHiConstraintSizeClass.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F04C6B8559AF5DFD2B184E9238AF6F /* UIViewHiConstraintSizeClass.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CD0815EA7C2D49422C6020F4AE6C6D81 /* HiPaddingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A3CDED6E547500A215FB68700957696A /* HiPaddingLabel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D1BA004B15254BF9D78C1474B1335C53 /* HIContraintMake.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB2B05085C08BC8CC5326446D0A2A33 /* HIContraintMake.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DF6DADCEE232B2501DC88DDD430EB53B /* HiFrameLayoutProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EFE5566F27C7660B20DE2373A5824A6 /* HiFrameLayoutProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E748C499D1174974A2632E14022AB080 /* HiUIHander.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA32FED9EFF2E26C1306563618ACA3 /* HiUIHander.m */; };
+		EBE2EDB3CA65B16DE7DBE7C3CFE36A48 /* HiExension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE05CD18D67F084C77AB074B5DD467E /* HiExension-dummy.m */; };
+		EF170CBE36573B67A8E931DB8D6BE161 /* HiConstraintLayoutProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 24616C5056057F823E779C01C587ED87 /* HiConstraintLayoutProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F7938C04AF3476A5C4E49F9429274D35 /* UIControlHiExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3123FFE52216081AEE220DAF8637DB35 /* UIControlHiExtension.m */; };
+		FBBBEE524CF59BA9946D0C3F18B1A21F /* UIViewHiEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF06D4C327C117A6530616EC60DDFB /* UIViewHiEnum.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A39AFE7FFA7DFC56ABC1B4017B8A185B /* PBXContainerItemProxy */ = {
+		2AF90A6D9BD14391D061186F9AE510F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -64,60 +68,64 @@
 
 /* Begin PBXFileReference section */
 		033AA1DE3322487EA2108CE4A5C37BB4 /* UITableViewHiExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UITableViewHiExtension.m; sourceTree = "<group>"; };
-		089B690DD55003E998D96D04CF52FBEC /* HiUIHander.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiUIHander.m; sourceTree = "<group>"; };
+		083F40B95D9E24D413C2EC275C554BDB /* HiViewFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiViewFrame.m; sourceTree = "<group>"; };
 		1205EBA02D71B28A22C1C02CA4F73588 /* Pods-HIExension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HIExension.release.xcconfig"; sourceTree = "<group>"; };
+		1A109B7703C48678047F53BDA0DA4CD3 /* HiViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiViewConstraint.m; sourceTree = "<group>"; };
 		1C9925755F2B2522B93ED0F7878AB1AE /* Pods-HIExension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HIExension-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2572B881452FEE6FE640DDCA61A24213 /* UIViewHiConstraintProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIViewHiConstraintProperty.h; sourceTree = "<group>"; };
-		25C7973A1AF8F89A398ABB7EFE12F7C2 /* HiViewFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiViewFrame.m; sourceTree = "<group>"; };
+		24616C5056057F823E779C01C587ED87 /* HiConstraintLayoutProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiConstraintLayoutProtocol.h; sourceTree = "<group>"; };
+		2BEC82BA5C36BB1DE9CC37465A83F284 /* HiOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiOptions.m; sourceTree = "<group>"; };
 		2D0DE66A92BC4810B2401F3859F2EC18 /* NSObjectHiExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NSObjectHiExtension.m; sourceTree = "<group>"; };
-		2E3E5392962E071BCBBE6F96C0E57898 /* UIViewHiConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIViewHiConstraint.m; sourceTree = "<group>"; };
+		2D2164DE32225E1ABC1C04C2B404DA4C /* HiFrameLayoutModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiFrameLayoutModel.h; sourceTree = "<group>"; };
+		2D926097058E6EA3DCD1E446BEE4E5DB /* HiFrameLayoutModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiFrameLayoutModel.m; sourceTree = "<group>"; };
 		3123FFE52216081AEE220DAF8637DB35 /* UIControlHiExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIControlHiExtension.m; sourceTree = "<group>"; };
-		3AA4610D80EAD761FB200B47F608FBFD /* HiUIHander.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiUIHander.h; sourceTree = "<group>"; };
+		32718B1B01CDC12426D2F5C1E77E62C7 /* HiLayoutModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiLayoutModel.m; sourceTree = "<group>"; };
 		404A8623A7AF7EB82E529A5373B92B23 /* Pods-HIExension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HIExension-acknowledgements.plist"; sourceTree = "<group>"; };
-		463748D959BC3AAC5F0F85D716176197 /* HiViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiViewConstraint.m; sourceTree = "<group>"; };
 		48BAC7BC303E966AAAB8ACF881F8826F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		5254E447460BA7BCD28976A78F25C352 /* HiConstraintModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiConstraintModel.m; sourceTree = "<group>"; };
+		4B9BBDED75262C4506532FBABD22C6F9 /* HiViewFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiViewFrame.h; sourceTree = "<group>"; };
+		5627F35B66DF041E4F4D70BB5CF54D26 /* HiLayoutModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiLayoutModel.h; sourceTree = "<group>"; };
+		597D382BF4AA1167B780C2E002A341BF /* UIViewHiConstraintSizeClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIViewHiConstraintSizeClass.m; sourceTree = "<group>"; };
+		5AB2B05085C08BC8CC5326446D0A2A33 /* HIContraintMake.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HIContraintMake.h; sourceTree = "<group>"; };
 		5B1EA6894516F4E9AB960DD8580F600F /* UIViewHiExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIViewHiExtension.m; sourceTree = "<group>"; };
-		5B40EAABD22E3A25355BC1687993B3AF /* HiOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiOptions.h; sourceTree = "<group>"; };
+		5CCF06D4C327C117A6530616EC60DDFB /* UIViewHiEnum.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIViewHiEnum.m; sourceTree = "<group>"; };
+		5EFE5566F27C7660B20DE2373A5824A6 /* HiFrameLayoutProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiFrameLayoutProtocol.h; sourceTree = "<group>"; };
 		5FB1AF46A9FEFED70339F03FF5DE7774 /* HiNSExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HiNSExtension.h; path = NSExtension/HiNSExtension.h; sourceTree = "<group>"; };
-		63185582FEAE565E42A9EA38964F593B /* HiLayoutModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiLayoutModel.m; sourceTree = "<group>"; };
-		650EF17F55F19579C3F4A899CE828E2C /* HiOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiOptions.m; sourceTree = "<group>"; };
-		6CC5B95ABF4A24C3AFB705C70268864A /* HIContraintMake.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HIContraintMake.h; sourceTree = "<group>"; };
+		6E322D75C9F42B574E2016D133E41501 /* HiViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiViewConstraint.h; sourceTree = "<group>"; };
 		6E86455FC2ED7742B471A780CD5D78BA /* Pods-HIExension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HIExension.debug.xcconfig"; sourceTree = "<group>"; };
 		712DA218C00B596720136A3E1A79E62F /* UIKitHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIKitHiExtension.h; sourceTree = "<group>"; };
 		73F0561037DF95CC5576806DAF108CE3 /* HiExension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HiExension-prefix.pch"; sourceTree = "<group>"; };
 		740D6CFFCE2488B4CC1F3841588ACA99 /* UICollectionVIewHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UICollectionVIewHiExtension.h; sourceTree = "<group>"; };
-		74EDB089933169F24C7FC398158B158F /* HiViewFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiViewFrame.h; sourceTree = "<group>"; };
 		75C4E2F2209990A4CEBB3171C23E7B7F /* HiPaddingLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiPaddingLabel.m; sourceTree = "<group>"; };
-		7FF66BF3A38C94A23FA219F0DADC33BC /* HiConstraintLayoutProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiConstraintLayoutProtocol.h; sourceTree = "<group>"; };
 		81CC7E45C750CF439E334E481F4E8713 /* UIButtonHiExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIButtonHiExtension.m; sourceTree = "<group>"; };
+		880AD5D5B7C74F16DDB44A359BE33908 /* UIViewHiConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIViewHiConstraint.m; sourceTree = "<group>"; };
 		8D8492BAC136FB88FDBE3F5663E25D21 /* HiCorners.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiCorners.m; sourceTree = "<group>"; };
 		93155962F94A83712DCFDBB9E483D319 /* NSObjectHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NSObjectHiExtension.h; sourceTree = "<group>"; };
+		96A9E8C055679A2C4A24D2CC6F9C1B24 /* HiConstraintModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiConstraintModel.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E190D076CA7E25A065C15B3BCBEEB52 /* UIControlHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIControlHiExtension.h; sourceTree = "<group>"; };
+		9FDA32FED9EFF2E26C1306563618ACA3 /* HiUIHander.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiUIHander.m; sourceTree = "<group>"; };
 		A0B69FB982161DF1DDBE4F36B38F3E0C /* UIButtonHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIButtonHiExtension.h; sourceTree = "<group>"; };
-		A38CF6ADA6E2AC5F3A383EDE752EBACF /* HiLayoutModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiLayoutModel.h; sourceTree = "<group>"; };
+		A2F55E0BAB733BC8BFBC64254D8CB05B /* HiOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiOptions.h; sourceTree = "<group>"; };
 		A3CDED6E547500A215FB68700957696A /* HiPaddingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiPaddingLabel.h; sourceTree = "<group>"; };
 		A75BEC693F8C834985E3101AB212B965 /* HiCorners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiCorners.h; sourceTree = "<group>"; };
 		A8ACC8B0D73A9CA7C2E1ADA956536D36 /* UITableViewHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UITableViewHiExtension.h; sourceTree = "<group>"; };
-		ACD0632DDBABB7A4123286953DDB8690 /* HiFrameLayoutProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiFrameLayoutProtocol.h; sourceTree = "<group>"; };
-		B1A2C197FE05D8FDC1AC75BACA475E23 /* HiViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiViewConstraint.h; sourceTree = "<group>"; };
-		B26F116C2EE5EEE0C9D3488B17B76CB8 /* HiConstraintModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiConstraintModel.h; sourceTree = "<group>"; };
+		A8D6193D438138FD8E492B84422E1905 /* HiUIHander.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiUIHander.h; sourceTree = "<group>"; };
+		B1C5C0FB2B9D9F696FE6E6DF24AFA7C4 /* UIViewHiConstraintProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIViewHiConstraintProperty.h; sourceTree = "<group>"; };
 		B3E6577DEC2D3EB86C52F00E221B632E /* Pods-HIExension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HIExension-dummy.m"; sourceTree = "<group>"; };
-		BA20EEE32BDBB7A8B73E34FCD789A963 /* HIContraintMake.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HIContraintMake.m; sourceTree = "<group>"; };
-		C0FE86001836A11406A45BA2F632E3B5 /* UIViewHiConstraintProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIViewHiConstraintProperty.m; sourceTree = "<group>"; };
-		C7F4979BF3AB95107233480E2963C156 /* HiFrameLayoutModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiFrameLayoutModel.h; sourceTree = "<group>"; };
+		B3F04C6B8559AF5DFD2B184E9238AF6F /* UIViewHiConstraintSizeClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIViewHiConstraintSizeClass.h; sourceTree = "<group>"; };
+		B685FC4BF9BD6028FE92535919A7E542 /* UIViewHiEnum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIViewHiEnum.h; sourceTree = "<group>"; };
+		BFFF026D6BEC548E864DD212FCFEFFD7 /* HiConstraintModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiConstraintModel.m; sourceTree = "<group>"; };
+		C3B290035677B477619A4140A3841EF0 /* UIViewHiConstraintProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIViewHiConstraintProperty.m; sourceTree = "<group>"; };
 		C85BF5FD772E8D70A1E5AD1DB3DE9A09 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		CB8339DABF53387437E9712BB060C94D /* HiFrameLayoutModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HiFrameLayoutModel.m; sourceTree = "<group>"; };
 		CD36C9913739D446B2515397CD2A8AC4 /* UIViewHiExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIViewHiExtension.h; sourceTree = "<group>"; };
 		CD3D40131D55D7EAD4833C94429884CD /* HiExension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HiExension.debug.xcconfig; sourceTree = "<group>"; };
 		DBDB5CA2FC6850783DC3C9F7E101AEB1 /* HiExension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HiExension.release.xcconfig; sourceTree = "<group>"; };
 		DEC64747276A3847D08777FCEB9860CC /* UICollectionVIewHiExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UICollectionVIewHiExtension.m; sourceTree = "<group>"; };
-		E70A86896A667352DCAC78A80715B887 /* UIViewHiConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIViewHiConstraint.h; sourceTree = "<group>"; };
-		E8579F10599CFA7338165493C6DF1FE1 /* HiFrameProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiFrameProtocol.h; sourceTree = "<group>"; };
+		E96F7B7E56D0C8C2BB416DBF76A3D8EB /* HIContraintMake.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HIContraintMake.m; sourceTree = "<group>"; };
 		EB879155E1A0D4B960DBF8DF1BC308F3 /* libHiExension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHiExension.a; path = libHiExension.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE05CD18D67F084C77AB074B5DD467E /* HiExension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HiExension-dummy.m"; sourceTree = "<group>"; };
 		F24ECA559EE7E7E869E3F4A15752FE3E /* HiExension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HiExension.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F4696E82C86568E4F2B5743D4D9BF19B /* UIViewHiConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIViewHiConstraint.h; sourceTree = "<group>"; };
+		FB09B12032CA95D30D17847614F47021 /* HiFrameProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HiFrameProtocol.h; sourceTree = "<group>"; };
 		FDA06B9FABFA6EFC8B25FED4AC5BEE5E /* libPods-HIExension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HIExension.a"; path = "libPods-HIExension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,7 +137,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9E43232870FA3DEDC115926FD131159E /* Frameworks */ = {
+		C5377D15102289707C971A4130FE8CD6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -161,18 +169,6 @@
 			path = "Pods/Target Support Files/HiExension";
 			sourceTree = "<group>";
 		};
-		08F23184A61657BDC6576123474665D9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				A38CF6ADA6E2AC5F3A383EDE752EBACF /* HiLayoutModel.h */,
-				63185582FEAE565E42A9EA38964F593B /* HiLayoutModel.m */,
-				4254F6CBFF21854134E52D5F46ACAEB2 /* Constraint */,
-				8F752463FB7C4A1B0C9EEB6CE34346CD /* Frame */,
-			);
-			name = Model;
-			path = Model;
-			sourceTree = "<group>";
-		};
 		1259AE6A4C0BB278F07F3C34C9EFCC92 /* Pods-HIExension */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +190,20 @@
 			);
 			name = Button;
 			path = Button;
+			sourceTree = "<group>";
+		};
+		1788C21710BB04A174171A1AB280431A /* SizeClass */ = {
+			isa = PBXGroup;
+			children = (
+				B1C5C0FB2B9D9F696FE6E6DF24AFA7C4 /* UIViewHiConstraintProperty.h */,
+				C3B290035677B477619A4140A3841EF0 /* UIViewHiConstraintProperty.m */,
+				B3F04C6B8559AF5DFD2B184E9238AF6F /* UIViewHiConstraintSizeClass.h */,
+				597D382BF4AA1167B780C2E002A341BF /* UIViewHiConstraintSizeClass.m */,
+				B685FC4BF9BD6028FE92535919A7E542 /* UIViewHiEnum.h */,
+				5CCF06D4C327C117A6530616EC60DDFB /* UIViewHiEnum.m */,
+			);
+			name = SizeClass;
+			path = SizeClass;
 			sourceTree = "<group>";
 		};
 		1E260E4BDB40A78270042C45E685A147 /* HiExension */ = {
@@ -227,17 +237,27 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		4254F6CBFF21854134E52D5F46ACAEB2 /* Constraint */ = {
+		4DE63CE2374962EA076ACAA7759EB246 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7FF66BF3A38C94A23FA219F0DADC33BC /* HiConstraintLayoutProtocol.h */,
-				B26F116C2EE5EEE0C9D3488B17B76CB8 /* HiConstraintModel.h */,
-				5254E447460BA7BCD28976A78F25C352 /* HiConstraintModel.m */,
-				B1A2C197FE05D8FDC1AC75BACA475E23 /* HiViewConstraint.h */,
-				463748D959BC3AAC5F0F85D716176197 /* HiViewConstraint.m */,
+				5627F35B66DF041E4F4D70BB5CF54D26 /* HiLayoutModel.h */,
+				32718B1B01CDC12426D2F5C1E77E62C7 /* HiLayoutModel.m */,
+				C338891E5394CA27E7F71586CEB8A986 /* Constraint */,
+				D89406CCEEA18173D1D420864CF2867A /* Frame */,
+				1788C21710BB04A174171A1AB280431A /* SizeClass */,
 			);
-			name = Constraint;
-			path = Constraint;
+			name = Model;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4F910D80F6873B1E43A5BCA3A612A292 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F4696E82C86568E4F2B5743D4D9BF19B /* UIViewHiConstraint.h */,
+				880AD5D5B7C74F16DDB44A359BE33908 /* UIViewHiConstraint.m */,
+			);
+			name = Main;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		5FDE58B4B805390FBE6A048C1F7D4B68 /* UICollectionVIew */ = {
@@ -248,6 +268,21 @@
 			);
 			name = UICollectionVIew;
 			path = UICollectionVIew;
+			sourceTree = "<group>";
+		};
+		60ECEA0CBBC0B98DABE2F45899349E1B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5AB2B05085C08BC8CC5326446D0A2A33 /* HIContraintMake.h */,
+				E96F7B7E56D0C8C2BB416DBF76A3D8EB /* HIContraintMake.m */,
+				FB09B12032CA95D30D17847614F47021 /* HiFrameProtocol.h */,
+				A2F55E0BAB733BC8BFBC64254D8CB05B /* HiOptions.h */,
+				2BEC82BA5C36BB1DE9CC37465A83F284 /* HiOptions.m */,
+				A8D6193D438138FD8E492B84422E1905 /* HiUIHander.h */,
+				9FDA32FED9EFF2E26C1306563618ACA3 /* HiUIHander.m */,
+			);
+			name = Other;
+			path = Other;
 			sourceTree = "<group>";
 		};
 		69E2C8A6A90D83FCB0E8DA8AEEBCD63F /* UITableView */ = {
@@ -281,19 +316,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8F752463FB7C4A1B0C9EEB6CE34346CD /* Frame */ = {
-			isa = PBXGroup;
-			children = (
-				C7F4979BF3AB95107233480E2963C156 /* HiFrameLayoutModel.h */,
-				CB8339DABF53387437E9712BB060C94D /* HiFrameLayoutModel.m */,
-				ACD0632DDBABB7A4123286953DDB8690 /* HiFrameLayoutProtocol.h */,
-				74EDB089933169F24C7FC398158B158F /* HiViewFrame.h */,
-				25C7973A1AF8F89A398ABB7EFE12F7C2 /* HiViewFrame.m */,
-			);
-			name = Frame;
-			path = Frame;
-			sourceTree = "<group>";
-		};
 		9C548C77880421F2F0167D122396329A /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,17 +323,6 @@
 			);
 			name = Main;
 			path = Main;
-			sourceTree = "<group>";
-		};
-		B6C47DE12D6A276359B84081C10D4BF7 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				F3548BF4FBE553C575F442EA42C2CA9E /* Main */,
-				08F23184A61657BDC6576123474665D9 /* Model */,
-				E676CF7EB80DE6971A74DAF4C32342A6 /* Other */,
-			);
-			name = Layout;
-			path = Layout;
 			sourceTree = "<group>";
 		};
 		B87E4CE90679C0A49E709E148F9386B9 /* UIView */ = {
@@ -327,7 +338,7 @@
 		BA6DC658B28B1FB5A20A62501B608914 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				B6C47DE12D6A276359B84081C10D4BF7 /* Layout */,
+				D35951E6D791C74DB9F2CD444A8647D0 /* Layout */,
 				9C548C77880421F2F0167D122396329A /* Main */,
 				789AD55DDD02D6E6E45B71273DDC6BA9 /* UI */,
 				C0BCBDB5BD0D63235764BF654219F358 /* View */,
@@ -348,6 +359,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C338891E5394CA27E7F71586CEB8A986 /* Constraint */ = {
+			isa = PBXGroup;
+			children = (
+				24616C5056057F823E779C01C587ED87 /* HiConstraintLayoutProtocol.h */,
+				96A9E8C055679A2C4A24D2CC6F9C1B24 /* HiConstraintModel.h */,
+				BFFF026D6BEC548E864DD212FCFEFFD7 /* HiConstraintModel.m */,
+				6E322D75C9F42B574E2016D133E41501 /* HiViewConstraint.h */,
+				1A109B7703C48678047F53BDA0DA4CD3 /* HiViewConstraint.m */,
+			);
+			name = Constraint;
+			path = Constraint;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +381,30 @@
 				E214AEE96824E9F7A94B88851BD1F329 /* Products */,
 				81ABBCEBD6D418A6479DCC6EF65F5948 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D35951E6D791C74DB9F2CD444A8647D0 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				4F910D80F6873B1E43A5BCA3A612A292 /* Main */,
+				4DE63CE2374962EA076ACAA7759EB246 /* Model */,
+				60ECEA0CBBC0B98DABE2F45899349E1B /* Other */,
+			);
+			name = Layout;
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		D89406CCEEA18173D1D420864CF2867A /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				2D2164DE32225E1ABC1C04C2B404DA4C /* HiFrameLayoutModel.h */,
+				2D926097058E6EA3DCD1E446BEE4E5DB /* HiFrameLayoutModel.m */,
+				5EFE5566F27C7660B20DE2373A5824A6 /* HiFrameLayoutProtocol.h */,
+				4B9BBDED75262C4506532FBABD22C6F9 /* HiViewFrame.h */,
+				083F40B95D9E24D413C2EC275C554BDB /* HiViewFrame.m */,
+			);
+			name = Frame;
+			path = Frame;
 			sourceTree = "<group>";
 		};
 		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
@@ -375,21 +423,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E676CF7EB80DE6971A74DAF4C32342A6 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				6CC5B95ABF4A24C3AFB705C70268864A /* HIContraintMake.h */,
-				BA20EEE32BDBB7A8B73E34FCD789A963 /* HIContraintMake.m */,
-				E8579F10599CFA7338165493C6DF1FE1 /* HiFrameProtocol.h */,
-				5B40EAABD22E3A25355BC1687993B3AF /* HiOptions.h */,
-				650EF17F55F19579C3F4A899CE828E2C /* HiOptions.m */,
-				3AA4610D80EAD761FB200B47F608FBFD /* HiUIHander.h */,
-				089B690DD55003E998D96D04CF52FBEC /* HiUIHander.m */,
-			);
-			name = Other;
-			path = Other;
-			sourceTree = "<group>";
-		};
 		E7FBF24EAD9D2EB37E305484FE6CBA58 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,55 +433,45 @@
 			path = NSExtension/Foundation;
 			sourceTree = "<group>";
 		};
-		F3548BF4FBE553C575F442EA42C2CA9E /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				E70A86896A667352DCAC78A80715B887 /* UIViewHiConstraint.h */,
-				2E3E5392962E071BCBBE6F96C0E57898 /* UIViewHiConstraint.m */,
-				2572B881452FEE6FE640DDCA61A24213 /* UIViewHiConstraintProperty.h */,
-				C0FE86001836A11406A45BA2F632E3B5 /* UIViewHiConstraintProperty.m */,
-			);
-			name = Main;
-			path = Main;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1BB5B4146751ED1C0559EEE10C11E3D4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF170CBE36573B67A8E931DB8D6BE161 /* HiConstraintLayoutProtocol.h in Headers */,
+				AED5D863BF9DC35D7F81FB1DDD7D7FDA /* HiConstraintModel.h in Headers */,
+				D1BA004B15254BF9D78C1474B1335C53 /* HIContraintMake.h in Headers */,
+				B7F8CF14DC4E661482B9B23E6320AA7B /* HiCorners.h in Headers */,
+				18C199682A5E926101C3F3A1400F1A9E /* HiFrameLayoutModel.h in Headers */,
+				DF6DADCEE232B2501DC88DDD430EB53B /* HiFrameLayoutProtocol.h in Headers */,
+				77E52DFCA2CB2CD2C9FA02114939653F /* HiFrameProtocol.h in Headers */,
+				310F8CF49E75D7FAD36B6B6FC48DBC54 /* HiLayoutModel.h in Headers */,
+				715633B3AFDFCC0E2362C2CF4777135B /* HiNSExtension.h in Headers */,
+				3C6A370EDFB758552E3440F9CEC433E8 /* HiOptions.h in Headers */,
+				CD0815EA7C2D49422C6020F4AE6C6D81 /* HiPaddingLabel.h in Headers */,
+				1FDC018E9B5D71DB4359D400AA531450 /* HiUIHander.h in Headers */,
+				9F2EDFABEF34D734A89772C1C4ADEAFD /* HiViewConstraint.h in Headers */,
+				A21C116BD805E9A5C7091E8AEDFBF36B /* HiViewFrame.h in Headers */,
+				95EA97A9E2D279274461082C8C90E575 /* NSObjectHiExtension.h in Headers */,
+				39011FB47E3D956C60560B0DEEE4650F /* UIButtonHiExtension.h in Headers */,
+				5800B42F0781B61DA90136A9FA4E068B /* UICollectionVIewHiExtension.h in Headers */,
+				27D054BA20EDF17DA5B122498993B785 /* UIControlHiExtension.h in Headers */,
+				A23782E5C39E08A4AA721DB617AB8E61 /* UIKitHiExtension.h in Headers */,
+				59F17B14611A238E0647786C611E73F7 /* UITableViewHiExtension.h in Headers */,
+				2BF4E11255C85E049AFAE21C297A96BB /* UIViewHiConstraint.h in Headers */,
+				26996316D4D03A00BD6C3E87DC250E57 /* UIViewHiConstraintProperty.h in Headers */,
+				CC6CA09BDE929EA473BD186D9DF3183E /* UIViewHiConstraintSizeClass.h in Headers */,
+				837AC6B45B63FF2DC51E4EE83984209E /* UIViewHiEnum.h in Headers */,
+				696447ECED8D8A2E0849FC817EF51811 /* UIViewHiExtension.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5C4B7FF26B2D142C69E534F50CB45C6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EC6A2270A7EC15673FE7DDAE717FC3E8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6F89AA1C6D683E4855055547656635C5 /* HiConstraintLayoutProtocol.h in Headers */,
-				DE79D1C4FA70130E7F2D692190ED934B /* HiConstraintModel.h in Headers */,
-				1D5866932EC282C9E4BC7CB51F07F517 /* HIContraintMake.h in Headers */,
-				839BDB2796D13E9251AA67D7956CE380 /* HiCorners.h in Headers */,
-				A91CE510F5BB78B3F4416CDDFCDE697E /* HiFrameLayoutModel.h in Headers */,
-				C2BC59B5DCF6E44238D7751A5CE6BB9E /* HiFrameLayoutProtocol.h in Headers */,
-				A29C80CB8E129A72F5A8A23CAA05CA81 /* HiFrameProtocol.h in Headers */,
-				299A06306F51D03DCF0B1C28D2A573A2 /* HiLayoutModel.h in Headers */,
-				80E73BCE970A10B28B057826A401FC70 /* HiNSExtension.h in Headers */,
-				F28C0473AFD5A60C83FFA91E9B4DFF18 /* HiOptions.h in Headers */,
-				F2DC226EA37F16A8279F73E89FCEC8DB /* HiPaddingLabel.h in Headers */,
-				D6F3CB4C4EE07B4C3A1096AB16238E70 /* HiUIHander.h in Headers */,
-				6541210E90D3D64AE0595730A7FDE27B /* HiViewConstraint.h in Headers */,
-				3B75493EB3626B33B788CCB484EDE48C /* HiViewFrame.h in Headers */,
-				EB01EB8C623F1427F55AA3B2BE7DD492 /* NSObjectHiExtension.h in Headers */,
-				76CA67897DACD55B8FA52549A4B84DA8 /* UIButtonHiExtension.h in Headers */,
-				5C0A535CDE11F0514084D0DF7E7B9365 /* UICollectionVIewHiExtension.h in Headers */,
-				DCFA2D1053037DE6B6D1D75513EB30E8 /* UIControlHiExtension.h in Headers */,
-				AD39EB12CCE053DB0D76B9062817DC66 /* UIKitHiExtension.h in Headers */,
-				7236D21F18F05FD254D5AD74406AEEBC /* UITableViewHiExtension.h in Headers */,
-				F0CFA42FA5D6E7987E7B23B34C9851C2 /* UIViewHiConstraint.h in Headers */,
-				D8B70EC7B3277BF6A2E632B4C96EFE9C /* UIViewHiConstraintProperty.h in Headers */,
-				6ADF85F491155BCCEEB8D4484D60D6BD /* UIViewHiExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,11 +480,11 @@
 /* Begin PBXNativeTarget section */
 		46A87A73C8DCB406B149EBFDB982D08F /* HiExension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0520AB48BFBA38673A3791D83C24BDED /* Build configuration list for PBXNativeTarget "HiExension" */;
+			buildConfigurationList = EA5FC17407E2D6DBACD0A7C8D591FBA0 /* Build configuration list for PBXNativeTarget "HiExension" */;
 			buildPhases = (
-				EC6A2270A7EC15673FE7DDAE717FC3E8 /* Headers */,
-				E1E41D7F47264B6360D44235FA6724B3 /* Sources */,
-				9E43232870FA3DEDC115926FD131159E /* Frameworks */,
+				1BB5B4146751ED1C0559EEE10C11E3D4 /* Headers */,
+				21715E2B7C3FC6A46232F022D2B5BF57 /* Sources */,
+				C5377D15102289707C971A4130FE8CD6 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -483,7 +506,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9CFF60CB07406C6E630CFAAFE78A600C /* PBXTargetDependency */,
+				0C51284E768DC58221EA6E274EA71D16 /* PBXTargetDependency */,
 			);
 			name = "Pods-HIExension";
 			productName = "Pods-HIExension";
@@ -519,6 +542,34 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		21715E2B7C3FC6A46232F022D2B5BF57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4B4DCC0EE1676C613493AA757F9F8CE /* HiConstraintModel.m in Sources */,
+				660672FC9EA1F7667162532076A6B7BC /* HIContraintMake.m in Sources */,
+				97E891FABFE0C096F3BF621FC268062F /* HiCorners.m in Sources */,
+				EBE2EDB3CA65B16DE7DBE7C3CFE36A48 /* HiExension-dummy.m in Sources */,
+				C530CD7099154D045E629727EC4125AE /* HiFrameLayoutModel.m in Sources */,
+				09866A1A772A6BB8B57982314FEFC5E5 /* HiLayoutModel.m in Sources */,
+				5B1395D5AE395A17A8C646D994E4A54B /* HiOptions.m in Sources */,
+				5F70893D3734C59ACCEBCF671B626A26 /* HiPaddingLabel.m in Sources */,
+				E748C499D1174974A2632E14022AB080 /* HiUIHander.m in Sources */,
+				330F74CF57E11D4312E6A4E307482C68 /* HiViewConstraint.m in Sources */,
+				272D73A7919AD83D4E6893464B873746 /* HiViewFrame.m in Sources */,
+				CBECDC0C61EBEA04AA1872A7EB3EEA7A /* NSObjectHiExtension.m in Sources */,
+				924053B72C722A24EA6880709C79315B /* UIButtonHiExtension.m in Sources */,
+				9E1D80A4E5C32C38BA5B8171AF61AF08 /* UICollectionVIewHiExtension.m in Sources */,
+				F7938C04AF3476A5C4E49F9429274D35 /* UIControlHiExtension.m in Sources */,
+				347AF0BC68651235078CDAD9B553BCA1 /* UITableViewHiExtension.m in Sources */,
+				31357A5367D2B33D5E1603F66792AB1E /* UIViewHiConstraint.m in Sources */,
+				43E6EB3C307FFD0A260DA9542EA1FAE5 /* UIViewHiConstraintProperty.m in Sources */,
+				2EAB5EB0240205465F1AFE90BD2738D9 /* UIViewHiConstraintSizeClass.m in Sources */,
+				FBBBEE524CF59BA9946D0C3F18B1A21F /* UIViewHiEnum.m in Sources */,
+				94F7119014CF8C26695EB5AB2BD3AC6B /* UIViewHiExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A7EABBAFCF65B0BC3CC5DD353BAE6B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -527,67 +578,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1E41D7F47264B6360D44235FA6724B3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A2408C137731EE2C660E16604E122B5 /* HiConstraintModel.m in Sources */,
-				3474A353F2B7C6CBCAE620617B9490F5 /* HIContraintMake.m in Sources */,
-				F13897A677B77ECD2CD2104AF87813FD /* HiCorners.m in Sources */,
-				A5BCAE0C99923A5D94F30BAE0D0285A5 /* HiExension-dummy.m in Sources */,
-				A6F993428451A3B8E1DDF8E0B5335062 /* HiFrameLayoutModel.m in Sources */,
-				0F7D79A163DD8034F5A85358FC393E5D /* HiLayoutModel.m in Sources */,
-				9BD07DBA35B76EF18F73FA0FD931AE79 /* HiOptions.m in Sources */,
-				DEB74448D3BA74792E604A762549652E /* HiPaddingLabel.m in Sources */,
-				2E8F969990D68E3199F85140EBAB6A79 /* HiUIHander.m in Sources */,
-				78BAD57CAA5E1C449AA45E4181B7FEDC /* HiViewConstraint.m in Sources */,
-				1C5233F70B361E9CBD1420B40A436F0E /* HiViewFrame.m in Sources */,
-				5EB76473D851F461E7DB980394DB3262 /* NSObjectHiExtension.m in Sources */,
-				01F9EDE98215691F2443F894D39E744B /* UIButtonHiExtension.m in Sources */,
-				1C344D8EB3C444BBBA2BF45F850E39BB /* UICollectionVIewHiExtension.m in Sources */,
-				0317C58AD562543FD743440865EE9A4C /* UIControlHiExtension.m in Sources */,
-				62AAF853BF73E415F498F65483618AE9 /* UITableViewHiExtension.m in Sources */,
-				A89AB4CF356584DCD84E8D29E112F8B5 /* UIViewHiConstraint.m in Sources */,
-				E737F0B5EB177DACB8802001A536E67D /* UIViewHiConstraintProperty.m in Sources */,
-				237C209FD17AB5B4EB6AA7EC204A0B5F /* UIViewHiExtension.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9CFF60CB07406C6E630CFAAFE78A600C /* PBXTargetDependency */ = {
+		0C51284E768DC58221EA6E274EA71D16 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HiExension;
 			target = 46A87A73C8DCB406B149EBFDB982D08F /* HiExension */;
-			targetProxy = A39AFE7FFA7DFC56ABC1B4017B8A185B /* PBXContainerItemProxy */;
+			targetProxy = 2AF90A6D9BD14391D061186F9AE510F5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1667D83AB5B9E3B29C0F8D50E064D864 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBDB5CA2FC6850783DC3C9F7E101AEB1 /* HiExension.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/HiExension/HiExension-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = HiExension;
-				PRODUCT_NAME = HiExension;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -674,7 +676,30 @@
 			};
 			name = Debug;
 		};
-		651492DA6E3FB9318D55B40E6AEA887D /* Debug */ = {
+		50ECF3428FA372BA5843BE146B0BC6F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBDB5CA2FC6850783DC3C9F7E101AEB1 /* HiExension.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/HiExension/HiExension-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = HiExension;
+				PRODUCT_NAME = HiExension;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		631327A42CB390389F3C04E0E1114F2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD3D40131D55D7EAD4833C94429884CD /* HiExension.debug.xcconfig */;
 			buildSettings = {
@@ -782,15 +807,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0520AB48BFBA38673A3791D83C24BDED /* Build configuration list for PBXNativeTarget "HiExension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				651492DA6E3FB9318D55B40E6AEA887D /* Debug */,
-				1667D83AB5B9E3B29C0F8D50E064D864 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -805,6 +821,15 @@
 			buildConfigurations = (
 				34E599244E737DD8EBF8A27D531E89B8 /* Debug */,
 				ABC2AD62B2CB648D31C396241C0A4933 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA5FC17407E2D6DBACD0A7C8D591FBA0 /* Build configuration list for PBXNativeTarget "HiExension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				631327A42CB390389F3C04E0E1114F2D /* Debug */,
+				50ECF3428FA372BA5843BE146B0BC6F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -20,40 +20,6 @@
     return _builer;
 }
 
-- (HiSizeClass)hi_getSizeClass {
-    UIWindow *windon = [[UIApplication.sharedApplication delegate] window];
-    
-    if (UIUserInterfaceSizeClassRegular == windon.traitCollection.horizontalSizeClass) {
-        if (UIUserInterfaceSizeClassRegular == windon.traitCollection.verticalSizeClass) {
-            return HiSizeClass_rr;
-        }
-        if (UIUserInterfaceSizeClassCompact == windon.traitCollection.verticalSizeClass) {
-            return HiSizeClass_rc;
-        }
-        
-        return HiSizeClass_ra;
-    }
-    
-    if (UIUserInterfaceSizeClassCompact == windon.traitCollection.horizontalSizeClass) {
-        if (UIUserInterfaceSizeClassRegular == windon.traitCollection.verticalSizeClass) {
-            return HiSizeClass_cr;
-        }
-        if (UIUserInterfaceSizeClassCompact == windon.traitCollection.verticalSizeClass) {
-            return HiSizeClass_cc;
-        }
-        
-        return HiSizeClass_ca;
-    }
-    
-    if (UIUserInterfaceSizeClassRegular == windon.traitCollection.verticalSizeClass) {
-        return HiSizeClass_ar;
-    }
-    if (UIUserInterfaceSizeClassCompact == windon.traitCollection.verticalSizeClass) {
-        return HiSizeClass_ac;
-    }
-    return HiSizeClass_aa;
-}
-
 - (HiViewConstraint *)hi_builder {
     return [self hi_getBuilderWithSizeClass:[self hi_getSizeClass]];
 }
@@ -131,15 +97,15 @@
     
     BOOL res = (2 == self.hi_aa_instanced && HiSizeClass_aa == sizeClass) || (1 == self.hi_aa_instanced);
     
-    NSAssert(!res, @"you have made contraints in (aa , **) class.");
+    HIAssert(!res, @"you have made contraints in (aa , **) class.");
     
     self.hi_aa_instanced = HiSizeClass_aa == sizeClass ? 1 : 2;
     
-    NSAssert(self.superview, @"Super view is nil");
+    HIAssert(self.superview, @"Super view is nil");
     HiViewConstraint *builder = [self hi_getBuilderWithSizeClass:sizeClass];
     
     if (block) {
-        NSAssert(builder.avaliable, @"you have made contraints. please remove all constraints");
+        HIAssert(builder.avaliable, @"you have made contraints. please remove all constraints");
         self.translatesAutoresizingMaskIntoConstraints = false;
         block(builder);
         [builder updateFrame];
@@ -149,8 +115,7 @@
     
     // 不是当前 size class 不激活
     if (sizeClass != [self hi_getSizeClass]) {
-        NSArray *array = builder.allConstraints;
-        if (array)[NSLayoutConstraint deactivateConstraints:array];
+        [builder deactivateConstraints];
     }
 }
 
@@ -160,6 +125,39 @@
 
 - (void)setHi_aa_instanced:(NSInteger)hi_aa_instanced {
     [self hi_addIntegerValuePropertyForKey:@selector(hi_aa_instanced) value:hi_aa_instanced];
+}
+
+- (HiSizeClass)hi_getSizeClass {
+
+    if (UIUserInterfaceSizeClassRegular == self.traitCollection.horizontalSizeClass) {
+        if (UIUserInterfaceSizeClassRegular == self.traitCollection.verticalSizeClass) {
+            return HiSizeClass_rr;
+        }
+        if (UIUserInterfaceSizeClassCompact == self.traitCollection.verticalSizeClass) {
+            return HiSizeClass_rc;
+        }
+        
+        return HiSizeClass_ra;
+    }
+    
+    if (UIUserInterfaceSizeClassCompact == self.traitCollection.horizontalSizeClass) {
+        if (UIUserInterfaceSizeClassRegular == self.traitCollection.verticalSizeClass) {
+            return HiSizeClass_cr;
+        }
+        if (UIUserInterfaceSizeClassCompact == self.traitCollection.verticalSizeClass) {
+            return HiSizeClass_cc;
+        }
+        
+        return HiSizeClass_ca;
+    }
+    
+    if (UIUserInterfaceSizeClassRegular == self.traitCollection.verticalSizeClass) {
+        return HiSizeClass_ar;
+    }
+    if (UIUserInterfaceSizeClassCompact == self.traitCollection.verticalSizeClass) {
+        return HiSizeClass_ac;
+    }
+    return HiSizeClass_aa;
 }
 
 @end

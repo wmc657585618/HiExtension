@@ -9,6 +9,13 @@
 #import "HiViewConstraint.h"
 #import "UIViewHiEnum.h"
 
+#ifdef DEBUG
+#define HIAssert(condition, desc)    NSAssert(condition, desc)
+#else
+#define HIAssert(condition, desc)
+#endif
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (HiConstraintProperty)

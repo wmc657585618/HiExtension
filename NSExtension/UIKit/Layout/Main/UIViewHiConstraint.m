@@ -13,7 +13,7 @@
 @implementation UIView (HiViewLayout)
 
 - (NSArray<NSLayoutConstraint *> *)hi_constraints_instance:(void (^)(id<HiViewConstraintBuilder> _Nullable))block {
-    NSAssert(self.superview, @"Super view is nil");
+    HIAssert(self.superview, @"Super view is nil");
 
     if (block) {
         self.translatesAutoresizingMaskIntoConstraints = false;
@@ -31,7 +31,7 @@
 }
 
 - (void)hi_frame_make:(void(^)(id<HiViewFrameBuilder> builder))block {
-    NSAssert(self.superview, @"Super view is nil");
+    HIAssert(self.superview, @"Super view is nil");
     
     if (block) {
         HiViewFrame *builder = [[HiViewFrame alloc] initWithView:self];

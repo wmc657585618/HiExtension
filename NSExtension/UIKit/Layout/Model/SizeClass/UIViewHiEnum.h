@@ -8,7 +8,6 @@
 #import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
-    HiSizeClass_none,
     HiSizeClass_rr,
     HiSizeClass_rc,
     HiSizeClass_ra,

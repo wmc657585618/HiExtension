@@ -29,6 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSArray<NSLayoutConstraint *> *allConstraints;
 
+- (void)deactivateConstraints;
+- (void)activateConstraints;
+
 @end
 
 NS_ASSUME_NONNULL_END

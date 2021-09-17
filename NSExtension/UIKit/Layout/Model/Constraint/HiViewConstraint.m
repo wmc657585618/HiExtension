@@ -276,4 +276,13 @@
     
     return array;
 }
+
+- (void)deactivateConstraints {
+    [NSLayoutConstraint deactivateConstraints:self.allConstraints];
+}
+
+- (void)activateConstraints {
+    [NSLayoutConstraint activateConstraints:self.allConstraints];
+}
+
 @end

@@ -29,6 +29,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong,readonly) HiViewConstraint *hi_builder_aa;
 
 - (HiViewConstraint *)hi_getBuilderWithSizeClass:(HiSizeClass)sizeClass;
+- (HiSizeClass)hi_getSizeClass;
+
+- (void)hi_constraints_makeWithSizeClass:(HiSizeClass)sizeClass block:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block;
+
+/// hi_builder_aa 是否创建
+/// hi_builder_aa 不能和其它共存
+/// 0 - 没有
+/// 1 - 已经创建
+/// 2 - 已经创建其它
+@property (nonatomic, assign) NSInteger hi_aa_instanced;
 
 @end
 

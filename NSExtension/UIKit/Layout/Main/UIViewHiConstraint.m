@@ -27,14 +27,7 @@
 }
 
 - (void)hi_constraints_make:(void(^)(id<HiViewConstraintBuilder> builder))block {
-    NSAssert(self.superview, @"Super view is nil");
-
-    if (block) {
-        NSAssert(self.hi_builder.avaliable, @"you have made contraints. please remove all constraints");
-        self.translatesAutoresizingMaskIntoConstraints = false;
-        block(self.hi_builder);
-        [self.hi_builder updateFrame];
-    }
+    [self hi_constraints_makeWithSizeClass:HiSizeClass_aa block:block];
 }
 
 - (void)hi_frame_make:(void(^)(id<HiViewFrameBuilder> builder))block {

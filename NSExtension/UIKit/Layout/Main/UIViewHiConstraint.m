@@ -207,3 +207,47 @@
 
 @end
 
+
+@implementation UIView (HiSizeClass)
+
+- (void)test {
+//    [NSLayoutConstraint deactivateConstraints:<#(nonnull NSArray<NSLayoutConstraint *> *)#>]
+    
+//    [NSLayoutConstraint activateConstraints:<#(nonnull NSArray<NSLayoutConstraint *> *)#>];
+}
+
+- (NSArray *)hi_constraintsWithSizeClass:(HiSizeClass)sizeClass {
+    switch (sizeClass) {
+        case HiSizeClass_rr:
+            return self.hi_builder_rr.allConstraints;
+            
+        case HiSizeClass_rc:
+            return self.hi_builder_rc.allConstraints;
+            
+        case HiSizeClass_ra:
+            return self.hi_builder_ra.allConstraints;
+            
+        case HiSizeClass_cr:
+            return self.hi_builder_cr.allConstraints;
+            
+        case HiSizeClass_cc:
+            return self.hi_builder_cc.allConstraints;
+            
+        case HiSizeClass_ca:
+            return self.hi_builder_ca.allConstraints;
+            
+        case HiSizeClass_ar:
+            return self.hi_builder_ar.allConstraints;
+            
+        case HiSizeClass_ac:
+            return self.hi_builder_ac.allConstraints;
+            
+        case HiSizeClass_aa:
+            return self.hi_builder_aa.allConstraints;
+    }
+}
+
+- (void)hi_updateConstraints:(HiSizeClass)sizeClass {
+    
+}
+@end

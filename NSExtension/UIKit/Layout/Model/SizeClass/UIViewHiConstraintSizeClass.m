@@ -7,8 +7,20 @@
 
 #import "UIViewHiConstraintSizeClass.h"
 #import "UIViewHiConstraintProperty.h"
+#import "NSObjectHiExtension.h"
 
 @implementation UIView (HiSizeClass)
+
++ (void)load {
+    [self hi_exchange_instanceMethod:@selector(hi_layoutSubviews) newSelector:@selector(layoutSubviews)];
+}
+
+- (void)hi_layoutSubviews {
+    [self hi_layoutSubviews];
+    if (2 == self.hi_aa_instanced) {
+        [self hi_activateConstraints:[self hi_getSizeClass]];
+    }
+}
 
 - (void)hi_deactivateAllConstraints{
 

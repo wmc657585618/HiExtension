@@ -67,26 +67,26 @@
         builder.height.equal(self.tableView).width.multiplier(0.5).value(0);
     }];
     
-    [self.label hi_constraints_make:^(id<HiViewConstraintBuilder> builder) {
-        builder.left.value(0);
-        builder.top.equal(self.tableView).bottom.value(10.0);
-        builder.height.autoValue();
-        builder.right.value(0);
-    }];
-    
-//    [self.label hi_constraints_cr_make:^(id<HiViewConstraintBuilder>  _Nullable builder) {
+//    [self.label hi_constraints_make:^(id<HiViewConstraintBuilder> builder) {
 //        builder.left.value(0);
 //        builder.top.equal(self.tableView).bottom.value(10.0);
 //        builder.height.autoValue();
 //        builder.right.value(0);
 //    }];
     
-//    [self.label hi_constraints_cc_make:^(id<HiViewConstraintBuilder>  _Nullable builder) {
-//        builder.left.value(0);
-//        builder.top.value(10.0);
-//        builder.height.autoValue();
-//        builder.right.value(0);
-//    }];
+    [self.label hi_constraints_cr_make:^(id<HiViewConstraintBuilder>  _Nullable builder) {
+        builder.left.value(0);
+        builder.top.equal(self.tableView).bottom.value(10.0);
+        builder.height.autoValue();
+        builder.right.value(0);
+    }];
+    
+    [self.label hi_constraints_cc_make:^(id<HiViewConstraintBuilder>  _Nullable builder) {
+        builder.left.value(0);
+        builder.top.value(10.0);
+        builder.height.autoValue();
+        builder.right.value(0);
+    }];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -98,9 +98,6 @@
 //        builder.right.value(0);
 //        builder.height.equal(self.tableView).width.multiplier(0.5).value(0);
 //    }];
-    
-    [self.label hi_activateConstraints:self.label.hi_sizeClass];
-
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -122,9 +119,6 @@
 #pragma mark *********** animate ***********
 - (void)animations {
     [self.label hi_animateWithDuration:10 animations:^{
-    
-//        NSLayoutConstraint *left = [self.label hi_constraint:NSLayoutAttributeTop];
-//        left.constant = 200.0;
         [self.label hi_updateAttribute:NSLayoutAttributeTop constraint:200.0];
     } completion:nil];
 }

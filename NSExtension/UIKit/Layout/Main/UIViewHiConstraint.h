@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HiConstraintModel.h"
 #import "HiFrameProtocol.h"
 
 @interface UIView (HiViewLayout)
@@ -20,24 +19,33 @@
 
 - (void)hi_removeAllConstraints;
 - (void)hi_removeConstraint:(NSLayoutAttribute)attribute;
+
 - (NSLayoutConstraint *_Nonnull)hi_constraint:(NSLayoutAttribute)attribute;
 
-/**
- animations
- */
-- (void)hi_animateWithDuration:(NSTimeInterval)duration animations:(void (^_Nullable)(void))animations;
+@property (nonatomic, readonly) NSArray<NSLayoutConstraint *> * _Nonnull hi_allConstraints;
 
-- (void)hi_animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(void (^_Nullable)(void))animations completion:(void (^ __nullable)(BOOL finished))completion;
+@end
 
-- (void)hi_animateWithDuration:(NSTimeInterval)duration animations:(void (^_Nullable)(void))animations completion:(void (^ __nullable)(BOOL finished))completion;
+@interface UIView (HiViewContraintUpdate)
 
-- (void)hi_animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay usingSpringWithDamping:(CGFloat)dampingRatio initialSpringVelocity:(CGFloat)velocity options:(UIViewAnimationOptions)options animations:(void (^_Nullable)(void))animations completion:(void (^ __nullable)(BOOL finished))completion;
-
-/**
- update
- */
 /// 更新 constraint
 - (void)hi_updateAttribute:(NSLayoutAttribute)attribute constraint:(CGFloat)constraint;
+
+- (void)hi_updateTop:(CGFloat)constraint;
+
+- (void)hi_updateBottom:(CGFloat)constraint;
+
+- (void)hi_updateLeft:(CGFloat)constraint;
+
+- (void)hi_updateRight:(CGFloat)constraint;
+
+- (void)hi_updateCenterX:(CGFloat)constraint;
+
+- (void)hi_updateCenterY:(CGFloat)constraint;
+
+- (void)hi_updateWidth:(CGFloat)constraint;
+
+- (void)hi_updateHeight:(CGFloat)constraint;
 
 /**
  如果之前有 才重置
@@ -58,12 +66,27 @@
 
 - (void)hi_resetHeight:(void(^_Nullable)(id<HiConstraintSize0> _Nullable constraint))constraint;
 
+@end
+
+
+@interface UIView (HiViewAnimations)
+
+- (void)hi_animateWithDuration:(NSTimeInterval)duration animations:(void (^_Nullable)(void))animations;
+
+- (void)hi_animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(void (^_Nullable)(void))animations completion:(void (^ __nullable)(BOOL finished))completion;
+
+- (void)hi_animateWithDuration:(NSTimeInterval)duration animations:(void (^_Nullable)(void))animations completion:(void (^ __nullable)(BOOL finished))completion;
+
+- (void)hi_animateWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay usingSpringWithDamping:(CGFloat)dampingRatio initialSpringVelocity:(CGFloat)velocity options:(UIViewAnimationOptions)options animations:(void (^_Nullable)(void))animations completion:(void (^ __nullable)(BOOL finished))completion;
+
+@end
+
+
+@interface UIView (HiViewComplex)
 
 - (void)hi_horizotalHuggingPriority:(UILayoutPriority)priority;
 - (void)hi_verticallHuggingPriority:(UILayoutPriority)priority;
 - (void)hi_horizotalCompressionPriority:(UILayoutPriority)priority;
 - (void)hi_verticallCompressionPriority:(UILayoutPriority)priority;
-
-@property (nonatomic, readonly) NSArray<NSLayoutConstraint *> * _Nonnull hi_allConstraints;
 
 @end

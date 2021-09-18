@@ -1,1 +1,1 @@
-../../../../NSExtension/UIKit/Layout/Model/SizeClass/Other/UIViewHiSizeClass.h
+../../../../NSExtension/UIKit/SizeClass/Other/UIViewHiSizeClass.h

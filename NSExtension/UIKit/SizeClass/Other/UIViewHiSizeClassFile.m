@@ -288,6 +288,9 @@
 
 - (void)hi_layoutSubviews {
     [self hi_layoutSubviews];
+    
+    if (HiSizeOptions_none == self.hi_propertyOptions) return;
+    
     HiSizeClass _size = [self hi_getAvailableSizeClass:self.hi_sizeClass options:self.hi_propertyOptions];
     
     switch (_size) {

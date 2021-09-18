@@ -64,20 +64,20 @@
 
     // 如果 ca 创建 了
     if (options & HiSizeOptions_ca) {
-        if (HiSizeClass_rc == sizeClass || HiSizeClass_rr == sizeClass || HiSizeClass_ra == sizeClass)
-            return HiSizeClass_ra;
+        if (HiSizeClass_cc == sizeClass || HiSizeClass_cr == sizeClass || HiSizeClass_ca == sizeClass)
+            return HiSizeClass_ca;
     }
 
     // 如果 ac 创建 了
     if (options & HiSizeOptions_ac) {
-        if (HiSizeClass_rc == sizeClass || HiSizeClass_rr == sizeClass || HiSizeClass_ra == sizeClass)
-            return HiSizeClass_ra;
+        if (HiSizeClass_rc == sizeClass || HiSizeClass_cc == sizeClass || HiSizeClass_ac == sizeClass)
+            return HiSizeClass_ac;
     }
     
     // 如果 ar 创建 了
     if (options & HiSizeOptions_ar) {
         if (HiSizeClass_ar == sizeClass || HiSizeClass_rr == sizeClass || HiSizeClass_cr == sizeClass)
-            return HiSizeClass_ra;
+            return HiSizeClass_ar;
     }
     
     // 没有 包含 any 返回当前

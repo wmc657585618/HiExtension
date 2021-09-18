@@ -74,13 +74,14 @@
         builder.right.value(0);
     }];
     
-    [self.label hi_property_cr_make:^{
+    [self.label hi_property_ar_make:^{
         self.label.backgroundColor = UIColor.redColor;
     }];
     
-    [self.label hi_property_cc_make:^{
+    [self.label hi_property_ac_make:^{
         self.label.backgroundColor = UIColor.brownColor;
     }];
+    
 //    [self.label hi_constraints_cr_make:^(id<HiViewConstraintBuilder>  _Nullable builder) {
 //        builder.left.value(0);
 //        builder.top.equal(self.tableView).bottom.value(10.0);

@@ -87,6 +87,13 @@
         builder.height.autoValue();
         builder.right.value(0);
     }];
+    
+    [self.label hi_constraints_ar_make:^(id<HiViewConstraintBuilder>  _Nullable builder) {
+        builder.left.value(0);
+        builder.top.value(10.0);
+        builder.height.autoValue();
+        builder.right.value(0);
+    }];
 }
 
 - (void)viewDidLayoutSubviews {

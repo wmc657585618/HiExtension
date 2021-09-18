@@ -150,29 +150,33 @@
         HIAssert(false, @"you have made contraints in (aa , **) class.");
     }
     
+    if (HiSizeOptions_aa == sizeClass && HiSizeOptions_none != self.hi_sizeOptions) {
+        HIAssert(false, @"you have made contraints in (aa , **) class.");
+    }
+    
     // 如果 ra 创建 了, 不能 创建 r*
-    if (self.hi_sizeOptions & HiSizeOptions_ra) {
+    if (self.hi_sizeOptions & HiSizeOptions_ra || HiSizeClass_ra == sizeClass) {
         if (self.hi_sizeOptions & HiSizeOptions_ra || self.hi_sizeOptions & HiSizeOptions_rc || self.hi_sizeOptions & HiSizeOptions_rr) {
             HIAssert(false, @"you have made contraints in (ra , r*) class.");
         }
     }
 
     // 如果 ca 创建 了, 不能 创建 c*
-    if (self.hi_sizeOptions & HiSizeOptions_ca) {
+    if (self.hi_sizeOptions & HiSizeOptions_ca || HiSizeClass_ra == sizeClass) {
         if (self.hi_sizeOptions & HiSizeOptions_ca || self.hi_sizeOptions & HiSizeOptions_cc || self.hi_sizeOptions & HiSizeOptions_cr) {
             HIAssert(false, @"you have made contraints in (ca , c*) class.");
         }
     }
 
     // 如果 ac 创建 了, 不能 创建 *c
-    if (self.hi_sizeOptions & HiSizeOptions_ac) {
+    if (self.hi_sizeOptions & HiSizeOptions_ac || HiSizeClass_ac == sizeClass) {
         if (self.hi_sizeOptions & HiSizeOptions_ac || self.hi_sizeOptions & HiSizeOptions_cc || self.hi_sizeOptions & HiSizeOptions_rc) {
             HIAssert(false, @"you have made contraints in (ac , *c) class.");
         }
     }
     
     // 如果 ar 创建 了, 不能 创建 *r
-    if (self.hi_sizeOptions & HiSizeOptions_ar) {
+    if (self.hi_sizeOptions & HiSizeOptions_ar || HiSizeClass_ar == sizeClass) {
         if (self.hi_sizeOptions & HiSizeOptions_ar || self.hi_sizeOptions & HiSizeOptions_rr || self.hi_sizeOptions & HiSizeOptions_cr) {
             HIAssert(false, @"you have made contraints in (ar , *r) class.");
         }

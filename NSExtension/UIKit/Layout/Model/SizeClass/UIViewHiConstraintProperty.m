@@ -21,6 +21,32 @@
 }
 
 - (HiViewConstraint *)hi_builder {
+    
+    // 如果 aa 创建 了, 不能 创建其它的
+    if (self.hi_sizeOptions & HiSizeOptions_aa) {
+        return [self hi_getBuilderWithSizeClass:HiSizeClass_aa];
+    }
+    
+    // 如果 ra 创建 了, 不能 创建 r*
+    if (self.hi_sizeOptions & HiSizeOptions_ra) {
+        return [self hi_getBuilderWithSizeClass:HiSizeClass_ra];
+    }
+
+    // 如果 ca 创建 了, 不能 创建 c*
+    if (self.hi_sizeOptions & HiSizeOptions_ca) {
+        return [self hi_getBuilderWithSizeClass:HiSizeClass_ca];
+    }
+
+    // 如果 ac 创建 了, 不能 创建 *c
+    if (self.hi_sizeOptions & HiSizeOptions_ac) {
+        return [self hi_getBuilderWithSizeClass:HiSizeClass_ac];
+    }
+    
+    // 如果 ar 创建 了, 不能 创建 *r
+    if (self.hi_sizeOptions & HiSizeOptions_ar) {
+        return [self hi_getBuilderWithSizeClass:HiSizeClass_ar];
+    }
+    
     return [self hi_getBuilderWithSizeClass:[self hi_getSizeClass]];
 }
 
@@ -65,42 +91,133 @@
     switch (sizeClass) {
             
         case HiSizeClass_rr:
-            return self.hi_builder_rr;
+        {
+            if (self.hi_sizeOptions & HiSizeOptions_rr)
+                return self.hi_builder_rr;
+        }
             
         case HiSizeClass_rc:
-            return self.hi_builder_rc;
-            
+        {
+            if (self.hi_sizeOptions & HiSizeOptions_rr)
+                return self.hi_builder_rc;
+        }
         case HiSizeClass_ra:
-            return self.hi_builder_ra;
+        {
+            if (self.hi_sizeOptions & HiSizeOptions_ra)
+                return self.hi_builder_ra;
+        }
             
         case HiSizeClass_cr:
-            return self.hi_builder_cr;
-            
+        {
+            if (self.hi_sizeOptions & HiSizeOptions_cr)
+                return self.hi_builder_cr;
+        }
         case HiSizeClass_cc:
-            return self.hi_builder_cc;
-            
+        {
+            if (self.hi_sizeOptions & HiSizeOptions_cc)
+                return self.hi_builder_cc;
+        }
         case HiSizeClass_ca:
-            return self.hi_builder_ca;
-            
+        {
+            if (self.hi_sizeOptions & HiSizeOptions_ca)
+                return self.hi_builder_ca;
+        }
         case HiSizeClass_ar:
-            return self.hi_builder_ar;
-            
+        {
+            if (self.hi_sizeOptions & HiSizeOptions_ar)
+                return self.hi_builder_ar;
+        }
         case HiSizeClass_ac:
-            return self.hi_builder_ac;
-            
+        {
+            if (self.hi_sizeOptions & HiSizeOptions_ac)
+                return self.hi_builder_ac;
+        }
         case HiSizeClass_aa:
-            return self.hi_builder_aa;
+        {
+            if (self.hi_sizeOptions & HiSizeOptions_aa)
+                return self.hi_builder_aa;
+        }
+    }
+    
+    return nil;
+}
+
+
+#ifdef DEBUG
+- (void)hi_checkOptionsWithSizeClass:(HiSizeClass)sizeClass {
+    // 如果 aa 创建 了, 不能 创建其它的
+    if (self.hi_sizeOptions & HiSizeOptions_aa) {
+        HIAssert(false, @"you have made contraints in (aa , **) class.");
+    }
+    
+    // 如果 ra 创建 了, 不能 创建 r*
+    if (self.hi_sizeOptions & HiSizeOptions_ra) {
+        if (self.hi_sizeOptions & HiSizeOptions_ra || self.hi_sizeOptions & HiSizeOptions_rc || self.hi_sizeOptions & HiSizeOptions_rr) {
+            HIAssert(false, @"you have made contraints in (ra , r*) class.");
+        }
+    }
+
+    // 如果 ca 创建 了, 不能 创建 c*
+    if (self.hi_sizeOptions & HiSizeOptions_ca) {
+        if (self.hi_sizeOptions & HiSizeOptions_ca || self.hi_sizeOptions & HiSizeOptions_cc || self.hi_sizeOptions & HiSizeOptions_cr) {
+            HIAssert(false, @"you have made contraints in (ca , c*) class.");
+        }
+    }
+
+    // 如果 ac 创建 了, 不能 创建 *c
+    if (self.hi_sizeOptions & HiSizeOptions_ac) {
+        if (self.hi_sizeOptions & HiSizeOptions_ac || self.hi_sizeOptions & HiSizeOptions_cc || self.hi_sizeOptions & HiSizeOptions_rc) {
+            HIAssert(false, @"you have made contraints in (ac , *c) class.");
+        }
+    }
+    
+    // 如果 ar 创建 了, 不能 创建 *r
+    if (self.hi_sizeOptions & HiSizeOptions_ar) {
+        if (self.hi_sizeOptions & HiSizeOptions_ar || self.hi_sizeOptions & HiSizeOptions_rr || self.hi_sizeOptions & HiSizeOptions_cr) {
+            HIAssert(false, @"you have made contraints in (ar , *r) class.");
+        }
+    }
+}
+#endif
+
+- (HiSizeOptions)hi_optionsWithSizeClass:(HiSizeClass)sizeClass {
+    switch (sizeClass) {
+        case HiSizeClass_aa:
+            return HiSizeOptions_aa;
+            
+        case HiSizeClass_rr:
+            return HiSizeOptions_rr;
+
+        case HiSizeClass_rc:
+            return HiSizeOptions_rc;
+
+        case HiSizeClass_ra:
+            return HiSizeOptions_ra;
+
+        case HiSizeClass_cr:
+            return HiSizeOptions_cr;
+
+        case HiSizeClass_cc:
+            return HiSizeOptions_cc;
+
+        case HiSizeClass_ca:
+            return HiSizeOptions_ca;
+
+        case HiSizeClass_ar:
+            return HiSizeOptions_ar;
+
+        case HiSizeClass_ac:
+            return HiSizeOptions_ac;
     }
 }
 
 - (void)hi_constraints_makeWithSizeClass:(HiSizeClass)sizeClass block:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block{
     
-    BOOL res = (2 == self.hi_aa_instanced && HiSizeClass_aa == sizeClass) || (1 == self.hi_aa_instanced);
+#ifdef DEBUG
+    [self hi_checkOptionsWithSizeClass:sizeClass];
+#endif
     
-    HIAssert(!res, @"you have made contraints in (aa , **) class.");
-    
-    self.hi_aa_instanced = HiSizeClass_aa == sizeClass ? 1 : 2;
-    
+    self.hi_sizeOptions = self.hi_sizeOptions | [self hi_optionsWithSizeClass:sizeClass];
     HIAssert(self.superview, @"Super view is nil");
     HiViewConstraint *builder = [self hi_getBuilderWithSizeClass:sizeClass];
     
@@ -119,12 +236,12 @@
     }
 }
 
-- (NSInteger)hi_aa_instanced {
+- (NSInteger)hi_sizeOptions {
     return [self hi_integerValuePropertyForKey:_cmd];
 }
 
-- (void)setHi_aa_instanced:(NSInteger)hi_aa_instanced {
-    [self hi_addIntegerValuePropertyForKey:@selector(hi_aa_instanced) value:hi_aa_instanced];
+- (void)setHi_sizeOptions:(NSInteger)hi_sizeOptions {
+    [self hi_addIntegerValuePropertyForKey:@selector(hi_sizeOptions) value:hi_sizeOptions];
 }
 
 - (HiSizeClass)hi_getSizeClass {
@@ -158,6 +275,36 @@
         return HiSizeClass_ac;
     }
     return HiSizeClass_aa;
+}
+
+- (void)hi_deactivateAllConstraints{
+
+    if (self.hi_sizeOptions & HiSizeOptions_rr)
+        [self.hi_builder_rr deactivateConstraints];
+    
+    if (self.hi_sizeOptions & HiSizeOptions_rc)
+        [self.hi_builder_rc deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_ra)
+        [self.hi_builder_ra deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_cr)
+        [self.hi_builder_cr deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_cc)
+        [self.hi_builder_cc deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_ca)
+        [self.hi_builder_ca deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_ar)
+        [self.hi_builder_ar deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_ac)
+        [self.hi_builder_ac deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_aa)
+        [self.hi_builder_aa deactivateConstraints];
 }
 
 @end

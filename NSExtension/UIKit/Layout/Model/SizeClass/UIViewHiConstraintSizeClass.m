@@ -17,37 +17,16 @@
 
 - (void)hi_layoutSubviews {
     [self hi_layoutSubviews];
-    if (2 == self.hi_aa_instanced) {
-        [self hi_activateConstraints:[self hi_getSizeClass]];
-    }
-}
-
-- (void)hi_deactivateAllConstraints{
-
-    [self.hi_builder_rr deactivateConstraints];
-    [self.hi_builder_rc deactivateConstraints];
-    [self.hi_builder_ra deactivateConstraints];
-    [self.hi_builder_cr deactivateConstraints];
-    [self.hi_builder_cc deactivateConstraints];
-    [self.hi_builder_ca deactivateConstraints];
-    [self.hi_builder_ar deactivateConstraints];
-    [self.hi_builder_ac deactivateConstraints];
-    [self.hi_builder_aa deactivateConstraints];
+    [self hi_activateConstraints:[self hi_getSizeClass]];
 }
 
 - (void)hi_activateConstraints:(HiSizeClass)sizeClass {
-
-    if (1 == self.hi_aa_instanced) return;
-    
     [self hi_deactivateAllConstraints];
     HiViewConstraint *constraint = [self hi_getBuilderWithSizeClass:sizeClass];
     [constraint activateConstraints];
 }
 
 - (void)hi_deactivateConstraints:(HiSizeClass)sizeClass {
-    
-    if (1 == self.hi_aa_instanced) return;
-
     HiViewConstraint *constraint = [self hi_getBuilderWithSizeClass:sizeClass];
     [constraint deactivateConstraints];
 }

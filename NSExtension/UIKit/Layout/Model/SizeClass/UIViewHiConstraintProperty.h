@@ -15,6 +15,18 @@
 #define HIAssert(condition, desc)
 #endif
 
+typedef NS_OPTIONS(NSUInteger, HiSizeOptions) {
+    HiSizeOptions_none = 0,
+    HiSizeOptions_aa = 1 << 0,
+    HiSizeOptions_ra = 1 << 1,
+    HiSizeOptions_rr = 1 << 2,
+    HiSizeOptions_rc = 1 << 3,
+    HiSizeOptions_ca = 1 << 4,
+    HiSizeOptions_cr = 1 << 5,
+    HiSizeOptions_cc = 1 << 6,
+    HiSizeOptions_ar = 1 << 7,
+    HiSizeOptions_ac = 1 << 8,
+};
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -40,12 +52,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)hi_constraints_makeWithSizeClass:(HiSizeClass)sizeClass block:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block;
 
-/// hi_builder_aa 是否创建
-/// hi_builder_aa 不能和其它共存
-/// 0 - 没有
-/// 1 - 已经创建
-/// 2 - 已经创建其它
-@property (nonatomic, assign) NSInteger hi_aa_instanced;
+@property (nonatomic, assign) NSInteger hi_sizeOptions;
+
+- (void)hi_deactivateAllConstraints;
 
 @end
 

@@ -8,7 +8,7 @@
 
 #import "UIViewHiConstraint.h"
 #import "HiViewFrame.h"
-#import "UIViewHiConstraintProperty.h"
+#import "UIViewHiSizeClassFile.h"
 
 @implementation UIView (HiViewLayout)
 

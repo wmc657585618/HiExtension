@@ -6,63 +6,9 @@
 //
 
 #import "HiViewConstraintBuilder.h"
-#import "NSObjectHiExtension.h"
+#import "UIViewHiSizeClassFile.h"
 
 @implementation UIView (HiViewConstraintBuilder)
-
-- (NSInteger)hi_sizeOptions {
-    return [self hi_integerValuePropertyForKey:_cmd];
-}
-
-- (void)setHi_sizeOptions:(NSInteger)hi_sizeOptions {
-    [self hi_addIntegerValuePropertyForKey:@selector(hi_sizeOptions) value:hi_sizeOptions];
-}
-
-- (HiViewConstraint *)hi_builderWithSEL:(SEL)sel {
-    
-    HiViewConstraint *_builer = [self hi_getValueForKey:sel];
-    if (!_builer) {
-        _builer = [[HiViewConstraint alloc] initWithView:self];
-        [self hi_addRetainNonatomicPropertyForKey:sel value:_builer];
-    }
-    return _builer;
-}
-
-- (HiViewConstraint *)hi_builder_cr {
-    return [self hi_builderWithSEL:_cmd];
-}
-
-- (HiViewConstraint *)hi_builder_cc {
-    return [self hi_builderWithSEL:_cmd];
-}
-
-- (HiViewConstraint *)hi_builder_ca {
-    return [self hi_builderWithSEL:_cmd];
-}
-
-- (HiViewConstraint *)hi_builder_rr {
-    return [self hi_builderWithSEL:_cmd];
-}
-
-- (HiViewConstraint *)hi_builder_rc {
-    return [self hi_builderWithSEL:_cmd];
-}
-
-- (HiViewConstraint *)hi_builder_ra {
-    return [self hi_builderWithSEL:_cmd];
-}
-
-- (HiViewConstraint *)hi_builder_ar {
-    return [self hi_builderWithSEL:_cmd];
-}
-
-- (HiViewConstraint *)hi_builder_ac {
-    return [self hi_builderWithSEL:_cmd];
-}
-
-- (HiViewConstraint *)hi_builder_aa {
-    return [self hi_builderWithSEL:_cmd];
-}
 
 - (HiViewConstraint *)hi_getBuilderWithSizeClass:(HiSizeClass)sizeClass {
     
@@ -162,38 +108,6 @@
 }
 #endif
 
-
-- (HiSizeOptions)hi_optionsWithSizeClass:(HiSizeClass)sizeClass {
-    switch (sizeClass) {
-        case HiSizeClass_aa:
-            return HiSizeOptions_aa;
-            
-        case HiSizeClass_rr:
-            return HiSizeOptions_rr;
-
-        case HiSizeClass_rc:
-            return HiSizeOptions_rc;
-
-        case HiSizeClass_ra:
-            return HiSizeOptions_ra;
-
-        case HiSizeClass_cr:
-            return HiSizeOptions_cr;
-
-        case HiSizeClass_cc:
-            return HiSizeOptions_cc;
-
-        case HiSizeClass_ca:
-            return HiSizeOptions_ca;
-
-        case HiSizeClass_ar:
-            return HiSizeOptions_ar;
-
-        case HiSizeClass_ac:
-            return HiSizeOptions_ac;
-    }
-}
-
 - (HiViewConstraint *)hi_makeBuilderWithSizeClass:(HiSizeClass)sizeClass {
 
     switch (sizeClass) {
@@ -255,39 +169,16 @@
     [self hi_checkOptionsWithSizeClass:sizeClass];
 #endif
     
-    self.hi_sizeOptions = self.hi_sizeOptions | [self hi_optionsWithSizeClass:sizeClass];
+    if (self.hi_sizeOptions & [self hi_size2options:sizeClass]) {
+        HIAssert(false, @"不能重复创建, 更新 使用 update");
+    }
+    
+    self.hi_sizeOptions = self.hi_sizeOptions | [self hi_size2options:sizeClass];
     return [self hi_makeBuilderWithSizeClass:sizeClass];
 }
 
 - (HiViewConstraint *)hi_getAvailableBuilderWithSizeClass:(HiSizeClass)sizeClass {
-    // 如果 aa 创建 了, 不能 创建其它的
-    if (self.hi_sizeOptions & HiSizeOptions_aa) return self.hi_builder_aa;
-    
-    // 如果 ra 创建 了, 不能 创建 r*
-    if (self.hi_sizeOptions & HiSizeOptions_ra) {
-        if (HiSizeClass_rc == sizeClass || HiSizeClass_rr == sizeClass || HiSizeClass_ra == sizeClass)
-            return self.hi_builder_ra;
-    }
-
-    // 如果 ca 创建 了, 不能 创建 c*
-    if (self.hi_sizeOptions & HiSizeOptions_ca) {
-        if (HiSizeClass_rc == sizeClass || HiSizeClass_rr == sizeClass || HiSizeClass_ra == sizeClass)
-            return self.hi_builder_ra;
-    }
-
-    // 如果 ac 创建 了, 不能 创建 *c
-    if (self.hi_sizeOptions & HiSizeOptions_ac) {
-        if (HiSizeClass_rc == sizeClass || HiSizeClass_rr == sizeClass || HiSizeClass_ra == sizeClass)
-            return self.hi_builder_ra;
-    }
-    
-    // 如果 ar 创建 了, 不能 创建 *r
-    if (self.hi_sizeOptions & HiSizeOptions_ar) {
-        if (HiSizeClass_ar == sizeClass || HiSizeClass_rr == sizeClass || HiSizeClass_cr == sizeClass)
-            return self.hi_builder_ra;
-    }
-    
-    return [self hi_getBuilderWithSizeClass:sizeClass];
+    return [self hi_getBuilderWithSizeClass:[self hi_getAvailableSizeClass:sizeClass options:self.hi_sizeOptions]];
 }
 
 @end

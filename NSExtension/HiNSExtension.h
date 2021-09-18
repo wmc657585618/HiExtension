@@ -8,5 +8,5 @@
 
 #import "NSObjectHiExtension.h"
 #import "UIKitHiExtension.h"
-#import "UIViewHiConstraintSizeClass.h"
+#import "UIViewHiSizeClassConstraint.h"
 

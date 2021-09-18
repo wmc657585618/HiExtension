@@ -7,7 +7,7 @@
 
 #import "ViewController.h"
 #import "HiNSExtension.h"
-#import "UIViewHiConstraintSizeClass.h"
+#import "UIViewHiSizeClassProperty.h"
 
 @interface TableViewCell : UITableViewCell
 
@@ -69,11 +69,18 @@
     
     [self.label hi_constraints_make:^(id<HiViewConstraintBuilder> builder) {
         builder.left.value(0);
-        builder.top.equal(self.tableView).bottom.value(10.0);
+        builder.top.value(100.0);
         builder.height.autoValue();
         builder.right.value(0);
     }];
     
+    [self.label hi_property_cr_make:^{
+        self.label.backgroundColor = UIColor.redColor;
+    }];
+    
+    [self.label hi_property_cc_make:^{
+        self.label.backgroundColor = UIColor.brownColor;
+    }];
 //    [self.label hi_constraints_cr_make:^(id<HiViewConstraintBuilder>  _Nullable builder) {
 //        builder.left.value(0);
 //        builder.top.equal(self.tableView).bottom.value(10.0);

@@ -1,17 +1,17 @@
 //
-//  UIViewHiConstraintSizeClass.h
+//  UIViewHiSizeClassConstraint.h
 //  HiExension
 //
-//  Created by four on 2021/9/17.
+//  Created by four on 2021/9/18.
 //
 
 #import <UIKit/UIKit.h>
 #import "HiFrameProtocol.h"
-#import "UIViewHiEnum.h"
+#import "UIViewHiSizeClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIView (HiSizeClass)
+@interface UIView (HiSizeClassConstraint)
 
 - (void)hi_constraints_rr_make:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block;
 - (void)hi_constraints_rc_make:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block;
@@ -27,8 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)hi_activateConstraints:(HiSizeClass)sizeClass;
 - (void)hi_deactivateConstraints:(HiSizeClass)sizeClass;
-
-@property (nonatomic, readonly) HiSizeClass hi_sizeClass;
+- (void)hi_deactivateAllConstraints;
 
 @end
+
 NS_ASSUME_NONNULL_END

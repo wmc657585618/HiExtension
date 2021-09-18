@@ -1,34 +1,23 @@
 //
-//  UIViewHiConstraintSizeClass.m
+//  UIViewHiSizeClassConstraint.m
 //  HiExension
 //
-//  Created by four on 2021/9/17.
+//  Created by four on 2021/9/18.
 //
 
-#import "UIViewHiConstraintSizeClass.h"
-#import "UIViewHiConstraintProperty.h"
-#import "NSObjectHiExtension.h"
+#import "UIViewHiSizeClassConstraint.h"
+#import "UIViewHiSizeClassFile.h"
 
-@implementation UIView (HiSizeClass)
-
-+ (void)load {
-    [self hi_exchange_instanceMethod:@selector(hi_layoutSubviews) newSelector:@selector(layoutSubviews)];
-}
-
-- (void)hi_layoutSubviews {
-    [self hi_layoutSubviews];
-    [self hi_activateConstraints:[self hi_getSizeClass]];
-}
-
+@implementation UIView (HiSizeClassConstraint)
 
 - (void)hi_activateConstraints:(HiSizeClass)sizeClass {
     [self hi_deactivateAllConstraints];
-    HiViewConstraint *constraint = [self hi_getBuilderWithSizeClass:sizeClass];
+    HiViewConstraint *constraint = [self hi_getAvailableBuilderWithSizeClass:sizeClass];
     [constraint activateConstraints];
 }
 
 - (void)hi_deactivateConstraints:(HiSizeClass)sizeClass {
-    HiViewConstraint *constraint = [self hi_getBuilderWithSizeClass:sizeClass];
+    HiViewConstraint *constraint = [self hi_getAvailableBuilderWithSizeClass:sizeClass];
     [constraint deactivateConstraints];
 }
 
@@ -69,8 +58,34 @@
     [self hi_constraints_makeWithSizeClass:HiSizeClass_aa block:block];
 }
 
-- (HiSizeClass)hi_sizeClass {
-    return [self hi_getSizeClass];
+- (void)hi_deactivateAllConstraints{
+
+    if (self.hi_sizeOptions & HiSizeOptions_rr)
+        [self.hi_builder_rr deactivateConstraints];
+    
+    if (self.hi_sizeOptions & HiSizeOptions_rc)
+        [self.hi_builder_rc deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_ra)
+        [self.hi_builder_ra deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_cr)
+        [self.hi_builder_cr deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_cc)
+        [self.hi_builder_cc deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_ca)
+        [self.hi_builder_ca deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_ar)
+        [self.hi_builder_ar deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_ac)
+        [self.hi_builder_ac deactivateConstraints];
+
+    if (self.hi_sizeOptions & HiSizeOptions_aa)
+        [self.hi_builder_aa deactivateConstraints];
 }
 
 @end

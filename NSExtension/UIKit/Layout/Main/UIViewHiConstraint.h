@@ -14,7 +14,10 @@
 /// 只能创建 constraints, 不能有后续操作
 - (NSArray<NSLayoutConstraint *> *_Nullable)hi_constraints_instance:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block;
 
+/// default is aa.
 - (void)hi_constraints_make:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block;
+- (void)hi_constraints_update:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block;
+
 - (void)hi_frame_make:(void(^_Nullable)(id<HiViewFrameBuilder> _Nullable builder))block;
 
 - (void)hi_removeAllConstraints;

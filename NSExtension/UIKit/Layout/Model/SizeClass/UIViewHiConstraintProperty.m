@@ -6,20 +6,16 @@
 //
 
 #import "UIViewHiConstraintProperty.h"
-#import "NSObjectHiExtension.h"
 
 @implementation UIView (HiConstraintProperty)
 
 - (HiViewConstraint *)hi_builder {
-    return [self hi_getAvailableBuilderWithSizeClass:[self hi_getSizeClass]];    
+    return [self hi_getAvailableBuilderWithSizeClass:[self hi_getSizeClass]];
 }
 
-- (void)hi_constraints_makeWithSizeClass:(HiSizeClass)sizeClass block:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block{
-    
+- (void)hi_constraints_WithBuilder:(HiViewConstraint *)builder sizeClass:(HiSizeClass)sizeClass block:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block{
     HIAssert(self.superview, @"Super view is nil");
-    
-    HiViewConstraint *builder = [self hi_constraints_makeWithSizeClass:sizeClass];
-    
+        
     if (block) {
         HIAssert(builder.avaliable, @"you have made contraints. please remove all constraints");
         self.translatesAutoresizingMaskIntoConstraints = false;
@@ -27,12 +23,49 @@
         [builder updateFrame];
     }
     
-    if (HiSizeClass_aa == sizeClass) return;
-    
     // 不是当前 size class 不激活
-    if (sizeClass != [self hi_getSizeClass]) {
+    if (![self hi_activateConstraintsWithSize:sizeClass]) {
         [builder deactivateConstraints];
     }
+}
+
+- (BOOL)hi_activateConstraintsWithSize:(HiSizeClass)sizeClass {
+    if (HiSizeClass_aa == sizeClass) return true;
+    
+    if (HiSizeClass_ra == sizeClass) {
+        HiSizeClass _size = [self hi_getSizeClass];
+        return HiSizeClass_rr == _size || HiSizeClass_ra == _size || HiSizeClass_rc == _size;
+    }
+    
+    if (HiSizeClass_ca == sizeClass) {
+        HiSizeClass _size = [self hi_getSizeClass];
+        return HiSizeClass_ca == _size || HiSizeClass_cc == _size || HiSizeClass_cr == _size;
+    }
+    
+    if (HiSizeClass_ar == sizeClass) {
+        HiSizeClass _size = [self hi_getSizeClass];
+        return HiSizeClass_cr == _size || HiSizeClass_ar == _size || HiSizeClass_rr == _size;
+    }
+    
+    if (HiSizeClass_ac == sizeClass) {
+        HiSizeClass _size = [self hi_getSizeClass];
+        return HiSizeClass_ac == _size || HiSizeClass_cc == _size || HiSizeClass_rc == _size;
+    }
+    
+    return sizeClass == [self hi_getSizeClass];
+}
+
+- (void)hi_constraints_makeWithSizeClass:(HiSizeClass)sizeClass block:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block{
+    
+    HiViewConstraint *builder = [self hi_constraints_makeWithSizeClass:sizeClass];
+    [self hi_constraints_WithBuilder:builder sizeClass:sizeClass block:block];
+}
+
+- (void)hi_constraints_updateWithSizeClass:(HiSizeClass)sizeClass block:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block{
+    
+    HiViewConstraint *builder = [self hi_getAvailableBuilderWithSizeClass:sizeClass];
+    [builder removeAllConstraints];
+    [self hi_constraints_WithBuilder:builder sizeClass:sizeClass block:block];
 }
 
 - (HiSizeClass)hi_getSizeClass {

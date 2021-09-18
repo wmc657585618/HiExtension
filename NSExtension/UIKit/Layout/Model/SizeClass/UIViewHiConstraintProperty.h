@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (HiSizeClass)hi_getSizeClass;
 
 - (void)hi_constraints_makeWithSizeClass:(HiSizeClass)sizeClass block:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block;
+- (void)hi_constraints_updateWithSizeClass:(HiSizeClass)sizeClass block:(void(^_Nullable)(id<HiViewConstraintBuilder> _Nullable builder))block;
 
 - (void)hi_deactivateAllConstraints;
 

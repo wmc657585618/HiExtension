@@ -30,6 +30,10 @@
     [self hi_constraints_makeWithSizeClass:HiSizeClass_aa block:block];
 }
 
+- (void)hi_constraints_update:(void (^)(id<HiViewConstraintBuilder> _Nullable))block {
+    [self hi_constraints_updateWithSizeClass:HiSizeClass_aa block:block];
+}
+
 - (void)hi_frame_make:(void(^)(id<HiViewFrameBuilder> builder))block {
     HIAssert(self.superview, @"Super view is nil");
     
@@ -127,7 +131,6 @@
 
 - (void)hi_resetWidth:(void(^_Nullable)(id<HiConstraintSize0> _Nullable constraint))constraint {
     [self hi_resetAttribute:NSLayoutAttributeWidth constraint:constraint];
-
 }
 
 - (void)hi_resetHeight:(void(^_Nullable)(id<HiConstraintSize0> _Nullable constraint))constraint {

@@ -257,8 +257,8 @@
 
     HiConstraintModel *model = [self modelWithAttribute:attribute];
     if (model && constraint) {
-        constraint(model);
         [model remove];
+        constraint(model);
         [model layout];
     }
 }

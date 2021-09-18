@@ -20,6 +20,7 @@
     [self hi_activateConstraints:[self hi_getSizeClass]];
 }
 
+
 - (void)hi_activateConstraints:(HiSizeClass)sizeClass {
     [self hi_deactivateAllConstraints];
     HiViewConstraint *constraint = [self hi_getBuilderWithSizeClass:sizeClass];

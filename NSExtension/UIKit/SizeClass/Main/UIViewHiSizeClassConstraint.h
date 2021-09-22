@@ -29,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)hi_deactivateConstraints:(HiSizeClass)sizeClass;
 - (void)hi_deactivateAllConstraints;
 
+- (void)hi_updateSizeContraints;
+
 @end
 
 NS_ASSUME_NONNULL_END

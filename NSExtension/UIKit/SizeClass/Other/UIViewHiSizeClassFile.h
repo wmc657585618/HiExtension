@@ -58,7 +58,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) void(^hi_property_ac)(void);
 @property (nonatomic, copy) void(^hi_property_aa)(void);
 
-
 @end
 
 NS_ASSUME_NONNULL_END

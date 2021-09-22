@@ -88,4 +88,9 @@
         [self.hi_builder_aa deactivateConstraints];
 }
 
+- (void)hi_updateSizeContraints {
+    if (HiSizeOptions_none == self.hi_sizeOptions) return;
+    [self hi_activateConstraints:self.hi_sizeClass];
+}
+
 @end

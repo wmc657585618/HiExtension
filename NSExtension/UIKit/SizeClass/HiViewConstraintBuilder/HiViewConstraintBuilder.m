@@ -19,43 +19,57 @@
             if (self.hi_sizeOptions & HiSizeOptions_rr)
                 return self.hi_builder_rr;
         }
-            
+            break;
+
         case HiSizeClass_rc:
         {
             if (self.hi_sizeOptions & HiSizeOptions_rr)
                 return self.hi_builder_rc;
         }
+            break;
+
         case HiSizeClass_ra:
         {
             if (self.hi_sizeOptions & HiSizeOptions_ra)
                 return self.hi_builder_ra;
         }
-            
+            break;
+
         case HiSizeClass_cr:
         {
             if (self.hi_sizeOptions & HiSizeOptions_cr)
                 return self.hi_builder_cr;
         }
+            break;
+
         case HiSizeClass_cc:
         {
             if (self.hi_sizeOptions & HiSizeOptions_cc)
                 return self.hi_builder_cc;
         }
+            break;
+
         case HiSizeClass_ca:
         {
             if (self.hi_sizeOptions & HiSizeOptions_ca)
                 return self.hi_builder_ca;
         }
+            break;
+
         case HiSizeClass_ar:
         {
             if (self.hi_sizeOptions & HiSizeOptions_ar)
                 return self.hi_builder_ar;
         }
+            break;
+
         case HiSizeClass_ac:
         {
             if (self.hi_sizeOptions & HiSizeOptions_ac)
                 return self.hi_builder_ac;
         }
+            break;
+
         case HiSizeClass_aa:
         {
             if (self.hi_sizeOptions & HiSizeOptions_aa)

@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)hi_property_ac_make:(void(^)(void))block;
 - (void)hi_property_aa_make:(void(^)(void))block;
 
+- (void)hi_updateSizeProperty;
+
 @end
 
 NS_ASSUME_NONNULL_END

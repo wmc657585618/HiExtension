@@ -9,17 +9,6 @@
 #import "NSObjectHiExtension.h"
 
 @implementation UIView (HiSizeClass)
-
-//+ (void)load {
-//    [self hi_exchange_instanceMethod:@selector(hi_layoutSubviews) newSelector:@selector(layoutSubviews)];
-//}
-//
-//- (void)hi_layoutSubviews {
-//    [self hi_layoutSubviews];
-////    [self hi_activateConstraints:self.hi_sizeClass];
-//}
-
-
 - (HiSizeClass)hi_sizeClass {
     if (UIUserInterfaceSizeClassRegular == self.traitCollection.horizontalSizeClass) {
         if (UIUserInterfaceSizeClassRegular == self.traitCollection.verticalSizeClass) {

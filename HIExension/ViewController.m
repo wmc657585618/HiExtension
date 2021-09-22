@@ -81,12 +81,16 @@
         builder.right.value(0);
     }];
     
+    __weak typeof(self) weak = self;
+
     [self.label hi_property_ar_make:^{
-        self.label.backgroundColor = UIColor.redColor;
+        __strong typeof(weak) strong = weak;
+        strong.label.backgroundColor = UIColor.redColor;
     }];
     
     [self.label hi_property_ac_make:^{
-        self.label.backgroundColor = UIColor.brownColor;
+        __strong typeof(weak) strong = weak;
+        strong.label.backgroundColor = UIColor.brownColor;
     }];
     
 //    [self.label hi_constraints_cr_make:^(id<HiViewConstraintBuilder>  _Nullable builder) {
@@ -140,8 +144,10 @@
 
 #pragma mark *********** animate ***********
 - (void)animations {
+    __weak typeof(self) weak = self;
     [self.label hi_animateWithDuration:10 animations:^{
-        [self.label hi_updateAttribute:NSLayoutAttributeTop constraint:200.0];
+        __strong typeof(weak) strong = weak;
+        [strong.label hi_updateAttribute:NSLayoutAttributeTop constraint:200.0];
     } completion:nil];
 }
 

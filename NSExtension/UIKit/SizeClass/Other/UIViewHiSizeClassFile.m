@@ -8,6 +8,13 @@
 #import "UIViewHiSizeClassFile.h"
 #import "NSObjectHiExtension.h"
 
+#define hi_add(_op) - (void)setHi_property_##_op:(void (^)(void))hi_property_##_op {\
+[self hi_addPropertyValue:hi_property_##_op forKey:@selector(hi_property_##_op) sizeOption:HiSizeOptions_##_op];\
+}\
+- (void (^)(void))hi_property_##_op {\
+return [self hi_getValueForKey:_cmd];\
+}
+
 @implementation UIView (HiConstraintProperty)
 
 - (HiViewConstraint *)hi_builder {
@@ -127,6 +134,18 @@
     return [self hi_builderWithSEL:_cmd];
 }
 
+- (void)hi_addPropertyValue:(id _Nullable)value forKey:(const void *)key sizeOption:(HiSizeOptions)option {
+    BOOL res = self.hi_propertyOptions & option;
+
+    if (value) {
+        // 有值 添加
+        if (!res) self.hi_propertyOptions = self.hi_propertyOptions | option;
+    } else {
+        if (res) self.hi_propertyOptions = self.hi_propertyOptions & (~option); // 清空 移除
+    }
+    [self hi_addCopyNonatomicPropertyForKey:key value:value];
+}
+
 #pragma mark *********** property ***********
 - (NSInteger)hi_propertyOptions {
     return [self hi_integerValuePropertyForKey:_cmd];
@@ -136,149 +155,16 @@
     [self hi_addIntegerValuePropertyForKey:@selector(hi_propertyOptions) value:hi_propertyOptions];
 }
 
-- (void)setHi_property_aa:(void (^)(void))hi_property_aa {
-    HiSizeOptions option = HiSizeOptions_aa;
-    BOOL res = self.hi_propertyOptions & option;
+hi_add(aa)
+hi_add(ar)
+hi_add(ac)
 
-    if (hi_property_aa) {
-        if (!res) self.hi_propertyOptions = self.hi_propertyOptions | option;
-    } else {
-        if (res) self.hi_propertyOptions = self.hi_propertyOptions & (~option);
-    }
-    
-    [self hi_addCopyNonatomicPropertyForKey:@selector(hi_property_aa) value:hi_property_aa];
-}
+hi_add(ca)
+hi_add(cr)
+hi_add(cc)
 
-- (void (^)(void))hi_property_aa {
-    return [self hi_getValueForKey:_cmd];
-}
-
-- (void)setHi_property_ar:(void (^)(void))hi_property_ar {
-    HiSizeOptions option = HiSizeOptions_ar;
-    BOOL res = self.hi_propertyOptions & option;
-
-    if (hi_property_ar) {
-        if (!res) self.hi_propertyOptions = self.hi_propertyOptions | option;
-    } else {
-        if (res) self.hi_propertyOptions = self.hi_propertyOptions & (~option);
-    }
-    [self hi_addCopyNonatomicPropertyForKey:@selector(hi_property_ar) value:hi_property_ar];
-}
-
-- (void (^)(void))hi_property_ar {
-    return [self hi_getValueForKey:_cmd];
-}
-
-- (void)setHi_property_ac:(void (^)(void))hi_property_ac {
-    HiSizeOptions option = HiSizeOptions_ac;
-    BOOL res = self.hi_propertyOptions & option;
-
-    if (hi_property_ac) {
-        if (!res) self.hi_propertyOptions = self.hi_propertyOptions | option;
-    } else {
-        if (res) self.hi_propertyOptions = self.hi_propertyOptions & (~option);
-    }
-    [self hi_addCopyNonatomicPropertyForKey:@selector(hi_property_ac) value:hi_property_ac];
-}
-
-- (void (^)(void))hi_property_ac {
-    return [self hi_getValueForKey:_cmd];
-}
-
-- (void)setHi_property_cc:(void (^)(void))hi_property_cc {
-    HiSizeOptions option = HiSizeOptions_cc;
-    BOOL res = self.hi_propertyOptions & option;
-
-    if (hi_property_cc) {
-        if (!res) self.hi_propertyOptions = self.hi_propertyOptions | option;
-    } else {
-        if (res) self.hi_propertyOptions = self.hi_propertyOptions & (~option);
-    }
-    [self hi_addCopyNonatomicPropertyForKey:@selector(hi_property_cc) value:hi_property_cc];
-}
-
-- (void (^)(void))hi_property_cc {
-    return [self hi_getValueForKey:_cmd];
-}
-
-- (void)setHi_property_ca:(void (^)(void))hi_property_ca {
-    HiSizeOptions option = HiSizeOptions_ca;
-    BOOL res = self.hi_propertyOptions & option;
-
-    if (hi_property_ca) {
-        if (!res) self.hi_propertyOptions = self.hi_propertyOptions | option;
-    } else {
-        if (res) self.hi_propertyOptions = self.hi_propertyOptions & (~option);
-    }
-    [self hi_addCopyNonatomicPropertyForKey:@selector(hi_property_ca) value:hi_property_ca];
-}
-
-- (void (^)(void))hi_property_ca {
-    return [self hi_getValueForKey:_cmd];
-}
-
-- (void)setHi_property_cr:(void (^)(void))hi_property_cr {
-    HiSizeOptions option = HiSizeOptions_cr;
-    BOOL res = self.hi_propertyOptions & option;
-
-    if (hi_property_cr) {
-        if (!res) self.hi_propertyOptions = self.hi_propertyOptions | option;
-    } else {
-        if (res) self.hi_propertyOptions = self.hi_propertyOptions & (~option);
-    }
-    [self hi_addCopyNonatomicPropertyForKey:@selector(hi_property_cr) value:hi_property_cr];
-}
-
-- (void (^)(void))hi_property_cr {
-    return [self hi_getValueForKey:_cmd];
-}
-
-- (void)setHi_property_rr:(void (^)(void))hi_property_rr {
-    HiSizeOptions option = HiSizeOptions_rr;
-    BOOL res = self.hi_propertyOptions & option;
-
-    if (hi_property_rr) {
-        if (!res) self.hi_propertyOptions = self.hi_propertyOptions | option;
-    } else {
-        if (res) self.hi_propertyOptions = self.hi_propertyOptions & (~option);
-    }
-    [self hi_addCopyNonatomicPropertyForKey:@selector(hi_property_rr) value:hi_property_rr];
-}
-
-- (void (^)(void))hi_property_rr {
-    return [self hi_getValueForKey:_cmd];
-}
-
-- (void)setHi_property_ra:(void (^)(void))hi_property_ra {
-    HiSizeOptions option = HiSizeOptions_ra;
-    BOOL res = self.hi_propertyOptions & option;
-
-    if (hi_property_ra) {
-        if (!res) self.hi_propertyOptions = self.hi_propertyOptions | option;
-    } else {
-        if (res) self.hi_propertyOptions = self.hi_propertyOptions & (~option);
-    }
-    [self hi_addCopyNonatomicPropertyForKey:@selector(hi_property_ra) value:hi_property_ra];
-}
-
-- (void (^)(void))hi_property_ra {
-    return [self hi_getValueForKey:_cmd];
-}
-
-- (void)setHi_property_rc:(void (^)(void))hi_property_rc {
-    HiSizeOptions option = HiSizeOptions_rc;
-    BOOL res = self.hi_propertyOptions & option;
-
-    if (hi_property_rc) {
-        if (!res) self.hi_propertyOptions = self.hi_propertyOptions | option;
-    } else {
-        if (res) self.hi_propertyOptions = self.hi_propertyOptions & (~option);
-    }
-    [self hi_addCopyNonatomicPropertyForKey:@selector(hi_property_rc) value:hi_property_rc];
-}
-
-- (void (^)(void))hi_property_rc {
-    return [self hi_getValueForKey:_cmd];
-}
+hi_add(rr)
+hi_add(ra)
+hi_add(rc)
 
 @end

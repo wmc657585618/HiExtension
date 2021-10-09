@@ -8,6 +8,9 @@
 #import "UIViewHiSizeClassProperty.h"
 #import "UIViewHiSizeClassFile.h"
 
+#define hi_case(_v_)         case HiSizeClass_##_v_:\
+{if (self.hi_property_##_v_) self.hi_property_##_v_();} break;
+
 @implementation UIView (HiSizeClassProperty)
 
 - (void)hi_property_rr_make:(void(^)(void))block {
@@ -53,70 +56,15 @@
     HiSizeClass _size = [self hi_getAvailableSizeClass:self.hi_sizeClass options:self.hi_propertyOptions];
     
     switch (_size) {
-            
-        case HiSizeClass_aa:
-        {
-            if (self.hi_property_aa) {
-                self.hi_property_aa();
-            }
-        }
-            break;
-        case HiSizeClass_rr:
-        {
-            if (self.hi_property_rr) {
-                self.hi_property_rr();
-            }
-        }
-            break;
-        case HiSizeClass_rc:
-        {
-            if (self.hi_property_rc) {
-                self.hi_property_rc();
-            }
-        }
-            break;
-        case HiSizeClass_ra:
-        {
-            if (self.hi_property_ra) {
-                self.hi_property_ra();
-            }
-        }
-            break;
-        case HiSizeClass_cr:
-        {
-            if (self.hi_property_cr) {
-                self.hi_property_cr();
-            }
-        }
-            break;
-        case HiSizeClass_cc:
-        {
-            if (self.hi_property_cc) {
-                self.hi_property_cc();
-            }
-        }
-            break;
-        case HiSizeClass_ca:
-        {
-            if (self.hi_property_ca) {
-                self.hi_property_ca();
-            }
-        }
-            break;
-        case HiSizeClass_ar:
-        {
-            if (self.hi_property_ar) {
-                self.hi_property_ar();
-            }
-        }
-            break;
-        case HiSizeClass_ac:
-        {
-            if (self.hi_property_ac) {
-                self.hi_property_ac();
-            }
-        }
-            break;
+        hi_case(aa)
+        hi_case(rr)
+        hi_case(rc)
+        hi_case(ra)
+        hi_case(cr)
+        hi_case(cc)
+        hi_case(ca)
+        hi_case(ar)
+        hi_case(ac)
     }
 }
 

@@ -77,7 +77,7 @@
     [self.label hi_constraints_ac_make:^(id<HiViewConstraintBuilder>  _Nullable builder) {
         builder.left.value(0);
         builder.top.value(40.0);
-        builder.height.autoValue();
+        builder.height.warpcontent();
         builder.right.value(0);
     }];
     
@@ -133,9 +133,6 @@
 }
 #pragma mark *********** update ***********
 - (void)update {
-    
-//    [self.navigationController pushViewController:[[ViewController alloc] init] animated:true];
-//    [self.label hi_updateAttribute:NSLayoutAttributeTop constraint:200];
     
     [self.label hi_resetTop:^(id<HiConstraintVertical0>  _Nullable constraint) {
         constraint.equal(self.view).value(100.0);

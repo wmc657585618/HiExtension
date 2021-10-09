@@ -62,7 +62,7 @@
 /**
  如果是 UILabel 的 height 要设置 preferredMaxLayoutWidth
  */
-@property (nonatomic, readonly) void(^autoValue)(void);
+@property (nonatomic, readonly) void(^warpcontent)(void);
 
 @end
 

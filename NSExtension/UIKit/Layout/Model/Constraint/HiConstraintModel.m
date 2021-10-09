@@ -142,7 +142,7 @@
     };
 }
 
-- (void (^)(void))autoValue {
+- (void (^)(void))warpcontent {
     __weak typeof(self) weak = self;
     return ^(void) {
         __strong typeof(weak) strong = weak;

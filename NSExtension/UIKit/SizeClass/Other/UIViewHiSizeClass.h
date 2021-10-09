@@ -10,6 +10,8 @@
 /*
  ra 包含: rc, rr
  ca 包含: cc, cr
+ ar 包含: rr, cr
+ ac 包含: cc, rc
  aa 包含所有
  */
 typedef enum : NSUInteger {

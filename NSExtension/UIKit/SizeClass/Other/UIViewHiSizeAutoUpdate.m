@@ -10,7 +10,7 @@
 #import "UIViewHiSizeClassConstraint.h"
 #import "UIViewHiSizeClassProperty.h"
 
-static BOOL kAutoUpdate = true;
+static BOOL kAutoUpdate = NO;
 @implementation UIView (HiSizeAutoUpdate)
 
 + (void)load {

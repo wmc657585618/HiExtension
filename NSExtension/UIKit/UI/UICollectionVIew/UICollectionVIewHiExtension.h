@@ -21,6 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)hi_collection:(UICollectionView *)collectionView dequeueViewOfKind:(NSString *)elementKind forIndexPath:(NSIndexPath *)indexPath;
 + (void)hi_collection:(UICollectionView *)collectionView registerViewOfKind:(NSString *)elementKind;
 
++ (instancetype)hi_collection:(UICollectionView *)collectionView dequeueHeaderForIndexPath:(NSIndexPath *)indexPath;
++ (instancetype)hi_collection:(UICollectionView *)collectionView dequeueFooterForIndexPath:(NSIndexPath *)indexPath;
+
++ (void)hi_collectionRegisteHeader:(UICollectionView *)collectionView;
++ (void)hi_collectionRegisteFooter:(UICollectionView *)collectionView;
+
 @end
 
 NS_ASSUME_NONNULL_END

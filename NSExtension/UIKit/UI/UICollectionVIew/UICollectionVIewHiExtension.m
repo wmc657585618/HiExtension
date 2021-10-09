@@ -30,4 +30,20 @@
     [collectionView registerClass:self forSupplementaryViewOfKind:elementKind withReuseIdentifier:self.hi_classString];
 }
 
++ (instancetype)hi_collection:(UICollectionView *)collectionView dequeueHeaderForIndexPath:(NSIndexPath *)indexPath {
+    return [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:self.hi_classString forIndexPath:indexPath];
+}
+
++ (instancetype)hi_collection:(UICollectionView *)collectionView dequeueFooterForIndexPath:(NSIndexPath *)indexPath {
+    return [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:self.hi_classString forIndexPath:indexPath];
+}
+
++ (void)hi_collectionRegisteHeader:(UICollectionView *)collectionView {
+    [collectionView registerClass:self forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:self.hi_classString];
+}
+
++ (void)hi_collectionRegisteFooter:(UICollectionView *)collectionView {
+    [collectionView registerClass:self forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:self.hi_classString];
+}
+
 @end

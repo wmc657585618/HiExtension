@@ -45,10 +45,7 @@ CGFloat hi_attribute_frame(CGRect frame, NSLayoutAttribute attribute) {
 
 // 获取所有父类
 - (NSArray *)superViews {
-    UIView *view = self.superview;
-    
-    if (!view) return @[];
-    
+    UIView *view = self;
     NSMutableArray *result = [NSMutableArray array];
     while (view) {
         [result addObject:view];
@@ -59,26 +56,27 @@ CGFloat hi_attribute_frame(CGRect frame, NSLayoutAttribute attribute) {
 
 - (UIView *)superViewWithView:(UIView *)view {
     
-    // 位置关系
-    UIView *superview = self.superview;
-    NSMutableArray *superviews = [NSMutableArray array];
-    // view2 在 view1 中
-    while (superview) {
-        [superviews addObject:superview];
-        if ([superview isEqual:view]) break;
-        superview = superview.superview;
+    if ([view.superview isEqual:self]) return self;
+    if ([self.superview isEqual:view]) return view;
+    if ([self.superview isEqual:view.superview]) return view.superview;
+    
+    NSArray *views1 = [self superViews];
+    NSArray *views2 = [view superViews];
+
+    NSInteger i = views1.count - 1;
+    NSInteger j = views2.count - 1;
+
+    while (j > 0 && i > 0) {
+        
+        UIView *view1 = [views1 objectAtIndex:i];
+        UIView *view2 = [views2 objectAtIndex:i];
+
+        if ([view1 isEqual:view2]) return view1;
+        j --;
+        i --;
     }
     
-    if (!superview) {
-        // view1 在 view2 中 或者是 view2 的superview 中
-        superview = view;
-        while (superview) {
-            if ([superview isEqual:self] || [superviews containsObject:superview]) break;
-            superview = superview.superview;
-        }
-    }
-    
-    return superview;
+    return nil;
 }
 
 - (CGRect)convertToView:(UIView *)view {
